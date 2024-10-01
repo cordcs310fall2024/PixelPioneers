@@ -18,12 +18,14 @@ header {
     position: relative;
     font-size: 30px;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
     margin-right: 20px;
 }
 
@@ -48,30 +50,35 @@ nav ul li a:hover {
     width: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    background-color: lightblue;
+    right: 0;
+    background-color: #6f1d46;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
+}
 
-  .sidebar div {
+.sidebar div {
     padding: 8px 8px 8px 30px;
     font-size: 24px;
     display: block;
     transition: 0.5s;
     cursor: pointer;
-  }
+}
 
-  .sidebar .closebtn {
+.sidebar .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: 25px;
     font-size: 36px;
-  }
+    padding: 0;
+    border: none;
+}
 
-  .openbtn {
+.openbtn {
     font-size: 24px;
     cursor: pointer;
-    background-color: lightblue;
-  }
+    background-color: #6f1d46;
+    padding: 10px;
+    border: none;
+    color: white;
+}
