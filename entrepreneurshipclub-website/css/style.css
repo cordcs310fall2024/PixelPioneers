@@ -13,9 +13,11 @@ body {
 
 /* HEADER */
 header {
-    background-color: #333;
-    padding: 10px;
+    background-color: #6f1d46;
+    padding: 30px;
     position: relative;
+    font-size: 30px;
+    color: white;
 }
 
 nav ul {
@@ -36,7 +38,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #444;
+    font-size: 30px;
+    text-decoration: underline #eaa82a;
     border-radius: 5px;
 }
 
