@@ -26,7 +26,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 20px;
+    margin-left: auto;  /* This pushes the nav links to the right */
 }
 
 nav ul li {
@@ -57,9 +57,26 @@ nav ul li a:hover {
     padding-top: 60px;
 }
 
+.sidebar li {
+    list-style: none;
+    font-size: 24px;   
+    color: white;     
+    padding: 8px 30px;
+}
+
+.sidebar li a {
+    color: white;     
+    text-decoration: none;
+    font-size: 24px;  
+}
+
+.sidebar li a:hover {
+    text-decoration: underline #eaa82a;
+}
+
 .sidebar div {
     padding: 8px 8px 8px 30px;
-    font-size: 24px;
+    font-size: 30px;
     display: block;
     transition: 0.5s;
     cursor: pointer;
@@ -69,7 +86,7 @@ nav ul li a:hover {
     position: absolute;
     top: 0;
     left: 25px;
-    font-size: 36px;
+    font-size: 30px;
     padding: 0;
     border: none;
 }
