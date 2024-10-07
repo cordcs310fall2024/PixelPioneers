@@ -28,8 +28,8 @@ h1 {
 .left1 {
     position: absolute;
     top: 10vh;
-    left: -15vw; /* Adjusting the left position */
-    right: 10vw; /* This controls the right boundary instead of margin-right */
+    left: -10vw; /* Adjusting the left position */
+    right: 20vw; /* This controls the right boundary instead of margin-right */
     min-height: 60vh;
     background-color: #fff0d4;
     padding: 3vh;
@@ -39,10 +39,10 @@ h1 {
 
 .right1 {
     position: absolute;
-    top: 30vh;
+    top: 20vh;
     left: 30vw; /* Adjusting the left position */
     right: -10vw; /* This controls the right boundary instead of margin-right */
-    min-height: 50vh;
+    min-height: 60vh;
     background-color: #6f1d46;
     padding: 3vh;
     border-radius: 0.25vw;
@@ -60,7 +60,7 @@ h1 {
     margin: 2vh 0;
     font-size: 1.75vw;
     line-height: 1.5;
-    padding-right: 10vw; 
+    padding-right: 20vw; 
     font-weight: 20;
     letter-spacing: 0.1vw;
 }
