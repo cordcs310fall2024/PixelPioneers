@@ -1,10 +1,11 @@
 h1 {
-    font-size: 3vw;
+    font-size: 3rem;
     color:  #6f1d46;
     text-align: center;
     margin: 5vh 0; 
     font-weight: 200;
     letter-spacing: 0.2vw; 
+    padding-top: 12vh;
 }
 
 #aboutDescription {
@@ -25,11 +26,12 @@ h1 {
     height: 100vh; 
 }
 
+/* --------------------CONTAINER 1-------------------- */
 .left1 {
     position: absolute;
     top: 10vh;
-    left: -10vw; /* Adjusting the left position */
-    right: 20vw; /* This controls the right boundary instead of margin-right */
+    left: -10vw; 
+    right: 20vw;
     min-height: 60vh;
     background-color: #fff0d4;
     padding: 3vh;
@@ -40,13 +42,13 @@ h1 {
 .right1 {
     position: absolute;
     top: 20vh;
-    left: 30vw; /* Adjusting the left position */
-    right: -10vw; /* This controls the right boundary instead of margin-right */
+    left: 30vw; 
+    right: -10vw;
     min-height: 60vh;
     background-color: #6f1d46;
     padding: 3vh;
     border-radius: 0.25vw;
-    z-index: 1;
+    z-index: 2;
 }
 
 .left1 h1 {
@@ -65,18 +67,130 @@ h1 {
     letter-spacing: 0.1vw;
 }
 
-.buttonsection a {
-    text-decoration: none;
-    background-color:  #6f1d46;
-    color: #eaa82a;
-    padding: 2vh 5vw; 
-    display: inline-block;
-    margin-top: 3vh;
-    font-size: 2vw;
-    border-radius: 1vw;
-}
-
 #ferret1 {
     max-width: 100%;
     height: auto;
 }
+/* --------------------CONTAINER 2-------------------- */
+.left2 {
+    position: absolute;
+    top: 10vh;
+    left: -10vw;
+    right: 20vw; 
+    min-height: 60vh;
+    background-color: #6f1d46;
+    padding: 3vh;
+    border-radius: 0.25vw;
+    z-index: 2;
+}
+
+.right2 {
+    position: absolute;
+    top: 20vh;
+    left: 30vw; 
+    right: -10vw; 
+    min-height: 60vh;
+    background-color: #fff0d4;
+    padding: 3vh;
+    border-radius: 0.25vw;
+    z-index: 1;
+}
+
+.left2 h1 {
+    font-size: 3vw; 
+    font-weight: 200;
+    text-align: left;
+}
+
+.left2 p {
+    text-align: left;
+    margin: 2vh 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-right: 20vw; 
+    font-weight: 20;
+    letter-spacing: 0.1vw;
+}
+
+/* --------------------CONTAINER 3-------------------- */
+.left3 {
+    position: absolute;
+    top: 10vh;
+    left: -10vw;
+    right: 20vw; 
+    min-height: 60vh;
+    background-color: #fff0d4;;
+    padding: 3vh;
+    border-radius: 0.25vw;
+    z-index: 1;
+}
+
+.right3 {
+    position: absolute;
+    top: 20vh;
+    left: 30vw; 
+    right: -10vw; 
+    min-height: 60vh;
+    background-color: #6f1d46;
+    padding: 3vh;
+    border-radius: 0.25vw;
+    z-index: 2;
+}
+
+.left3 h1 {
+    font-size: 3vw; 
+    font-weight: 200;
+    text-align: left;
+}
+
+.left3 p {
+    text-align: left;
+    margin: 2vh 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-right: 20vw; 
+    font-weight: 20;
+    letter-spacing: 0.1vw;
+}
+
+/* --------------------CONTAINER 4-------------------- */
+.left4 {
+    position: absolute;
+    top: 10vh;
+    left: -10vw;
+    right: 20vw; 
+    min-height: 60vh;
+    background-color: #6f1d46;
+    padding: 3vh;
+    border-radius: 0.25vw;
+    z-index: 2;
+}
+
+.right4 {
+    position: absolute;
+    top: 20vh;
+    left: 30vw; 
+    right: -10vw; 
+    min-height: 60vh;
+    background-color: #fff0d4;
+    padding: 3vh;
+    border-radius: 0.25vw;
+    z-index: 1;
+}
+
+.left4 h1 {
+    font-size: 3vw; 
+    font-weight: 200;
+    text-align: left;
+}
+
+.left4 p {
+    text-align: left;
+    margin: 2vh 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-right: 20vw; 
+    font-weight: 20;
+    letter-spacing: 0.1vw;
+}
+

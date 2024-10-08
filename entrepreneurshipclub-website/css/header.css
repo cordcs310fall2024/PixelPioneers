@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 0;
+    z-index: 9999;
 }
 .header-image {
     max-width: 100px;
@@ -68,8 +68,8 @@ nav ul li a:hover {
 }
 
 .sidebar li a:hover {
-    border-bottom: 3px solid #eaa82a; /* thicker underline */
-    margin-bottom: 2px; /* space between text and underline */
+    border-bottom: 3px solid #eaa82a; 
+    margin-bottom: 2px; 
 }
 
 .sidebar div {
