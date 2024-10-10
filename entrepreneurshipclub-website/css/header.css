@@ -37,10 +37,12 @@ nav ul li a {
 
 nav ul li a:hover {
     font-size: 20px;
-    border-bottom: 4px solid #eaa82a; /* thicker underline */
-    margin-bottom: 2px; /* space between text and underline */
+    border-bottom: 4px solid #eaa82a; 
+    margin-bottom: 2px;
     border-radius: 5px;
 }
+
+
 
 .sidebar {
     height: 100%;
@@ -52,6 +54,7 @@ nav ul li a:hover {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    z-index: 10000; 
 }
 
 .sidebar li {
@@ -96,4 +99,31 @@ nav ul li a:hover {
     padding: 10px;
     border: none;
     color: white;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 40px; 
+    color: white;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar .admin-link {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    font-size: 24px;
+}
+
+.sidebar .admin-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .admin-link a:hover {
+    border-bottom: 2px solid #eaa82a;
 }
