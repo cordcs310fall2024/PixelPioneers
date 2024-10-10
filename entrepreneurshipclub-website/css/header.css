@@ -91,7 +91,10 @@ nav ul li a:hover {
 }
 
 .openbtn {
-    font-size: 24px;
+    top: 1vh;
+    left: 2.5vw;
+    font-size: 3rem; 
+    color: white;
     cursor: pointer;
     background-color: #6f1d46;
     padding: 10px;
@@ -101,9 +104,9 @@ nav ul li a:hover {
 
 .sidebar .closebtn {
     position: absolute;
-    top: 10px;
-    left: 25px;
-    font-size: 40px; 
+    top: 1vh;
+    left: 2.5vw;
+    font-size: 3rem; 
     color: white;
     padding: 0;
     border: none;
