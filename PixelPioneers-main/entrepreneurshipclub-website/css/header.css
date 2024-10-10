@@ -1,0 +1,128 @@
+
+/* HEADER */
+header {
+    background-color: #6f1d46;
+    padding: 2px;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.header-image {
+    max-width: 100px;
+    margin-right: 20px;
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto; 
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    font-size: 20px;
+    border-bottom: 3px solid #eaa82a;
+}
+
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #6f1d46;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 10000; 
+}
+
+.sidebar li {
+    list-style: none;
+    font-size: 24px;   
+    color: white;     
+    padding: 8px 30px;
+}
+
+.sidebar li a {
+    color: white;     
+    text-decoration: none;
+    font-size: 24px;  
+}
+
+.sidebar li a:hover {
+    border-bottom: 3px solid #eaa82a;
+    margin-bottom: 2px; 
+}
+
+.sidebar div {
+    padding: 8px 8px 8px 30px;
+    font-size: 30px;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 30px;
+    padding: 0;
+    border: none;
+}
+
+.openbtn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #6f1d46;
+    padding: 10px;
+    border: none;
+    color: white;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 40px; 
+    color: white;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar .admin-link {
+    position: absolute;
+    bottom: 0.1vh;
+    right: 0.1vw;
+    font-size: 1.2rem;
+    
+}
+
+.sidebar .admin-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .admin-link a:hover {
+    border-bottom: 3px solid #eaa82a;
+}
