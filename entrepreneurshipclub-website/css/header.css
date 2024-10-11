@@ -1,29 +1,35 @@
+/* ----- GENERAL STYLES ----- */
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+}
 
-/* HEADER */
-header {
+/* ----- HEADER STYLES ----- */
+.header {
     background-color: #6f1d46;
-    padding: 2px;
     position: fixed;
-    top: 0; 
     width: 100%;
-    font-size: 20px;
     color: white;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     z-index: 9999;
-}
-.header-image {
-    max-width: 100px;
-    margin-right: 20px;
-    float: left;
+    align-items: center;
+    padding: 10px 0; 
 }
 
+
+/* ----- NAVIGATION STYLES ----- */
 nav ul {
     list-style: none;
     display: flex;
-    margin-left: auto; 
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+   
 }
+
 
 nav ul li {
     margin-left: 20px;
@@ -36,96 +42,203 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    font-size: 20px;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border-bottom: 3px solid #eaa82a;
 }
 
-
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #6f1d46;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 10000; 
-}
-
-.sidebar li {
-    list-style: none;
-    font-size: 24px;   
-    color: white;     
-    padding: 8px 30px;
-}
-
-.sidebar li a {
-    color: white;     
-    text-decoration: none;
-    font-size: 24px;  
-}
-
-.sidebar li a:hover {
-    border-bottom: 3px solid #eaa82a;
-    margin-bottom: 2px; 
-}
-
-.sidebar div {
-    padding: 8px 8px 8px 30px;
-    font-size: 30px;
+/* ----- HEADER LAYOUT ----- */
+.header {
     display: block;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    left: 25px;
-    font-size: 30px;
-    padding: 0;
-    border: none;
-}
-
-.openbtn {
-    top: 1vh;
-    left: 2.5vw;
-    font-size: 3rem; 
-    color: white;
-    cursor: pointer;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
     background-color: #6f1d46;
-    padding: 10px;
-    border: none;
-    color: white;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
 }
 
-.sidebar .closebtn {
-    position: absolute;
-    top: 1vh;
-    left: 2.5vw;
-    font-size: 3rem; 
-    color: white;
+/* ----- MAIN CONTENT STYLES ----- */
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px; /* adjusts for fixed header */
+}
+
+/* Inner content */
+.mainInner {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.mainInner div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+
+/* ----- SIDEBAR STYLES ----- */
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    margin-top: 60px; 
+    transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background-color: #6f1d46;
+}
+
+.sidebarMenuInner {
+    margin: 0;
     padding: 0;
-    border: none;
+}
+
+/* outer links are always visible */
+.sidebarMenuInner > li {
+    list-style: none;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+/* inner links initially hidden */
+.sidebarMenuInner li ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* style for inner links */
+.sidebarMenuInner li ul li {
+    opacity: 0; /* Initially invisible */
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease; 
+    padding-left: 30px; 
+}
+
+/* inner link animations */
+input[type="checkbox"]:checked ~ #sidebarMenu .sidebarMenuInner li ul li {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+/* Outer links */
+.sidebarMenuInner li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-.sidebar .admin-link {
-    position: absolute;
-    bottom: 0.1vh;
-    right: 0.1vw;
-    font-size: 1.2rem;
-    
+/* inner links with smaller font size */
+.sidebarMenuInner li ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Smaller font size for inner links */
 }
 
-.sidebar .admin-link a {
+/* Sidebar link hover effect for the inner links */
+.sidebarMenuInner li ul li a:hover {
+    color: #eaa82a; /* Change color on hover */
+}
+
+/* Sidebar Toggle */
+input[type="checkbox"] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+/* ----- SIDEBAR TOGGLE ICON STYLES ----- */
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    right: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+/*---------- Toggle animations ---------- */
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/* ----- ADMIN LOGIN STYLES ----- */
+.adminLogin {
+    position: absolute;
+    bottom: 100px; 
+    right: 10px; 
+    font-size: 1.2rem;
+}
+
+.adminLogin a {
     color: white;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.sidebar .admin-link a:hover {
+.adminLogin a:hover {
     border-bottom: 3px solid #eaa82a;
 }
