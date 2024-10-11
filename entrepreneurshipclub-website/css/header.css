@@ -17,6 +17,7 @@ html, body {
     z-index: 9999;
     align-items: center;
     padding: 10px 0; 
+    
 }
 
 
@@ -29,7 +30,6 @@ nav ul {
     justify-content: center;
    
 }
-
 
 nav ul li {
     margin-left: 20px;
@@ -67,7 +67,7 @@ nav ul li a:hover {
     margin: 0 auto;
     display: block;
     height: 100%;
-    margin-top: 60px; /* adjusts for fixed header */
+    margin-top: 60px; 
 }
 
 /* Inner content */
@@ -120,7 +120,7 @@ nav ul li a:hover {
 
 /* style for inner links */
 .sidebarMenuInner li ul li {
-    opacity: 0; /* Initially invisible */
+    opacity: 0; 
     transform: translateX(50px);
     transition: opacity 0.6s ease, transform 0.6s ease; 
     padding-left: 30px; 
@@ -144,13 +144,19 @@ input[type="checkbox"]:checked ~ #sidebarMenu .sidebarMenuInner li ul li {
 .sidebarMenuInner li ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem; /* Smaller font size for inner links */
+    font-size: 1.5rem;
 }
 
-/* Sidebar link hover effect for the inner links */
+/* sidebar link hover effect for the inner links */
 .sidebarMenuInner li ul li a:hover {
-    color: #eaa82a; /* Change color on hover */
+    color: #eaa82a; 
 }
+
+/* sidebar link hover effect for the outer links */
+.sidebarMenuInner li a:hover {
+    color: #eaa82a; 
+}
+
 
 /* Sidebar Toggle */
 input[type="checkbox"] {
@@ -167,7 +173,6 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 .sidebarIconToggle {
     transition: all 0.3s;
     box-sizing: border-box;
-    cursor: pointer;
     position: absolute;
     z-index: 99;
     height: 100%;
