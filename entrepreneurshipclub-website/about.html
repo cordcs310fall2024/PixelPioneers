@@ -12,54 +12,33 @@
 </head>
 <body>
 
+
 <!---------------------- HEADER ---------------------->
-<div class="header">
+<header>
+    <a href="/index.html">
+        <img src="img/ConcoHeader.jpg" alt="Conco Header" class="header-image">
+    </a>
     <nav>
         <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
         </ul>
     </nav>
-</div>
+    <button class="openbtn" onclick="openNav()">
+        <i class="bi bi-list "></i>
+    </button>
+</header>
 
-<!---------------------- SIDEBAR ---------------------->
-<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-<label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-</label>
-<div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-        <li>
-            <a href="about.html">About</a>
-            <ul>
-                <li><a href="#">Members</a></li>
-                <li><a href="#">Businesses</a></li>
-                <li><a href="#">Programs</a></li>
-                <li><a href="#">Social Media</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="schedule.html">Schedule</a>
-            <ul>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Meetings</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-            <ul>
-                <li><a href="#">Join</a></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="adminLogin">
-        <a href="admin.html">Admin Login</a>
+<div id="mySidebar" class="sidebar">
+    <div class="closebtn" onclick="closeNav()">×</div>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <div class="admin-link">
+        <a href="login.html">Admin Login</a>
     </div>
 </div>
-
 
 
 <!---------------------- CONTENT ---------------------->

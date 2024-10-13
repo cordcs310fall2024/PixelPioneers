@@ -42,24 +42,23 @@
 
 <!-- -------------------- MAIN CONTENT ---------------------->
 <main>
-    <h1>Members List</h1>
-    <ol id="List">
-        <li>
-            <img src="ferret1.jpg" alt="Member 1">
-            <span>Member 1</span>
-            <div class="actions">
-                <button><a href="adminMemberEdit.html">Edit</a></button>
-                <button>Delete</button>
-            </div>
-        </li>
-        <!-- add more list items as needed -->
-    </ol>
-    <div class="add">
-        <a href="addMember.html">
-            <button>Add Member</button>
-          </a>
+    <div id="editForm" class="editFormEvent"> 
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
         
-      </div>
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+        
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        
+            <label for="image">Upload Image:</label><br>
+            <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </main>
 
 <!-- -------------------- JAVASCRIPT ---------------------->

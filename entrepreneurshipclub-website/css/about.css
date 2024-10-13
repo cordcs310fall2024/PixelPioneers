@@ -24,15 +24,14 @@ h1 {
     max-width: 1000px;
     margin: 0 auto;
     height: 100vh; 
-    min-width: 700px;
 }
 
 /* --------------------CONTAINER 1-------------------- */
 .left1 {
     position: absolute;
     top: 10vh;
-    right: 300px;
-    width: 100%;
+    right: 15vw;
+    width: 50vw;
     height: 35vw;
     background-color: #fff0d4;
     padding: 3vh;
@@ -44,10 +43,9 @@ h1 {
 .right1 {
     position: absolute;
     top: 20vh;
-    left: 500px; 
-    width: 70%;
+    left: 30vw; 
+    width : 33vw;
     height : 33vw;
-    min-width: 200px;
     background-color: #6f1d46;
     padding: 3vw;
     border-radius: 0.25vw;
@@ -56,7 +54,6 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center; 
-
 }
 
 .left1 h1 {
@@ -228,5 +225,3 @@ h1 {
     width: 30vw;
     height: 30vw;
 }
-
-
