@@ -10,13 +10,13 @@ html, body {
 /* ----- HEADER STYLES ----- */
 .header {
     background-color: #6f1d46;
-    position: fixed;
     width: 100%;
     color: white;
     justify-content: space-between;
     z-index: 9999;
     align-items: center;
     padding: 10px 0; 
+    height: 100px;
     
 }
 
@@ -122,7 +122,7 @@ nav ul li a:hover {
 .sidebarMenuInner li ul li {
     opacity: 0; 
     transform: translateX(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease; 
+    transition: opacity 0.3s , transform 0.5s ; 
     padding-left: 30px; 
 }
 
