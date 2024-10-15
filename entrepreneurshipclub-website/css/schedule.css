@@ -1,0 +1,65 @@
+
+        /* CSS to style the buttons and the layout */
+        body {
+            display: flex; /* Use flexbox for layout */
+            justify-content:left; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default body margin */
+            background-color: #ecd0ec; /* Optional: light gray background for contrast */
+        }
+
+        /* Container for the description */
+        .description-box {
+            background-color: rgb(56, 53, 11); /* Green background for the description box */
+            color: white; /* Text color */
+            padding: 20px; /* Padding around the text */
+            margin: 20px 0; /* Space between the description box and other elements */
+            width: 80%; /* Width of the description box */
+            max-width: 600px; /* Max width to keep it manageable on larger screens */
+            border-radius: 8px; /* Rounded corners */
+            text-align: center; /* Center the text within the box */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add slight shadow */
+            transform: translate(400px,-480px);
+            display: flex;
+            
+        }
+        /*Container for the buttons*/
+
+        .button-container {
+            background-color: #e0ac2c; /* Blue background for the container */
+            padding: 20px; /* Padding around the buttons */
+            border-radius: 8px; /* Rounded corners for the container */
+            display: flex; /* Use flexbox in the container */
+            flex-direction: column; /* Arrange buttons in a column */
+            justify-content: space-between;
+            align-items: center; /* Center the buttons horizontally */
+            transform: translate(-596px,-200px);
+           
+        }   
+
+        .button {
+            background-color: #6f1d46; /* Sets the background color to Concordia maroon  */
+            color: white; /* Sets the text color to white */
+            border: none; /* Removes the border */
+            padding: 10px 20px; /* Adds padding around the text */
+            margin: 10px 0; /* Adds vertical spacing between buttons */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+            font-size: 16px; /* Increases the font size */
+            border-radius: 5px; /* Adds rounded corners */
+            width: 100px; /* Sets a fixed width for buttons */
+        }
+
+         /* Label styling */
+        .button-label {
+            font-size: 20px; /* Increased font size for the label */
+            color: white; /* White text color */
+            margin-bottom: 15px; /* Space below the label */
+            text-align: center; /* Center the text */
+        }
+
+        /* Make the container a column */
+        div {
+            display: flex; /* Use flexbox in the container */
+            flex-direction: column; /* Arrange items in a column */
+        }
