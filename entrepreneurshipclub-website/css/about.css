@@ -13,6 +13,7 @@ h1 {
     color:  #6f1d46;
     text-align: center;
     margin: 5vh auto; 
+    margin-bottom: 100px;
     padding: 0 13vw; 
     font-weight: 200;
     letter-spacing: 0.2vw;
@@ -23,37 +24,43 @@ h1 {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    height: 100vh; 
+    height: 80vh; 
+    display: flex;
+    margin-bottom: 100px;
+    
 }
 
 /* --------------------CONTAINER 1-------------------- */
 .left1 {
-    position: absolute;
-    top: 10vh;
-    right: 15vw;
-    width: 50vw;
-    height: 35vw;
+    margin-bottom: 50px;
     background-color: #fff0d4;
     padding: 3vh;
-    border-radius: 0.25vw;
+    border-radius: 10px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    flex: 1;
+    z-index: 1;
+
     
 }
 
 .right1 {
-    position: absolute;
-    top: 20vh;
-    left: 30vw; 
-    width : 33vw;
-    height : 33vw;
+    margin-top: 10vh;
+    margin-left: -100px;
     background-color: #6f1d46;
     padding: 3vw;
-    border-radius: 0.25vw;
+    border-radius: 10px;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    z-index: 2;
 }
 
 .left1 h1 {
@@ -65,7 +72,7 @@ h1 {
 .left1 p {
     text-align: left;
     margin: 2vh 0;
-    font-size: 1.5rem;
+    font-size: calc(10px + 1vw);
     line-height: 1.5;
     padding-right: 20vw; 
     font-weight: 20;
@@ -73,38 +80,41 @@ h1 {
 }
 
 #ferret1 {
-    width: 30vw;
-    height: 30vw;
+    width: 50%;
+    height: 100%; 
 }
-
 
 /* --------------------CONTAINER 2-------------------- */
 .left2 {
-    position: absolute;
-    top: 10vh;
-    left: -10vw;
-    right: 20vw; 
-    min-height: 60vh;
-    background-color: #6f1d46;
+    margin-bottom: 50px;
+    background-color: #fff0d4;
     padding: 3vh;
-    border-radius: 0.25vw;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    flex: 1;
+    z-index: 1;
+
+    
+}
+
+.right2 {
+    margin-top: 100px;
+    margin-left: -100px;
+    background-color: #6f1d46;
+    padding: 3vw;
+    border-radius: 10px;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
-}
-
-.right2 {
-    position: absolute;
-    top: 20vh;
-    left: 30vw; 
-    right: -10vw; 
-    min-height: 60vh;
-    background-color: #fff0d4;
-    padding: 3vh;
-    border-radius: 0.25vw;
-    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    z-index: 2;
 }
 
 .left2 h1 {
@@ -116,7 +126,7 @@ h1 {
 .left2 p {
     text-align: left;
     margin: 2vh 0;
-    font-size: 1.5rem;
+    font-size: calc(10px + 1vw);
     line-height: 1.5;
     padding-right: 20vw; 
     font-weight: 20;
@@ -124,37 +134,42 @@ h1 {
 }
 
 #ferret2 {
-    width: 30vw;
-    height: 30vw;
+    width: 50%;
+    height: 100%; 
 }
+
 
 /* --------------------CONTAINER 3-------------------- */
 .left3 {
-    position: absolute;
-    top: 10vh;
-    left: -10vw;
-    right: 20vw; 
-    min-height: 60vh;
-    background-color: #fff0d4;;
+    margin-bottom: 50px;
+    background-color: #fff0d4;
     padding: 3vh;
-    border-radius: 0.25vw;
+    border-radius: 10px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    flex: 1;
+    z-index: 1;
+
+    
 }
 
 .right3 {
-    position: absolute;
-    top: 20vh;
-    left: 30vw; 
-    right: -10vw; 
-    min-height: 60vh;
+    margin-top: 100px;
+    margin-left: -100px;
     background-color: #6f1d46;
-    padding: 3vh;
-    border-radius: 0.25vw;
+    padding: 3vw;
+    border-radius: 10px;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    z-index: 2;
 }
 
 .left3 h1 {
@@ -166,43 +181,50 @@ h1 {
 .left3 p {
     text-align: left;
     margin: 2vh 0;
-    font-size: 1.5rem;
+    font-size: calc(10px + 1vw);
     line-height: 1.5;
     padding-right: 20vw; 
     font-weight: 20;
     letter-spacing: 0.1vw;
 }
+
 #ferret3 {
-    width: 30vw;
-    height: 30vw;
+    width: 50%;
+    height: 100%; 
 }
+
+
 /* --------------------CONTAINER 4-------------------- */
 .left4 {
-    position: absolute;
-    top: 10vh;
-    left: -10vw;
-    right: 20vw; 
-    min-height: 60vh;
-    background-color: #6f1d46;
+    margin-bottom: 50px;
+    background-color: #fff0d4;
     padding: 3vh;
-    border-radius: 0.25vw;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    flex: 1;
+    z-index: 1;
+
+    
+}
+
+.right4 {
+    margin-top: 100px;
+    margin-left: -100px;
+    background-color: #6f1d46;
+    padding: 3vw;
+    border-radius: 10px;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
-}
-
-.right4 {
-    position: absolute;
-    top: 20vh;
-    left: 30vw; 
-    right: -10vw; 
-    min-height: 60vh;
-    background-color: #fff0d4;
-    padding: 3vh;
-    border-radius: 0.25vw;
-    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    z-index: 2;
 }
 
 .left4 h1 {
@@ -214,7 +236,7 @@ h1 {
 .left4 p {
     text-align: left;
     margin: 2vh 0;
-    font-size: 1.5rem;
+    font-size: calc(10px + 1vw);
     line-height: 1.5;
     padding-right: 20vw; 
     font-weight: 20;
@@ -222,6 +244,9 @@ h1 {
 }
 
 #ferret4 {
-    width: 30vw;
-    height: 30vw;
+    width: 50%;
+    height: 100%; 
 }
+
+
+

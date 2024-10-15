@@ -14,52 +14,50 @@ html, body {
    width: 100%;
    color: white;
    align-items: center;
-   padding: 10px 20px; 
+   padding: 10px 20px;
    z-index: 9998;
-   height: 10vh;
+   height: 100px;
    display: flex;
-   justify-content: space-between; /* Ensures logo is on the left and the nav links are positioned properly */
+   justify-content: space-between; 
    margin: 0 auto;
    max-width: 100%;
    box-shadow: none;
    overflow: hidden;
+   padding-right: 5vw;
 }
 
-#leftHeader{
-
+/* Left side of the header */
+#leftHeader {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start; 
+   flex: 1;
 }
 
-#rightHeader{
-   
+/* Right side of the header */
+#rightHeader {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   flex: 1;
 }
 
 /* -----LOGO----- */
 .header-logo {
-   height: auto;
+   height: 10vh;
    max-height: 100px;
    width: auto;
-   margin-bottom: -10px;
-   /* The logo stays on the left side */
+   margin-left: -1vw;
 }
 
 /* ----- NAVIGATION STYLES ----- */
 nav {
    display: flex;
    align-items: center;
-   height: 100%;
-   justify-content: center; /* This centers the links in the available space */
-   flex-grow: 1; /* Ensures the nav section grows to take the central space */
+   justify-content: flex-end; 
+   flex-grow: 1; 
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
 
 nav ul {
    list-style: none;
@@ -105,9 +103,10 @@ input[type="checkbox"]:not(:checked) ~ nav ul {
 /* ----- MAIN CONTENT STYLES ----- */
 .main {
    margin: 0 auto;
+   
    display: block;
    height: 100%;
-   margin-top: 120px; /* adjusts for fixed header */
+   margin-top: 10vh; 
 }
 
 
@@ -162,10 +161,10 @@ input[type="checkbox"]:not(:checked) ~ nav ul {
 .sidebarMenuInner > li a {
    color: #fff;
    text-decoration: none;
-   font-size: 1.8rem;
+   font-size: calc(20px + 1vh);
    display: block;
    width: 100%; 
-   padding: 10px 0;
+   padding: 1vh  0;
    text-align: left;
    transition: color 0.3s ease;
 }
@@ -175,26 +174,31 @@ input[type="checkbox"]:not(:checked) ~ nav ul {
    padding: 0;
    margin: 0;
    list-style: none;
-   background-color: #6f1d46; /* Background matches the sidebar */
+   background-color: #6f1d46; 
 }
 
 .sidebarMenuInner li ul li {
    padding-left: 30px;
-   padding-top: 8px;
-   padding-bottom: 8px;
+   padding-top:0.5vh;
+   padding-bottom:0.5vh;
    transition: background 0.3s ease;
 }
 
 /* Inner links hover effect */
 .sidebarMenuInner li ul li:hover {
-   background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+   background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .sidebarMenuInner li ul li a {
-   font-size: 1.5rem;
+   font-size: calc(15px + 1vh);
    color: #fff;
    text-decoration: none;
    transition: color 0.3s ease;
+}
+.sidebarMenuInner li ul li a i {
+   margin-left: -10px;
+   margin-right: 10px; 
+   font-size: 1.5rem;  
 }
 
 /* Inner links hover effect */
@@ -214,23 +218,23 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 }
 
 /* Sidebar Toggle Icon Styles */
+
 .sidebarIconToggle {
    transition: all 0.3s;
    box-sizing: border-box;
-   cursor: pointer;
    position: absolute;
    z-index: 9999;
-   top: 22px;
+   top: 37px;
    right: 15px;
-   height: 22px;
-   width: 22px;
+   height: 35px;
+   width: 35px;
 }
 
 .spinner {
    transition: all 0.3s;
    box-sizing: border-box;
    position: absolute;
-   height: 3px;
+   height: 4px;
    width: 100%;
    background-color: #fff;
 }
@@ -240,7 +244,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: relative;
    float: left;
-   margin-top: 3px;
+   margin-top: 6px;
 }
 
 .diagonal.part-1 {
@@ -255,7 +259,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: relative;
    float: left;
-   margin-top: 3px;
+   margin-top: 6px;
 }
 
 /* Toggle Animations */
@@ -265,20 +269,20 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
 
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
    transform: rotate(135deg);
-   margin-top: 8px;
+   margin-top: 12px;
 }
 
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
    transform: rotate(-135deg);
-   margin-top: -9px;
+   margin-top: -14px;  /* needs to be more for some reason */
 }
 
 /* Admin Login Styles */
 .adminLogin {
    position: absolute;
-   bottom: 100px;
+   bottom: 12vh;
    right: 10px;
-   font-size: 1.2rem;
+   font-size: calc(12px + 1vh);
 }
 
 .adminLogin a {
@@ -288,11 +292,22 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .adminLogin a:hover {
-   border-bottom: 3px solid #eaa82a;
+   color: #eaa82a;
 }
 
-.sidebarMenuInner li ul li a i {
-   margin-left: -10px;
-   margin-right: 10px; /* Adds space between the icon and the text */
-   font-size: 1.5rem;  /* Adjust icon size if needed */
+
+/* Default nav link color */
+#mainNav ul li a {
+   opacity: 1;
+   color: white;
+   pointer-events: auto;
 }
+
+/* Change nav link color when sidebar is open */
+#mainNav.sidebar-open ul li a {
+   opacity: 1;
+   color: white;
+   pointer-events: auto;
+}
+
+
