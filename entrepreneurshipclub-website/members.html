@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Project</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/members.css">
+</head>
+<body>
+
+<!---------------------- HEADER ---------------------->
+
+<!-- header.php -->
+<header class="header">
+    <nav>
+        <a href="index.html">
+            <img src="img/ConcoHeader.jpg" class="header-logo">
+        </a>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+ </header>
+ 
+ <!-- Sidebar -->
+ <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+ <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+ </label>
+ <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+        <li>
+            <a href="about.html">About</a>
+            <ul>
+                <li><a href="#"><i class="bi bi-person"></i> Members</a></li> <!-- Bootstrap person icon -->
+                <li><a href="#"><i class="bi bi-chat-dots"></i> Cobbertunity</a></li> <!-- Bootstrap chat icon -->
+                <li><a href="#"><i class="bi bi-award"></i> Programs</a></li> <!-- Bootstrap award icon -->
+                <li><a href="#"><i class="bi bi-facebook"></i> Social Media</a></li> <!-- Bootstrap Facebook icon -->
+            </ul>
+        </li>
+        <li>
+            <a href="schedule.html">Schedule</a>
+            <ul>
+                <li><a href="#"><i class="bi bi-calendar-event"></i> Events</a></li> <!-- Bootstrap calendar event icon -->
+                <li><a href="#"><i class="bi bi-clock"></i> Meetings</a></li> <!-- Bootstrap clock icon -->
+            </ul>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="#"><i class="bi bi-person-plus"></i> Join</a></li> <!-- Bootstrap person plus icon -->
+            </ul>
+        </li>
+    </ul>
+    <div class="adminLogin">
+        <a href="admin.html"><i class="bi bi-shield-lock"></i> Admin Login</a> <!-- Bootstrap shield lock icon -->
+    </div>
+</div>
+ 
+<!---------------------- CONTENT ---------------------->
+
+<main>
+    <div class="top-section">
+        <h1>Meet Our Members</h1>
+        <div class="member-btns">
+            <button>Members</button>
+            <button>Executives</button>
+        </div>
+    </div>
+ 
+    <!-- Image Grid -->
+    <div class="member-grid">
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret1.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret2.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret3.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret4.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret5.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret6.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret7.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret1.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret2.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret3.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret4.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+        <div class="member-grid-item">
+            <img src="img/ferrets/ferret5.png">
+            <div class="middle">
+                <div class="memberName">John Doe</div>
+                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+    </div>
+ </main>
+</body>
+</html>

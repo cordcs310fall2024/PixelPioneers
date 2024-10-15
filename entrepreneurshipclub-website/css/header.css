@@ -1,128 +1,298 @@
-
-/* HEADER */
-header {
-    background-color: #6f1d46;
-    padding: 2px;
-    position: fixed;
-    top: 0; 
-    width: 100%;
-    font-size: 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
+/* ----- GENERAL STYLES ----- */
+html, body {
+   overflow-x: hidden;
+   height: 100%;
+   padding: 0;
+   margin: 0;
+   background: #fff;
 }
-.header-image {
-    max-width: 100px;
-    margin-right: 20px;
-    float: left;
+
+/* ----- HEADER STYLES ----- */
+.header {
+   background-color: #6f1d46;
+   position: fixed;
+   width: 100%;
+   color: white;
+   align-items: center;
+   padding: 10px 20px; 
+   z-index: 9998;
+   height: 10vh;
+   display: flex;
+   justify-content: space-between; /* Ensures logo is on the left and the nav links are positioned properly */
+   margin: 0 auto;
+   max-width: 100%;
+   box-shadow: none;
+   overflow: hidden;
+}
+
+#leftHeader{
+
+}
+
+#rightHeader{
+   
+}
+
+/* -----LOGO----- */
+.header-logo {
+   height: auto;
+   max-height: 100px;
+   width: auto;
+   margin-bottom: -10px;
+   /* The logo stays on the left side */
+}
+
+/* ----- NAVIGATION STYLES ----- */
+nav {
+   display: flex;
+   align-items: center;
+   height: 100%;
+   justify-content: center; /* This centers the links in the available space */
+   flex-grow: 1; /* Ensures the nav section grows to take the central space */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    margin-left: auto; 
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
+
+nav ul {
+   list-style: none;
+   display: flex;
+   font-size: 2rem;
+   align-items: center;
+   justify-content: center;
+ 
+}
+
+
 
 nav ul li {
-    margin-left: 20px;
+   margin-left: 20px;
 }
+
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
+   color: white;
+   text-decoration: none;
+   padding: 10px;
 }
+
 
 nav ul li a:hover {
-    font-size: 20px;
-    border-bottom: 3px solid #eaa82a;
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+   color: #eaa82a;
+}
+
+/* ----- HIDING NAVBAR LINKS WHEN SIDEBAR IS OPEN ----- */
+input[type="checkbox"]:checked ~ nav ul {
+   color: yellow; 
+   pointer-events: none; 
+}
+
+/* Show links when the sidebar is closed */
+input[type="checkbox"]:not(:checked) ~ nav ul {
+   color: green; 
+   pointer-events: auto; 
+}
+
+/* ----- MAIN CONTENT STYLES ----- */
+.main {
+   margin: 0 auto;
+   display: block;
+   height: 100%;
+   margin-top: 120px; /* adjusts for fixed header */
 }
 
 
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #6f1d46;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 10000; 
+/* Inner content */
+.mainInner {
+   display: table;
+   height: 100%;
+   width: 100%;
+   text-align: center;
 }
 
-.sidebar li {
-    list-style: none;
-    font-size: 24px;   
-    color: white;     
-    padding: 8px 30px;
+
+.mainInner div {
+   display: table-cell;
+   vertical-align: middle;
+   font-size: 3em;
+   font-weight: bold;
+   letter-spacing: 1.25px;
 }
 
-.sidebar li a {
-    color: white;     
-    text-decoration: none;
-    font-size: 24px;  
+/* ----- SIDEBAR STYLES (UPDATED) ----- */
+#sidebarMenu {
+   height: 100%;
+   position: fixed;
+   right: 0;
+   width: 300px;
+   margin-top: 10vh;
+   transform: translateX(300px);
+   transition: transform 250ms ease-in-out;
+   background-color: #6f1d46;
+   z-index: 9999;
+   
 }
 
-.sidebar li a:hover {
-    border-bottom: 3px solid #eaa82a;
-    margin-bottom: 2px; 
+/* Sidebar inner styles */
+.sidebarMenuInner {
+   margin: 0;
+   padding: 0;
 }
 
-.sidebar div {
-    padding: 8px 8px 8px 30px;
-    font-size: 30px;
-    display: block;
-    transition: 0.5s;
-    cursor: pointer;
+/* Style for the outer links */
+.sidebarMenuInner > li {
+   list-style: none;
+   color: #fff;
+   padding: 15px 25px;
+   position: relative;
+   margin-bottom: 10px; 
+   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    left: 25px;
-    font-size: 30px;
-    padding: 0;
-    border: none;
+/* Links within the list */
+.sidebarMenuInner > li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 1.8rem;
+   display: block;
+   width: 100%; 
+   padding: 10px 0;
+   text-align: left;
+   transition: color 0.3s ease;
 }
 
-.openbtn {
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #6f1d46;
-    padding: 10px;
-    border: none;
-    color: white;
+/* Inner links (sub-menu) styling */
+.sidebarMenuInner li ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   background-color: #6f1d46; /* Background matches the sidebar */
 }
 
-.sidebar .closebtn {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-    font-size: 40px; 
-    color: white;
-    padding: 0;
-    border: none;
-    cursor: pointer;
+.sidebarMenuInner li ul li {
+   padding-left: 30px;
+   padding-top: 8px;
+   padding-bottom: 8px;
+   transition: background 0.3s ease;
 }
 
-.sidebar .admin-link {
-    position: absolute;
-    bottom: 0.1vh;
-    right: 0.1vw;
-    font-size: 1.2rem;
-    
+/* Inner links hover effect */
+.sidebarMenuInner li ul li:hover {
+   background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
 }
 
-.sidebar .admin-link a {
-    color: white;
-    text-decoration: none;
+.sidebarMenuInner li ul li a {
+   font-size: 1.5rem;
+   color: #fff;
+   text-decoration: none;
+   transition: color 0.3s ease;
 }
 
-.sidebar .admin-link a:hover {
-    border-bottom: 3px solid #eaa82a;
+/* Inner links hover effect */
+.sidebarMenuInner li ul li a:hover {
+   color: #eaa82a;
+}
+
+/* Sidebar Toggle */
+input[type="checkbox"] {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   display: none;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+   transform: translateX(0);
+}
+
+/* Sidebar Toggle Icon Styles */
+.sidebarIconToggle {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   cursor: pointer;
+   position: absolute;
+   z-index: 9999;
+   top: 22px;
+   right: 15px;
+   height: 22px;
+   width: 22px;
+}
+
+.spinner {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   position: absolute;
+   height: 3px;
+   width: 100%;
+   background-color: #fff;
+}
+
+.horizontal {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   position: relative;
+   float: left;
+   margin-top: 3px;
+}
+
+.diagonal.part-1 {
+   position: relative;
+   transition: all 0.3s;
+   box-sizing: border-box;
+   float: left;
+}
+
+.diagonal.part-2 {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   position: relative;
+   float: left;
+   margin-top: 3px;
+}
+
+/* Toggle Animations */
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+   opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+   transform: rotate(135deg);
+   margin-top: 8px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+   transform: rotate(-135deg);
+   margin-top: -9px;
+}
+
+/* Admin Login Styles */
+.adminLogin {
+   position: absolute;
+   bottom: 100px;
+   right: 10px;
+   font-size: 1.2rem;
+}
+
+.adminLogin a {
+   color: white;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+}
+
+.adminLogin a:hover {
+   border-bottom: 3px solid #eaa82a;
+}
+
+.sidebarMenuInner li ul li a i {
+   margin-left: -10px;
+   margin-right: 10px; /* Adds space between the icon and the text */
+   font-size: 1.5rem;  /* Adjust icon size if needed */
 }
