@@ -1,154 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"> 
-    <link rel="stylesheet" href="css/header.css"> 
-    <link rel="stylesheet" href="css/about.css"> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Project</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
-
 <!---------------------- HEADER ---------------------->
-<header>
-    <a href="/index.html">
-        <img src="img/ConcoHeader.jpg" alt="Conco Header" class="header-image">
-    </a>
+
+<!-- header.php???? -->
+<header class="header">
     <nav>
+        <div id = "leftHeader">
+                <a href="index.html"> <img src="img/ConcoHeader.jpg" class="header-logo"></a>
+        </div>
+        </div id = "rightHeader">
         <ul>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+    </div>
     </nav>
-    <button class="openbtn" onclick="openNav()">
-        <i class="bi bi-list "></i>
-    </button>
-</header>
-
-<div id="mySidebar" class="sidebar">
-    <div class="closebtn" onclick="closeNav()">×</div>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="schedule.html">Schedule</a></li>
-    <div class="admin-link">
-        <a href="login.html">Admin Login</a>
+ </header>
+ 
+ <!-- Sidebar -->
+ <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+ <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+ </label>
+ <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+        <li>
+            <a href="about.html">About</a>
+            <ul>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="#">Cobbertunity</a></li>
+                <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/">Programs</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="schedule.html">Schedule</a>
+            <ul>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Meetings</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="adminLogin">
+        <a href="admin.html">Admin Login</a>
     </div>
-</div>
-
-
+ </div>
+ 
 <!---------------------- CONTENT ---------------------->
-    <main>
-        <h1>About Us</h1>
-        <h1 id = "aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h1>
-    </main>
+<main>
+    <h1>About Us</h1>
+    <h1 id = "aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h1>
+</main>
 <!---------------------- CONTAINER 1 ---------------------->
-    <div class = "container">
-        <div class = "left1">
-            <div class = "content1">
-                <h1>Our Members</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <div class = "a">
-                    <a href = "#" class = "btn">Meet Our Members</a>
-                    </div>
-            </div>
-        </div>
-        <div class = "right1">
-            <div class ="image">
-            <img id = "ferret1" src="img/ferrets/ferret1.png">
-            </div>
-        </div>
-    </div>
+   <div class = "container">
+       <div class = "left1">
+           <div class = "content1">
+               <h1>Our Members</h1>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               </p>
+               <div class = "a">
+                   <a href = "members.html" class = "btn">Meet Our Members</a>
+                   </div>
+           </div>
+       </div>
+       <div class = "right1">
+           <div class ="image">
+           <img id = "ferret1" src="img/ferrets/ferret1.png">
+           </div>
+       </div>
+   </div>
 <!---------------------- CONTAINER 2 ---------------------->
-    <div class = "container">
-        
-        <div class = "left2">
-            <div class ="image">
-            <img id = "ferret2" src="img/ferrets/ferret2.png">
-            </div>
-        </div>
+   <div class = "container">
+      
+       <div class = "left2">
+           <div class ="image">
+           <img id = "ferret2" src="img/ferrets/ferret2.png">
+           </div>
+       </div>
 
-        <div class = "right2">
-            <div class = "content2">
-                <h1>Businesses</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <div class = "b">
-                    <a href = "#" class = "btn">Our Businesses</a>
-                    </div>
-            </div>
-        </div>
-    </div>
+
+       <div class = "right2">
+           <div class = "content2">
+               <h1>Businesses</h1>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               </p>
+               <div class = "b">
+                   <a href = "#" class = "btn">Our Businesses</a>
+                   </div>
+           </div>
+       </div>
+   </div>
 <!---------------------- CONTAINER 3 ---------------------->
-    <div class = "container">
-        
-        <div class = "right3">
-            <div class ="image">
-            <img id = "ferret3" src="img/ferrets/ferret3.png">
-            </div>
-        </div>
+   <div class = "container">
+      
+       <div class = "right3">
+           <div class ="image">
+           <img id = "ferret3" src="img/ferrets/ferret3.png">
+           </div>
+       </div>
 
-        <div class = "left3">
-            <div class = "content3">
-                <h1>Businesses</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <div class = "c">
-                    <a href = "#" class = "btn">Our Businesses</a>
-                    </div>
-            </div>
-        </div>
-    </div>
-<!---------------------- CONTAINER 4 ---------------------->  
-    <div class = "container">
-        
-        <div class = "left4">
-            <div class ="image">
-            <img id = "ferret4" src="img/ferrets/ferret4.png">
-            </div>
-        </div>
 
-        <div class = "right4">
-            <div class = "content4">
-                <h1>Businesses</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <div class = "c">
-                    <a href = "#" class = "btn">Our Businesses</a>
-                    </div>
-            </div>
-        </div>
-    </div>
-<!---------------------- JavaScript ---------------------->
-    <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-    
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
-        }
-      </script>
+       <div class = "left3">
+           <div class = "content3">
+               <h1>Businesses</h1>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               </p>
+               <div class = "c">
+                   <a href = "#" class = "btn">Our Businesses</a>
+                   </div>
+           </div>
+       </div>
+   </div>
+<!---------------------- CONTAINER 4 ----------------------> 
+   <div class = "container">
+      
+       <div class = "left4">
+           <div class ="image">
+           <img id = "ferret4" src="img/ferrets/ferret4.png">
+           </div>
+       </div>
+
+
+       <div class = "right4">
+           <div class = "content4">
+               <h1>Businesses</h1>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               </p>
+               <div class = "c">
+                   <a href = "#" class = "btn">Our Businesses</a>
+                   </div>
+           </div>
+       </div>
+   </div>
 
 </body>
 </html>
