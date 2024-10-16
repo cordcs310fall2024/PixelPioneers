@@ -97,6 +97,16 @@ h1 {
     justify-content: flex-start; /* Aligns the button to the right */
 }
 
+.pageTotal {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.openSidebarMenu:checked ~ .pageTotal {
+    width: calc(100% - 250px); /* Adjust this value to match your sidebar width */
+    margin-right: 250px; /* Shift content to the right to accommodate the sidebar */
+}
+
 
 .buttonMembers{
     display: flex;
