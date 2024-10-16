@@ -1,13 +1,13 @@
 h1 {
-    font-size: 3rem;
-    color:  #6f1d46;
+    font-size:calc(40px + 1vw);
+    color: #6f1d46;
     text-align: center;
-    margin: 5vh 0; 
+    padding-top: 18vh;
     font-weight: 200;
-    letter-spacing: 0.2vw; 
-    padding-top: 12vh;
+    letter-spacing: 0.2vw;
+    z-index: 1;
 }
-
+ 
 #aboutDescription {
     font-size: 2rem;
     color:  #6f1d46;
@@ -21,232 +21,469 @@ h1 {
 
 .container {
     position: relative; 
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1150px;
     margin: 0 auto;
-    height: 80vh; 
     display: flex;
+    flex-wrap: wrap; 
+    transition: transform 0.3s ease;
     margin-bottom: 100px;
-    
 }
 
-/* --------------------CONTAINER 1-------------------- */
-.left1 {
-    margin-bottom: 50px;
+.container:hover {
+    transform: scale(1.06) translate(0, 10px); 
+}
+
+/* --------------------CONTAINER 1 MEMBERS-------------------- */
+.contentMembers {
     background-color: #fff0d4;
-    padding: 3vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
     border-radius: 10px;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    flex: 1;
     z-index: 1;
-
-    
+    flex: 1;
+    flex-basis: 55%; 
 }
 
-.right1 {
-    margin-top: 10vh;
+.imageContainerMembers {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     margin-left: -100px;
     background-color: #6f1d46;
-    padding: 3vw;
+    padding: 1vw;
     border-radius: 10px;
     z-index: 2;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
     display: flex;
-    justify-content: flex-end;
     flex: 1;
     z-index: 2;
+    flex-basis: 45%; 
 }
 
-.left1 h1 {
+.contentMembers h1 {
+
     font-size: 3vw; 
-    font-weight: 200;
+    font-weight: 300;
     text-align: left;
+    margin-left: 1.5vw;
+    padding-top: 8vh;
 }
 
-.left1 p {
+.contentMembers p {
     text-align: left;
     margin: 2vh 0;
-    font-size: calc(10px + 1vw);
+    margin-left: 1.5vw;
+    font-size: calc(10px + 0.75vw);
     line-height: 1.5;
-    padding-right: 20vw; 
+    padding-right: 110px; 
     font-weight: 20;
     letter-spacing: 0.1vw;
 }
 
 #ferret1 {
-    width: 50%;
+    width: 100%;
     height: 100%; 
+    object-fit: cover; /* image covers the container */
+    border-radius: 10px;
 }
 
-/* --------------------CONTAINER 2-------------------- */
-.left2 {
-    margin-bottom: 50px;
+.buttonMembersAlign {
+    display: flex;
+    justify-content: flex-start; /* Aligns the button to the right */
+}
+
+
+.buttonMembers{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: calc(10px + 1vw);
+    font-weight: 10px;
+    padding: 0.5vw;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    min-width: 300px;
+    width: 13vw;
+    height: 5vw;
+    text-align: center;
+    color:  #eaa82a;
+    background-color: #6f1d46;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+
+}
+
+.buttonMembers:hover{
+    background-color:  #eaa82a;
+    color: #6f1d46;
+}
+
+
+/* --------------------CONTAINER 2 COBBERTUNITY -------------------- */
+.contentCobbertunity {
     background-color: #fff0d4;
-    padding: 3vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
     border-radius: 10px;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    flex: 1;
     z-index: 1;
-
-    
+    flex: 1;
+    flex-basis: 55%;   
 }
 
-.right2 {
-    margin-top: 100px;
-    margin-left: -100px;
+.imageCobbertunity {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: -100px;
     background-color: #6f1d46;
-    padding: 3vw;
+    padding: 1vw;
     border-radius: 10px;
     z-index: 2;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
     display: flex;
-    justify-content: flex-end;
     flex: 1;
     z-index: 2;
+    flex-basis: 45%;   
 }
 
-.left2 h1 {
+
+.contentCobbertunity h1 {
+
     font-size: 3vw; 
-    font-weight: 200;
-    text-align: left;
+    font-weight: 300;
+    text-align: right;
+    margin-right: 1.5vw;
+    padding-top: 8vh;
 }
 
-.left2 p {
-    text-align: left;
+.contentCobbertunity p {
+    text-align: right;
     margin: 2vh 0;
-    font-size: calc(10px + 1vw);
+    margin-right: 1.5vw;
+    font-size: calc(10px + 0.75vw);
     line-height: 1.5;
-    padding-right: 20vw; 
+    padding-left: 110px; 
     font-weight: 20;
     letter-spacing: 0.1vw;
 }
 
 #ferret2 {
-    width: 50%;
+    width: 100%;
     height: 100%; 
+    object-fit: cover; /* image covers the container */
+    border-radius: 10px;
+}
+
+.buttonCobbertunityAlign {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+}
+
+.buttonCobbertunity{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: calc(10px + 1vw);
+    font-weight: 10px;
+    padding: 0.5vw;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    min-width: 300px;
+    width: 13vw;
+    height: 5vw;
+    text-align: center;
+    color:  #eaa82a;
+    background-color: #6f1d46;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    
+
+}
+
+.buttonCobbertunity:hover{
+    background-color:  #eaa82a;
+    color: #6f1d46;
 }
 
 
-/* --------------------CONTAINER 3-------------------- */
-.left3 {
-    margin-bottom: 50px;
+/* --------------------CONTAINER 3 PROGRAMS -------------------- */
+.contentPrograms {
     background-color: #fff0d4;
-    padding: 3vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
     border-radius: 10px;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    flex: 1;
     z-index: 1;
-
-    
+    flex: 1;
+    flex-basis: 55%;   
 }
 
-.right3 {
-    margin-top: 100px;
+.imagePrograms {
+    margin-top:5vh;
+    margin-bottom: 5vh;
     margin-left: -100px;
     background-color: #6f1d46;
-    padding: 3vw;
+    padding: 1vw;
     border-radius: 10px;
     z-index: 2;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
     display: flex;
-    justify-content: flex-end;
     flex: 1;
     z-index: 2;
+    flex-basis: 45%;   
 }
 
-.left3 h1 {
+
+.contentPrograms h1 {
+
     font-size: 3vw; 
-    font-weight: 200;
+    font-weight: 300;
     text-align: left;
+    margin-left: 1.5vw;
+    padding-top: 8vh;
 }
 
-.left3 p {
+.contentPrograms p {
     text-align: left;
     margin: 2vh 0;
-    font-size: calc(10px + 1vw);
+    margin-left: 1.5vw;
+    font-size: calc(10px + 0.75vw);
     line-height: 1.5;
-    padding-right: 20vw; 
+    padding-right: 110px; 
     font-weight: 20;
     letter-spacing: 0.1vw;
 }
 
 #ferret3 {
-    width: 50%;
+    width: 100%;
     height: 100%; 
+    object-fit: cover; /* image covers the container */
+    border-radius: 10px;
+}
+
+.buttonProgramsAlign {
+    display: flex;
+    justify-content: flex-start; /* Aligns the button to the right */
 }
 
 
-/* --------------------CONTAINER 4-------------------- */
-.left4 {
-    margin-bottom: 50px;
+.buttonPrograms{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: calc(10px + 1vw);
+    font-weight: 10px;
+    padding: 0.5vw;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    min-width: 300px;
+    width: 13vw;
+    height: 5vw;
+    text-align: center;
+    color:  #eaa82a;
+    background-color: #6f1d46;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    
+
+}
+
+.buttonPrograms:hover{
+    background-color:  #eaa82a;
+    color: #6f1d46;
+}
+
+
+
+/* --------------------CONTAINER 4 CONNECT -------------------- */
+.contentConnect {
     background-color: #fff0d4;
-    padding: 3vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
     border-radius: 10px;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    flex: 1;
     z-index: 1;
-
-    
+    flex: 1;
+    flex-basis: 55%;   
 }
 
-.right4 {
-    margin-top: 100px;
-    margin-left: -100px;
+.imageConnect {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: -100px;
     background-color: #6f1d46;
-    padding: 3vw;
+    padding: 1vw;
     border-radius: 10px;
     z-index: 2;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; 
     display: flex;
-    justify-content: flex-end;
     flex: 1;
     z-index: 2;
+    flex-basis: 45%;   
 }
 
-.left4 h1 {
+
+.contentConnect h1 {
+
     font-size: 3vw; 
-    font-weight: 200;
-    text-align: left;
+    font-weight: 300;
+    text-align: right;
+    margin-right: 1.5vw;
+    padding-top: 8vh;
 }
 
-.left4 p {
-    text-align: left;
+.contentConnect p {
+    text-align: right;
     margin: 2vh 0;
-    font-size: calc(10px + 1vw);
+    margin-right: 1.5vw;
+    font-size: calc(10px + 0.75vw);
     line-height: 1.5;
-    padding-right: 20vw; 
+    padding-left: 110px; 
     font-weight: 20;
     letter-spacing: 0.1vw;
 }
 
 #ferret4 {
-    width: 50%;
+    width: 100%;
     height: 100%; 
+    object-fit: cover; /* image covers the container */
+    border-radius: 10px;
+}
+
+.buttonConnectAlign {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+}
+.buttonConnect{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: calc(10px + 1vw);
+    font-weight: 10px;
+    padding: 0.5vw;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    min-width: 300px;
+    width: 13vw;
+    height: 5vw;
+    text-align: center;
+    color:  #eaa82a;
+    background-color: #6f1d46;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    
+
+}
+
+.buttonConnect:hover{
+    background-color:  #eaa82a;
+    color: #6f1d46;
 }
 
 
+/* --------------------CONTAINER 5 SOCIAL MEDIA -------------------- */
+.contentSocial {
+    background-color: #fff0d4;
+    padding-bottom: 0.5vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    z-index: 1;
+    flex: 1;
+    flex-basis: 55%;   
+}
 
+.imageSocial {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: -100px;
+    background-color: #6f1d46;
+    padding: 1vw;
+    border-radius: 10px;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    display: flex;
+    flex: 1;
+    z-index: 2;
+    flex-basis: 45%;   
+}
+
+
+.contentSocial h1 {
+
+    font-size: 3vw; 
+    font-weight: 300;
+    text-align: left;
+    margin-left: 1.5vw;
+    padding-top: 8vh;
+}
+
+.contentSocial p {
+    text-align: left;
+    margin: 2vh 0;
+    margin-left: 1.5vw;
+    font-size: calc(10px + 0.75vw);
+    line-height: 1.5;
+    padding-right: 110px; 
+    font-weight: 20;
+    letter-spacing: 0.1vw;
+}
+
+#ferret5 {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; /* image covers the container */
+    border-radius: 10px;
+}
+
+.buttonSocialAlign a {
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    font-size: 30px; 
+    color:  #6f1d46;
+    text-decoration: none; 
+    display: flex;
+    justify-content: flex-start; 
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+.buttonSocial {
+    letter-spacing: 2px;
+    color:  #6f1d46;
+}
+
+.bi-instagram {
+    margin-left: 1.5vw; 
+}

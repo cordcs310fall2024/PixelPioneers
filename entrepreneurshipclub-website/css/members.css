@@ -78,6 +78,9 @@ h1 {
     position: relative;
     width: 25vw;
     height: 50vh;
+    border: 2px solid #ababab; 
+    border-radius: 5px; 
+    overflow: hidden; 
 }
 
 .member-grid-item img:hover {
