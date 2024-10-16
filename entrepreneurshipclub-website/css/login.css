@@ -16,10 +16,13 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
-    margin-top: 30vh; /*CHANGED TO MOVE DOWNWARDS ON SCREEN*/
-    transition: transform 0.2s;
     width: 500px;
     text-align: center;
+    position: absolute; /* ABSOLUTE POSITIONING CHANGED */
+    top: 50%; /* CENTER CHANGED */
+    left: 50%; /* CENTER CHANGED */
+    transform: translate(-50%, -50%); /* POSITION CHANGED TO CENTER */
+
 }
 
 h1 {

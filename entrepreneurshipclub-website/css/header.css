@@ -1,221 +1,193 @@
-/* ----- GENERAL STYLES ----- */
 html, body {
    overflow-x: hidden;
    height: 100%;
    padding: 0;
    margin: 0;
-   background: #fff;
+   background: #fff; /* Set a default white background */
 }
 
-/* ----- HEADER STYLES ----- */
+/* ---------- HEADER STYLES ---------- */
 .header {
-   background-color: #6f1d46;
+   background-color: #6f1d46; /* background color */
    position: fixed;
-   width: 100%;
-   color: white;
+   width: 100%; /* full-width header */
+   color: white; /* text color */
+   display: flex; /* flexbox to align elements */
    align-items: center;
-   padding: 10px 20px;
-   z-index: 9998;
-   height: 100px;
-   display: flex;
-   justify-content: space-between; 
-   margin: 0 auto;
-   max-width: 100%;
-   box-shadow: none;
+   justify-content: space-between; /* space between left and right sections */
+   padding: 10px 20px; /* padding for spacing */
+   z-index: 9998; /* header stays on top */
+   height: 100px; /* fixed height */
+   margin: 0 auto; /* centered the header */
+   max-width: 100%; /* doesn't shrik */
+   box-shadow: none; /* remove box-shadow */
    overflow: hidden;
-   padding-right: 5vw;
+   padding-right: 5vw; /* right padding for space between the header and sidebar toggle */
 }
 
-/* Left side of the header */
+/* LOGO */
 #leftHeader {
    display: flex;
    align-items: center;
-   justify-content: flex-start; 
-   flex: 1;
+   justify-content: flex-start; /* align to the left */
+   flex: 1; /* flex to occupy remaining space */
 }
 
-/* Right side of the header */
+/* LINKS */
 #rightHeader {
    display: flex;
    align-items: center;
-   justify-content: flex-end;
-   flex: 1;
+   justify-content: flex-end; /* align to the right */
+   flex: 1; /* occupy remaining space */
+   margin-right: 3vw; /* adjust spacing from the right side */
 }
 
-/* -----LOGO----- */
+/* ----- LOGO STYLES ----- */
+
 .header-logo {
-   height: 10vh;
-   max-height: 100px;
-   width: auto;
+   height: 10vh; /* set height relative */
+   max-height: 100px; /* doesn't grow too large */
+   width: auto; /* maintain aspect ratio */
    margin-left: -1vw;
 }
 
 /* ----- NAVIGATION STYLES ----- */
+
 nav {
    display: flex;
    align-items: center;
-   justify-content: flex-end; 
-   flex-grow: 1; 
+   justify-content: flex-end; /* align to the right */
+   flex-grow: 1; /* allow the nav to take remaining space */
 }
 
-
+/* list for the navigation links */
 nav ul {
    list-style: none;
-   display: flex;
-   font-size: 2rem;
+   display: flex; /* horizontal alignment of items */
+   font-size: 2rem; /* font size */
    align-items: center;
-   justify-content: center;
- 
+   justify-content: center; 
 }
 
-
-
+/* each indivudal list item in the navigation */
 nav ul li {
-   margin-left: 20px;
+   margin-left: 20px; /* spacing between nav items */
 }
 
-
+/* anchor tag styling for navigation links */
 nav ul li a {
-   color: white;
-   text-decoration: none;
-   padding: 10px;
+   color: white; /* text color */
+   text-decoration: none; /* remove underline */
+   padding: 10px; /* padding around each link */
+   transition: all 0.2s ease;
+}
+
+.header nav ul li a:hover {
+   text-decoration: underline; /* remove underline */
+   text-decoration-color: #eaa82a;
+   text-underline-offset: 8px;
 }
 
 
-nav ul li a:hover {
-   font-size: 2rem;
-   margin-bottom: 0.5rem;
-   color: #eaa82a;
-}
+/* ----- SIDEBAR STYLES ----- */
 
-/* ----- HIDING NAVBAR LINKS WHEN SIDEBAR IS OPEN ----- */
-input[type="checkbox"]:checked ~ nav ul {
-   color: yellow; 
-   pointer-events: none; 
-}
-
-/* Show links when the sidebar is closed */
-input[type="checkbox"]:not(:checked) ~ nav ul {
-   color: green; 
-   pointer-events: auto; 
-}
-
-/* ----- MAIN CONTENT STYLES ----- */
-.main {
-   margin: 0 auto;
-   
-   display: block;
-   height: 100%;
-   margin-top: 10vh; 
-}
-
-
-/* Inner content */
-.mainInner {
-   display: table;
-   height: 100%;
-   width: 100%;
-   text-align: center;
-}
-
-
-.mainInner div {
-   display: table-cell;
-   vertical-align: middle;
-   font-size: 3em;
-   font-weight: bold;
-   letter-spacing: 1.25px;
-}
-
-/* ----- SIDEBAR STYLES (UPDATED) ----- */
+/* siderbar container */
 #sidebarMenu {
-   height: 100%;
+   height: 100%; /* full-height sidebar */
    position: fixed;
    right: 0;
-   width: 300px;
-   margin-top: 10vh;
-   transform: translateX(300px);
-   transition: transform 250ms ease-in-out;
-   background-color: #6f1d46;
-   z-index: 9999;
-   
+   width: 300px; /* width */
+   margin-top: 10vh; /* align below the header */
+   transform: translateX(300px); /* initially hidden off-screen */
+   transition: transform 250ms ease-in-out; /* sliding transition */
+   background-color: #6f1d46; /* background color */
+   z-index: 9999; /* sidebar is above other content */
 }
 
-/* Sidebar inner styles */
+/* Inner sidebar content styling */
 .sidebarMenuInner {
    margin: 0;
    padding: 0;
 }
 
-/* Style for the outer links */
+/* outer links (main categories) in the sidebar */
 .sidebarMenuInner > li {
-   list-style: none;
-   color: #fff;
+   list-style: none; 
+   color: #fff; /* text color */
    padding: 15px 25px;
    position: relative;
    margin-bottom: 10px; 
-   transition: background 0.3s ease, box-shadow 0.3s ease;
+   transition: background 0.3s ease, box-shadow 0.3s ease; /* hover effects */
 }
 
-/* Links within the list */
+/* Links in the sidebar */
 .sidebarMenuInner > li a {
-   color: #fff;
+   color: #fff; /* color */
    text-decoration: none;
-   font-size: calc(20px + 1vh);
-   display: block;
+   font-size: calc(20px + 1vh); /* font size */
+   display: block; /* block-level links */
    width: 100%; 
-   padding: 1vh  0;
-   text-align: left;
-   transition: color 0.3s ease;
+   padding: 1vh  0; /* vertical padding */
+   text-align: left; /* align text to the left */
+   transition: color 0.3s ease; /* color transition */
 }
 
-/* Inner links (sub-menu) styling */
+/* inner submenu styling */
 .sidebarMenuInner li ul {
    padding: 0;
    margin: 0;
-   list-style: none;
-   background-color: #6f1d46; 
+   list-style: none; 
+   background-color: #6f1d46; /* background color */
 }
 
+/* submenu list item styling */
 .sidebarMenuInner li ul li {
-   padding-left: 30px;
-   padding-top:0.5vh;
-   padding-bottom:0.5vh;
-   transition: background 0.3s ease;
+   padding-left: 30px; /* indent submenu items */
+   padding-top: 0.5vh;
+   padding-bottom: 0.5vh;
+   transition: background 0.3s ease; /* hover effect */
 }
 
-/* Inner links hover effect */
+/* hover effect for inner links */
 .sidebarMenuInner li ul li:hover {
-   background-color: rgba(255, 255, 255, 0.1); 
+   background-color: rgba(255, 255, 255, 0.1); /* background color change on hover */
 }
 
+/* inner link styling */
 .sidebarMenuInner li ul li a {
-   font-size: calc(15px + 1vh);
-   color: #fff;
-   text-decoration: none;
-   transition: color 0.3s ease;
+   font-size: calc(15px + 1vh); /* font size */
+   color: #fff; /* text color */
+   text-decoration: none; 
+   transition: color 0.3s ease; /* color change */
 }
+
+/* icon in submenu items */
 .sidebarMenuInner li ul li a i {
-   margin-left: -10px;
-   margin-right: 10px; 
-   font-size: 1.5rem;  
+   margin-left: -10px; /* icon position */
+   margin-right: 10px; /* space between icon and text */
+   font-size: 1.5rem; /* size */
 }
 
-/* Inner links hover effect */
+/* hover effect for submenu links */
 .sidebarMenuInner li ul li a:hover {
-   color: #eaa82a;
+   color: #eaa82a; /* change color on hover */
 }
 
-/* Sidebar Toggle */
+/* ----- SIDEBAR TOGGLE STYLES ----- */
+
+/* hide the checkbox for the sidebar toggle */
 input[type="checkbox"] {
    transition: all 0.3s;
    box-sizing: border-box;
-   display: none;
+   display: none; /* hidden checkbox */
 }
 
+/* show the sidebar when the checkbox is checked */
 input[type="checkbox"]:checked ~ #sidebarMenu {
-   transform: translateX(0);
+   transform: translateX(0); /* slide the sidebar into view */
 }
+
+
 
 /* Sidebar Toggle Icon Styles */
 
@@ -277,37 +249,40 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
    margin-top: -14px;  /* needs to be more for some reason */
 }
 
-/* Admin Login Styles */
+
+/* ----- ADMIN LOGIN STYLES ----- */
+
+/* styling for the admin login link in the sidebar */
 .adminLogin {
    position: absolute;
-   bottom: 12vh;
-   right: 10px;
-   font-size: calc(12px + 1vh);
+   bottom: 12vh; /* put towards the bottom */
+   right: 10px; /* align right */
+   font-size: calc(12px + 1vh); /* font size */
 }
 
+/* styling for the admin login */
 .adminLogin a {
-   color: white;
-   text-decoration: none;
-   transition: background-color 0.3s ease;
+   color: white; /* text color */
+   text-decoration: none; 
+   transition: background-color 0.3s ease; 
 }
 
+/* hover effect for admin login */
 .adminLogin a:hover {
-   color: #eaa82a;
+   color: #eaa82a; /* change color on hover */
 }
 
+/* ----- NAVIGATION TOGGLE EFFECTS ----- */
 
-/* Default nav link color */
-#mainNav ul li a {
-   opacity: 1;
-   color: white;
-   pointer-events: auto;
-}
 
-/* Change nav link color when sidebar is open */
-#mainNav.sidebar-open ul li a {
-   opacity: 1;
-   color: white;
-   pointer-events: auto;
-}
+
+
+
+
+
+
+
+
+
 
 
