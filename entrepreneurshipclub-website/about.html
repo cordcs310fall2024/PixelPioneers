@@ -12,6 +12,9 @@
 </head>
 <body>
 
+    <div class="background--custom">
+        <canvas id="canvas">
+      </div>
 <!---------------------- HEADER ---------------------->
 
 <!-- header.php???? -->
@@ -71,12 +74,16 @@
  
 <!---------------------- CONTENT ---------------------->
 <div class = "pageTotal">
-<main>
-    <div class="top-section">
-    <h1>About Us</h1>
-    <h1 id = "aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h1>
+    <div class="background--custom">
+        <canvas id="canvas"></canvas>
     </div>
+<main>
+      <div class = top-section>
+            <h1>About Us</h1>
+            <h1 id="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </h1>
+        </div>
 </main>
 <!---------------------- CONTAINER 1 MEMBERS---------------------->
    <div class = "container">
@@ -144,7 +151,7 @@
         </div>
     </div>
     <div class = "imagePrograms">
-        <img id = "ferret3" src="img/ferrets/ferret3.png">
+        <img id = "ferret3" src="img/programsImage.png">
     </div>
 </div>
 </div>
@@ -214,6 +221,12 @@
     });
     
 </script>
+
+<script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+    <script>
+    var gradient = new Gradient();
+    gradient.initGradient("#canvas");
+    </script>
 
 </body>
 </html>
