@@ -19,6 +19,7 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
     transition: background-color 0.3s ease; /* Transition effect for hover */
     margin-top: 20px; /* Distance from the top of the page */
+    height: 100%;
 }
 
 .sidebar:hover {
