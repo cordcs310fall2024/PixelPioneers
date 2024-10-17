@@ -1,65 +1,137 @@
+body {
+    font-family: Arial, sans-serif; /* Font style for the entire body */
+    margin: 0; /* default margin removed */
+    padding: 0; /* default padding  removed*/
+    height: 100vh; /*full viewport height */
+    background-color: #e0d4bc;
+}
 
-        /* CSS to style the buttons and the layout */
-        body {
-            display: flex; /* Use flexbox for layout */
-            justify-content:left; /* Center items horizontally */
-            align-items: center; /* Center items vertically */
-            height: 100vh; /* Full height of the viewport */
-            margin: 0; /* Remove default body margin */
-            background-color: #ecd0ec; /* Optional: light gray background for contrast */
-        }
+.banner-image {
+    width: 100%; /*  image stretched across the full width */
+    height: 300px; 
+    object-fit: cover; /* No distortion of image*/
+}
 
-        /* Container for the description */
-        .description-box {
-            background-color: rgb(56, 53, 11); /* Green background for the description box */
-            color: white; /* Text color */
-            padding: 20px; /* Padding around the text */
-            margin: 20px 0; /* Space between the description box and other elements */
-            width: 80%; /* Width of the description box */
-            max-width: 600px; /* Max width to keep it manageable on larger screens */
-            border-radius: 8px; /* Rounded corners */
-            text-align: center; /* Center the text within the box */
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add slight shadow */
-            transform: translate(400px,-480px);
-            display: flex;
-            
-        }
-        /*Container for the buttons*/
+.sidebar {
+    background-color: #8B4513; /* Maroon color */
+    width: 200px; /* Width of the sidebar */
+    padding: 20px; /* Padding inside the panel */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: background-color 0.3s ease; /* Transition effect for hover */
+    margin-top: 20px; /* Distance from the top of the page */
+}
 
-        .button-container {
-            background-color: #e0ac2c; /* Blue background for the container */
-            padding: 20px; /* Padding around the buttons */
-            border-radius: 8px; /* Rounded corners for the container */
-            display: flex; /* Use flexbox in the container */
-            flex-direction: column; /* Arrange buttons in a column */
-            justify-content: space-between;
-            align-items: center; /* Center the buttons horizontally */
-            transform: translate(-596px,-200px);
-           
-        }   
+.sidebar:hover {
+    background-color: #6F4D2A; /* Darker shade on hover */
+}
 
-        .button {
-            background-color: #6f1d46; /* Sets the background color to Concordia maroon  */
-            color: white; /* Sets the text color to white */
-            border: none; /* Removes the border */
-            padding: 10px 20px; /* Adds padding around the text */
-            margin: 10px 0; /* Adds vertical spacing between buttons */
-            cursor: pointer; /* Changes the cursor to a pointer on hover */
-            font-size: 16px; /* Increases the font size */
-            border-radius: 5px; /* Adds rounded corners */
-            width: 100px; /* Sets a fixed width for buttons */
-        }
+h2 {
+    color: rgb(241, 200, 17); /* Heading color */
+    text-align: center; /* Centering the heading */
+    margin: 0 0 20px 0; /* Bottom margin for spacing */
+}
 
-         /* Label styling */
-        .button-label {
-            font-size: 20px; /* Increased font size for the label */
-            color: white; /* White text color */
-            margin-bottom: 15px; /* Space below the label */
-            text-align: center; /* Center the text */
-        }
+.month-button {
+    background-color: #FFD700; /* Deep yellow color for buttons */
+    color: #000; /* Button text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside the buttons */
+    margin: 5px 0; /* Space between buttons */
+    width: 100%; /* Full width of the sidebar */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition effect for hover */
+    font-size: 16px; /* Button text size */
+}
 
-        /* Make the container a column */
-        div {
-            display: flex; /* Use flexbox in the container */
-            flex-direction: column; /* Arrange items in a column */
-        }
+.month-button:hover {
+    background-color: #FFC107; /* Lighter yellow on hover */
+}
+
+.description-box {
+    background-color: transparent; /* No background color */
+    border: 3px solid #8B4513; /* Thick maroon border */
+    border-radius: 15px; /* Smooth edges */
+    padding: 10px; /* Padding inside the textbox */
+    width: 800px; /* Width */
+    max-height: 80px; /* Height restricted to just about 3 lines*/
+    margin: 10px auto; /* Centering the textbox and space from top */
+    position: absolute; /* Absolute positioning to overlay the banner image */
+    top: 240px; /* Below banner positioning*/
+    left: 50%; /* Center horizontally */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Transition for bulge effect */
+}
+
+.description-box:hover {
+    transform: scale(1.5); /* Bulge outwards on hover */
+}
+
+.description-box p {
+    font-family: "Georgia", serif; /* Elegant font family for the text */
+    font-size: 20px; 
+    color: #e4db66; /* Deep yellow text color */
+    margin: 0; 
+    text-align: center; /* Center text in the textbox */
+    font-weight: bold; /* Make text bold */
+    line-height: 1.2; /* Line height for spacing between lines */
+}
+.event-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Equal spacing between boxes */
+    padding: 20px; /* Padding for the event container */
+    position: absolute; /* Position to allow flexibility */
+    top: 400px; /*Below banner*/
+    left: 220px; /* Position next to the sidebar */
+    right: 0;
+    margin: auto; /* Center the container */
+}
+
+.event-box {
+    background-color: #FFD700; /* Deep yellow background */
+    border-radius: 10px; /* Smooth corners */
+    color: black; /* Text color */
+    font-weight: bold; /* Make font bold */
+    padding: 15px; /* Padding within each box */
+    flex: 1; /* Allow boxes to grow equally */
+    margin: 0 10px; /* Space between event boxes */
+    text-align: center; /* Center text */
+}
+
+.event-box:hover {
+    transform: scale(1.05); /* Slight bulge effect on hover */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+.large-description-box {
+    background-color: white; /* Background color of the large box */
+    border-radius: 15px; /* Smooth edges */
+    top: 600px; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); 
+    padding: 20px; /* Padding inside the large box */
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    height: 445px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; 
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Keep spacing uniform */
+    position: absolute; /* Positioning */
+    margin: 0; 
+}
+
+.large-description-box h2 {
+    text-align: center; /* Center text */
+}
+
+.large-description-box .content {
+    text-align: center; /* Center text for content */
+}
+
+.large-description-box img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum width for the image */
+    height: auto; /* Keep aspect ratio */
+    display: block; /* Make sure it's block element */
+    margin: 20px auto; /* Center the image */
+}
