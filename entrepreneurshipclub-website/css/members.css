@@ -12,6 +12,12 @@ h1 {
     z-index: 1;
 }
 
+.header {
+
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
+
+}
+
 .top-section {
     height: 30vh;
     width: 100%;
@@ -117,6 +123,7 @@ h1 {
 .pageTotal {
     width: 100%;
     transition: width 0.3s ease;
+    position: relative;
 }
 
 .openSidebarMenu:checked ~ .pageTotal {
