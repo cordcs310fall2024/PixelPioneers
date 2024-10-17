@@ -1,6 +1,6 @@
-/* Heading Styles */
+/* ----- HEADING STYLES ----- */
 main {
-    background-color: #fdf9fc;
+    background-color: #fdfdfd;
 }
 h1 {
     font-size:calc(40px + 1vw);
@@ -37,7 +37,7 @@ h1 {
 }
 
 
-/* Button Styles */
+/* ----- BUTTON STYLES ----- */
 .member-btns {
     display: flex;
     justify-content: center;
@@ -64,7 +64,6 @@ h1 {
 }
 
 
-/* Member Grid Styles */
 .member-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,25 +72,25 @@ h1 {
     margin: 30px 50px;
 }
 
-/* Grid Item Styles */
+/* ----- GRID STYLES ----- */
 .member-grid-item {
     position: relative;
     width: 25vw;
     height: 50vh;
     border-radius: 5px; 
     overflow: hidden; 
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
-    0 2px 2px rgba(0,0,0,0.1), 
-    0 4px 4px rgba(0,0,0,0.1), 
-    0 8px 8px rgba(0,0,0,0.1),
-    0 16px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2), 
+    0 2px 2px rgba(0,0,0,0.2), 
+    0 4px 4px rgba(0,0,0,0.2), 
+    0 8px 8px rgba(0,0,0,0.2),
+    0 16px 16px rgba(0,0,0,0.2);
 }
 
 .member-grid-item img:hover {
     transform: scale(1.1);
 }
 
-/* Hidden Hover Box Styles */
+/* ----- HOVER BOX STYLES ----- */
 .middle {
     position: absolute;
     top: 50%;
@@ -112,7 +111,7 @@ h1 {
 }
 
 .member-grid-item:hover .middle {
-    opacity: 1; /* Show the middle box on hover */
+    opacity: 1; 
 }
 
 .pageTotal {
@@ -125,7 +124,6 @@ h1 {
     margin-right: 250px; 
 }
 
-/* Text Styles */
 .memberName {
     font-size:calc(15px + 1vw);
     text-decoration: underline #eaa82a;
@@ -142,10 +140,10 @@ h1 {
 
 }
 
-/* Image Hover Effect */
+/* image hover effect */
 .member-grid img {
-    width: 25vw; /* fixed width */
-    height: 50vh; /* fixed height */
+    width: 25vw; 
+    height: 50vh; 
     min-height: 300px;
     min-width: 200px;
     object-fit: cover;
