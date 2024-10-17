@@ -11,13 +11,13 @@ body {
 
 .contact-container {
     background: white; /* White background for the form container */
-    border: 3px solid #8B4513; /* Maroon border */
+    border: 3px solid #6f1d46; /* Maroon border */
     border-radius: 15px; /* Smooth edges */
     padding: 30px; /* Padding inside the container */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     width: 90%; /* Responsive width */
     max-width: 600px; /* Maximum width for the form container */
-    margin-top: 120px;
+    min-height: fit-content;
 }
 
 h2 {
@@ -44,7 +44,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    border: 2px solid #8B4513; /* Maroon border */
+    border: 2px solid #6f1d46; /* Maroon border */
     border-radius: 5px; /* Smooth corners */
     padding: 10px; /* Padding inside the fields */
     font-size: 16px; /* Font size */
@@ -81,7 +81,7 @@ textarea {
 }
 
 button {
-    background-color: #8B4513; /* Maroon button background */
+    background-color: #6f1d46; /* Maroon button background */
     color: white; /* White text */
     border: none; /* No border */
     padding: 10px 15px; /* Padding for the button */
@@ -94,14 +94,15 @@ button {
 }
 
 button:hover {
-    background-color: #6F4D2A; /* Darker maroon on hover */
+    color: #6f1d46; /* Darker maroon on hover */
+    background-color: #eaa82a;
 }
 
 /* Focus Styles */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #8B4513; /* Change the border color to maroon when focused */
+    border-color: #6f1d46; /* Change the border color to maroon when focused */
     outline: none; /* Remove the default outline */
     background-color: #f0e7d7; /* Optional: change the background color on focus */
 }

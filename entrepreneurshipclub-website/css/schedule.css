@@ -13,7 +13,7 @@ body {
 }
 
 .sidebar {
-    background-color: #8B4513; /* Maroon color */
+    background-color: #6f1d46; /* Maroon color */
     width: 200px; /* Width of the sidebar */
     padding: 20px; /* Padding inside the panel */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
@@ -23,17 +23,17 @@ body {
 }
 
 .sidebar:hover {
-    background-color: #6F4D2A; /* Darker shade on hover */
+    color: #6f1d46; /* Darker maroon on hover */
 }
 
 h2 {
-    color: rgb(241, 200, 17); /* Heading color */
+    color: #eaa82a; /* Heading color */
     text-align: center; /* Centering the heading */
     margin: 0 0 20px 0; /* Bottom margin for spacing */
 }
 
 .month-button {
-    background-color: #FFD700; /* Deep yellow color for buttons */
+    background-color: #eaa82a; /* Deep yellow color for buttons */
     color: #000; /* Button text color */
     border: none; /* No border */
     padding: 10px; /* Padding inside the buttons */
@@ -51,7 +51,7 @@ h2 {
 
 .description-box {
     background-color: transparent; /* No background color */
-    border: 3px solid #8B4513; /* Thick maroon border */
+    border: 3px solid #6f1d46; /* Thick maroon border */
     border-radius: 15px; /* Smooth edges */
     padding: 10px; /* Padding inside the textbox */
     width: 800px; /* Width */
@@ -71,7 +71,7 @@ h2 {
 .description-box p {
     font-family: "Georgia", serif; /* Elegant font family for the text */
     font-size: 20px; 
-    color: #e4db66; /* Deep yellow text color */
+    color: #eaa82a; /* Deep yellow text color */
     margin: 0; 
     text-align: center; /* Center text in the textbox */
     font-weight: bold; /* Make text bold */
@@ -89,7 +89,7 @@ h2 {
 }
 
 .event-box {
-    background-color: #FFD700; /* Deep yellow background */
+    background-color: #eaa82a; /* Deep yellow background */
     border-radius: 10px; /* Smooth corners */
     color: black; /* Text color */
     font-weight: bold; /* Make font bold */
