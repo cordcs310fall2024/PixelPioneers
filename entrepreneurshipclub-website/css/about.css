@@ -1,28 +1,135 @@
-h1 {
-    font-size:calc(40px + 1vw);
-    color: #6f1d46;
-    text-align: center;
-    padding-top: 18vh;
-    font-weight: 200;
+main{
+    background-color: #fdfdfd;
+}
+
+
+#title h1{
+    font-size:calc(10px + 3.5vw);
+    text-align: left;
+    padding-top: 100px;
+    margin-left: 6vw;
+    padding-bottom: 6vw;
     letter-spacing: 0.2vw;
-    z-index: 1;
+    line-height: 12vh;
+    color:  #fff0d4;
+    padding-top: 200px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4); 
+}
+
+
+.top-section {
+
+    background-color:  #6f1d46;;
+    position: relative;
+}
+
+
+/* https://www.shapedivider.app/ */
+
+.custom-shape-divider-bottom-1729120949 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    pointer-events: none;
+}
+
+.custom-shape-divider-bottom-1729120949 svg {
+    position: relative;
+    display: block;
+    width: calc(175% + 1.3px);
+    height: 299px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1729120949 .shape-fill {
+    fill: #FFFFFF;
 }
  
-#aboutDescription {
-    font-size: 2rem;
-    color:  #6f1d46;
+/* button wrapper */
+.mission-button-wrapper {
+    position: relative;
+    text-align: right;
+    margin-top: -11vh;
+    margin-right: 6vw;
+    margin-bottom: 10vh;
+    z-index: 10;
+}
+
+/* button styles */
+.mission-button {
+    background-color: #6f1d46;
     text-align: center;
-    margin: 5vh auto; 
-    margin-bottom: 100px;
-    padding: 0 13vw; 
+    justify-content: center;
+    color: #eaa82a;
+    font-size: calc(5px + 2vw);
     font-weight: 200;
-    letter-spacing: 0.2vw;
+    padding-top: 5vh;
+    padding-bottom: 40px;
+    border-radius: 50px;
+    border: none;
+    transition: all 1s ease;
+    width: 30vw;
+    height: 14vh;
+    overflow: hidden;
+    white-space: wrap;
+    flex: 1;
+    
+}
+
+/* mission statement */
+.mission-content {
+    color:  #6f1d46;
+    font-size: calc(10px + 1vw);
+    line-height: 1.5;
+    letter-spacing: 0.1vw;
+    padding: 20px;
+    font-weight: 50px;
+    text-align: left;
+}
+
+/* morph the button into a container */
+.mission-button:hover {
+    width: 70%;
+    max-width: 900px;
+    background-color:#6f1d46;
+    border-radius: 50px;
+    color:  #eaa82a;
+    padding: 40px 20px;
+    height: auto;
+    white-space: normal;
+    transition: all 0.6s ease;
+    border: 8px solid #fdfdfd; ;
+}
+
+/* show mission content on hover */
+.mission-button:hover .mission-content {
+    display: block;
+    color:  #fff0d4;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.mission-button:hover .button-text {
+    display: none; /* hide button text when morphing */
+}
+
+/* fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .container {
     position: relative; 
-    width: 100%;
-    max-width: 1150px;
+    width: 90%;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; 
@@ -33,6 +140,7 @@ h1 {
 .container:hover {
     transform: scale(1.06) translate(0, 10px); 
 }
+
 
 /* --------------------CONTAINER 1 MEMBERS-------------------- */
 .contentMembers {
@@ -67,7 +175,8 @@ h1 {
 
 .contentMembers h1 {
 
-    font-size: 3vw; 
+    color: #6f1d46;
+    font-size: calc(20px + 1.5vw); 
     font-weight: 300;
     text-align: left;
     margin-left: 1.5vw;
@@ -94,7 +203,17 @@ h1 {
 
 .buttonMembersAlign {
     display: flex;
-    justify-content: flex-start; /* Aligns the button to the right */
+    justify-content: flex-start; 
+}
+
+.pageTotal {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.openSidebarMenu:checked ~ .pageTotal {
+    width: calc(100% - 250px); 
+    margin-right: 250px; 
 }
 
 .pageTotal {
@@ -171,6 +290,7 @@ h1 {
 
 .contentCobbertunity h1 {
 
+    color: #6f1d46;
     font-size: 3vw; 
     font-weight: 300;
     text-align: right;
@@ -264,6 +384,7 @@ h1 {
 
 .contentPrograms h1 {
 
+    color: #6f1d46;
     font-size: 3vw; 
     font-weight: 300;
     text-align: left;
@@ -291,7 +412,7 @@ h1 {
 
 .buttonProgramsAlign {
     display: flex;
-    justify-content: flex-start; /* Aligns the button to the right */
+    justify-content: flex-start; 
 }
 
 
@@ -359,6 +480,7 @@ h1 {
 
 .contentConnect h1 {
 
+    color: #6f1d46;
     font-size: 3vw; 
     font-weight: 300;
     text-align: right;
@@ -386,7 +508,7 @@ h1 {
 
 .buttonConnectAlign {
     display: flex;
-    justify-content: flex-end; /* Aligns the button to the right */
+    justify-content: flex-end; 
 }
 .buttonConnect{
     display: flex;
@@ -451,6 +573,7 @@ h1 {
 
 .contentSocial h1 {
 
+    color: #6f1d46;
     font-size: 3vw; 
     font-weight: 300;
     text-align: left;
