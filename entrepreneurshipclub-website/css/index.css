@@ -57,17 +57,17 @@ text-align: center;
 }
 
 .title {
-  margin: 20px 0;
-  padding: 20px; 
+  margin-bottom: 10px;
   background-color: #eaa82a;
   color: #6f1d46;
   border-radius: 40px;
   width: 300px;
-  height: auto; 
+  height: 150px;
+  
   text-align: center;
   display: flex; 
   justify-content: center; 
-  align-items: center;
+  align-items: center; 
 }
 
 .AboutLink {
@@ -77,8 +77,8 @@ text-align: center;
   padding: 10px 20px;
   border: none;
   text-decoration: none;
-  width: 120px;
-  height: 55px;
+  width: 125px;
+  height: 75px;
   line-height: 50px;
   text-align: center;
   justify-content: center;
@@ -98,7 +98,7 @@ text-align: center;
   width: 100%; 
   height: auto;
   object-fit: cover;
-  max-width: 350px; 
+  max-width: 500px; 
   max-height: auto;
   float: right;
   margin-right: 70px;
@@ -198,8 +198,8 @@ vertical-align: top;
 display: flex; 
 justify-content: center;
 align-items: center;
-width: 120px;
-height: 55px;
+width: 125px;
+height: 75px;
 background-color: #6f1d46;
 color: #eaa82a;
 padding: 10px 20px;
@@ -220,8 +220,8 @@ border-radius: 5px;
 display: flex; 
 justify-content: center;
 align-items: center;
-width: 120px;
-height: 55px;
+width: 125px;
+height: 75px;
 background-color: #6f1d46;
 color: #eaa82a;
 padding: 10px 20px;
