@@ -8,69 +8,14 @@
      <!-- Bootstrap Icons CDN -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/header.css"> 
     <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 
 
-<!---------------------- HEADER ---------------------->
-
-<!-- header.php???? -->
-<header class="header">
-  <nav id="mainNav">
-      <div id = "leftHeader">
-              <a href="index.html"> <img src="img/ConcoHeader.jpg" class="header-logo"></a>
-      </div>
-      <div id="rightHeader">
-      <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="contact.html">Contact</a></li>
-      </ul>
-  </div>
-  </nav>
-</header>
-
-<!-- Sidebar -->
-<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-<label for="openSidebarMenu" class="sidebarIconToggle">
-  <div class="spinner diagonal part-1"></div>
-  <div class="spinner horizontal"></div>
-  <div class="spinner diagonal part-2"></div>
-</label>
-<div id="sidebarMenu">
-  <ul class="sidebarMenuInner">
-      <li>
-          <a href="about.html">About</a>
-          <ul>
-              <li><a href="members.html"><i class="bi bi-person"></i> Members</a></li> 
-              <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/cobbertunity/" target="_blank"><i class="bi bi-chat-dots"></i> Cobbertunity</a></li> 
-              <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/" target="_blank"><i class="bi bi-award"></i> Programs</a></li>
-              <li><a href="https://cobberconnect.cord.edu/feeds?type=club&type_id=35499&tab=home/" target="_blank"><i class="bi bi-chat-quote"></i> Cobber Connect</a></li>
-              <li><a href="https://www.instagram.com/cobberentrepreneurs/" target="_blank"><i class="bi bi-instagram"></i> Social Media</a></li> 
-          </ul>
-      </li>
-      <li>
-          <a href="schedule.html">Schedule</a>
-          <ul>
-              <li><a href="schedule.html"><i class="bi bi-calendar-event"></i> Events</a></li> 
-              <li><a href="schedule.html"><i class="bi bi-clock"></i> Meetings</a></li> 
-          </ul>
-      </li>
-      <li>
-          <a href="contact.html">Contact</a>
-          <ul>
-              <li><a href="contact.html"><i class="bi bi-person-plus"></i> Join</a></li> 
-          </ul>
-      </li>
-  </ul>
-  <div class="adminLogin">
-      <a href="login.html"><i class="bi bi-shield-lock"></i> Admin Login</a>
-  </div>
-</div>
-
-
+<?php 
+require_once("header.php")
+?>
 <!---------------------- CONTENT ---------------------->
     <main>
         <img src="img/ClubImage.png" alt="backHome" class="homeImg">
