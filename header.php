@@ -21,9 +21,9 @@
         </div>
         <div id="rightHeader">
         <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="schedule.php">Schedule</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
     </div>
     </nav>
@@ -39,7 +39,7 @@
  <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
         <li>
-            <a href="about.html">About</a>
+            <a href="about.php">About</a>
             <ul>
                 <li><a href="members.html"><i class="bi bi-person"></i> Members</a></li> 
                 <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/cobbertunity/" target="_blank"><i class="bi bi-chat-dots"></i> Cobbertunity</a></li> 
@@ -49,21 +49,21 @@
             </ul>
         </li>
         <li>
-            <a href="schedule.html">Schedule</a>
+            <a href="schedule.php">Schedule</a>
             <ul>
                 <li><a href="schedule.html"><i class="bi bi-calendar-event"></i> Events</a></li> 
                 <li><a href="schedule.html"><i class="bi bi-clock"></i> Meetings</a></li> 
             </ul>
         </li>
         <li>
-            <a href="contact.html">Contact</a>
+            <a href="contact.php">Contact</a>
             <ul>
-                <li><a href="contact.html"><i class="bi bi-person-plus"></i> Join</a></li> 
+                <li><a href="contact.php"><i class="bi bi-person-plus"></i> Join</a></li> 
             </ul>
         </li>
     </ul>
     <div class="adminLogin">
-        <a href="login.html"><i class="bi bi-shield-lock"></i> Admin Login</a>
+        <a href="login.php"><i class="bi bi-shield-lock"></i> Admin Login</a>
     </div>
 </div>
 <script>
