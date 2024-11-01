@@ -9,7 +9,7 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/login.css"> 
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -17,7 +17,6 @@
 <?php 
 require_once("header.php")
 ?>
-
 
 <!---------------------- CONTENT ---------------------->
 

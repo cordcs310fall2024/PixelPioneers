@@ -1,10 +1,4 @@
-body {
-    font-family: Arial, sans-serif; /* Font style for the entire body */
-    margin: 0; /* default margin removed */
-    padding: 0; /* default padding  removed*/
-    height: 100vh; /*full viewport height */
-    background-color: #e0d4bc;
-}
+
 
 .banner-image {
     width: 100%; /*  image stretched across the full width */
@@ -69,7 +63,6 @@ h2 {
 }
 
 .description-box p {
-    font-family: "Georgia", serif; /* Elegant font family for the text */
     font-size: 20px; 
     color: #eaa82a; /* Deep yellow text color */
     margin: 0; 

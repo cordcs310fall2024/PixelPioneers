@@ -1,10 +1,6 @@
-html, body {
-   overflow-x: hidden;
-   height: 100%;
-   padding: 0;
-   margin: 0;
-   background: #fff;
-}
+
+
+
 
 /* ---------- HEADER STYLES ---------- */
 .header {
@@ -17,7 +13,7 @@ html, body {
    justify-content: space-between; /* space between left and right sections */
    padding: 10px 20px; 
    z-index: 9998; 
-   height: 100px;
+   height: 120;
    margin: 0 auto; /* centered the header */
    max-width: 100%; /* doesn't shrink */
    box-shadow: none; 
@@ -79,13 +75,6 @@ nav ul li a {
    color: white;
    text-decoration: none; 
    padding: 10px;
-   transition: all 0.2s ease;
-}
-
-.header nav ul li a:hover {
-   text-decoration: underline; 
-   text-decoration-color: #eaa82a;
-   text-underline-offset: 8px;
 }
 
 

@@ -8,7 +8,7 @@
      <!-- Bootstrap Icons CDN -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -99,17 +99,5 @@ require_once("header.php")
           </div>
     </main>
 
-<!---------------------- JavaScript ---------------------->
-    <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-    
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
-        }
-      </script>
 </body>
 </html>

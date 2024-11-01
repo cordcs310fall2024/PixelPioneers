@@ -1,109 +1,51 @@
-body {
-    background-color: #e0d4bc; /* Background color of the page */
-    font-family: Arial, sans-serif; /* Font style for the entire body */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for centering content */
-    justify-content: center; /* Center horizontally */
-    /*align-items: center; /* Center vertically */
-    height: 100vh; /* Use full viewport height */
+
+ 
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: pink;
 }
 
-.contact-container {
-    margin-top: 120px;
-    background: white; /* White background for the form container */
-    border: 3px solid #6f1d46; /* Maroon border */
-    border-radius: 15px; /* Smooth edges */
-    padding: 30px; /* Padding inside the container */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    width: 90%; /* Responsive width */
-    max-width: 600px; /* Maximum width for the form container */
-    min-height: fit-content;
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    border: solid pink 1px;
+
 }
 
-h2 {
-    text-align: center; /* Center the heading text */
-    margin-bottom: 20px; /* Margin below heading for spacing */
+.contact-left-title hr{
+    font-weight: 600;
+    color: black;
+    font-size: 40px;
+    margin-bottom: 5px;
+
 }
 
-.header-image {
-    width: 80%; /* Image takes 80% of the container width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px auto; /* Center and provide margin around the image */
+.contact-left-title h2{
+    font-weight: 600;
+    color: black;
+    font-size: 40px;
+    margin-bottom: 5px;
+
 }
 
-.contact-form {
-    display: flex; /* Use flexbox for form layout */
-    flex-direction: column; /* Stack fields vertically */
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: gray;
+    border-radius: 50px;
 }
 
-label {
-    margin: 10px 0 5px; /* Spacing above and below labels */
-    text-align: left; /* Align text to the left */
+.contact-right img{
+    width: calc(300px + 13vw + 13vh);
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    border: 2px solid #6f1d46; /* Maroon border */
-    border-radius: 5px; /* Smooth corners */
-    padding: 10px; /* Padding inside the fields */
-    font-size: 16px; /* Font size */
-    width: 80%; /* Reduced width for fields */
-    margin-left: 0; /* Remove left margin so they align properly */
-    margin-bottom: 15px; /* Space below the input fields */
-}
-
-textarea {
-    height: 100px; /* Set a fixed height for the text area */
-    resize: none; /* Disable resizing of the text area */
-}
-
-.radio-group {
-    margin: 10px 0; /* Margin for spacing */
-}
-
-.radio-item {
-    display: flex; /* Use flexbox to align radio button and label inline */
-    align-items: center; /* Center vertically */
-    margin-bottom: 10px; /* Space between each radio item */
-}
-
-.radio-item input[type="radio"] {
-    margin-right: 5px; /* Space between the radio button and the label */
-}
-
-.radio-group label {
-    margin-right: 20px; /* Space between radio labels */
-}
-
-.checkbox-group {
-    margin: 10px 0; /* Margin for spacing */
-}
-
-button {
-    background-color: #6f1d46; /* Maroon button background */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding for the button */
-    border-radius: 5px; /* Smooth corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size for button text */
-    margin: 15px auto 0; /* Center the button and add top margin */
-    display: block; /* Make the button a block element to center it */
-    width: 50%; /* Set a specific width for the button */
-}
-
-button:hover {
-    color: #6f1d46; /* Darker maroon on hover */
-    background-color: #eaa82a;
-}
-
-/* Focus Styles */
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #6f1d46; /* Change the border color to maroon when focused */
-    outline: none; /* Remove the default outline */
-    background-color: #f0e7d7; /* Optional: change the background color on focus */
-}

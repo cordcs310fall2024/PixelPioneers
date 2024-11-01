@@ -6,9 +6,9 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Project</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/header.css"> 
-   <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <!---------------------- HEADER ---------------------->
@@ -66,17 +66,7 @@
         <a href="login.php"><i class="bi bi-shield-lock"></i> Admin Login</a>
     </div>
 </div>
-<script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-    }
-</script>
+
 
 </body>
 </html>

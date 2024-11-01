@@ -7,7 +7,6 @@
     <title>Project</title>
     <!-- Bootstrap Icons CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/header.css"> 
     <link rel="stylesheet" href="css/adminMemberEvent.css"> 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -92,17 +91,5 @@
     </div>
 </main>
 
-<!-- -------------------- JAVASCRIPT ---------------------->
-<script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-    }
-</script>
 </body>
 </html>

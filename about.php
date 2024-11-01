@@ -6,8 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Project</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -163,20 +163,7 @@ require_once("header.php")
 
 
    <!-- JavaScript -->
-<script>
-    const checkbox = document.getElementById('openSidebarMenu');
-    const nav = document.getElementById('mainNav');
-    const header = document.querySelector('.header');
 
-    checkbox.addEventListener('change', function() {
-        if (this.checked) {
-            nav.classList.add('sidebar-open');
-        } else {
-            nav.classList.remove('sidebar-open');
-        }
-    });
-    
-</script>
 
 <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
 <script>
