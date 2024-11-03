@@ -26,9 +26,9 @@ require_once("header.php")
             <hr>
             </div> 
             <input type="text" name = "name" placeholder = "Your Name" class = "contact-inputs" required>
-            <input type = "email" name = "email" placehoder = "Your Email" class = "contact-inputs" required>
+            <input type = "text" name = "email" placehoder = "Your Email" class = "contact-inputs" required>
             <textarea name = "message" placeholder = "Your Message" class = "contact-inputs"></textarea>
-            <button type = "submit" >Submit <img src = "img/contactImg/arrow.png"></button>
+            <button type = "submit" >Submit </button>
         </form>
         <div class = "contact-right">
 
