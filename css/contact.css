@@ -29,12 +29,12 @@
 
 .contact-left-title h2{
     font-weight: 600;
-    color: #DD2C54;
+    color: black;
     font-size: calc(20px + 3vh);
     margin-bottom: 5px;
 
 }
-
+xs
 .contact-left button{
     margin-top: 10px;
     font-weight: 150px;
@@ -51,18 +51,17 @@
 
 }
 
-
 .contact-inputs{
     width: 400px;
-    height: calc(25px + 6vh); /* Increased height for better vertical centering */
+    height: calc(25px + 6vh); 
     border: none;
     outline: none;
-    padding: 15px 25px; /* Increased padding for better spacing */
+    padding: 15px 25px;
     font-weight: 500;
-    font-size: calc(16px + 0.5vw); /* Increased font size */
+    font-size: calc(16px + 0.5vw); 
     color: rgb(0, 0, 0);
     border-radius: 50px;
-    box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+    box-sizing: border-box; 
 }
 
 .contact-right img{
