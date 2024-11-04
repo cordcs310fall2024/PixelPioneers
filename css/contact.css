@@ -29,12 +29,12 @@
 
 .contact-left-title h2{
     font-weight: 600;
-    color: #DD2C54;
+    color: black;
     font-size: calc(20px + 3vh);
     margin-bottom: 5px;
 
 }
-
+xs
 .contact-left button{
     margin-top: 10px;
     font-weight: 150px;
