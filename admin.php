@@ -57,8 +57,8 @@
 <!---------------------- ADMIN LINKS ---------------------->
 <div class="adminLinks">
   <ul>
-    <li><a href="adminMember.html" class="addMember">Add/edit Member</a></li>
-    <li><a href="adminEvent.html" class="addEvent">Add/edit Event</a></li>
+    <li><a href="adminMembers.php" class="addMember">Add/edit Member</a></li>
+    <li><a href="adminEvent.php" class="addEvent">Add/edit Event</a></li>
   </ul>
 </div>
 
