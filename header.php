@@ -41,7 +41,7 @@
         <li>
             <a href="about.php">About</a>
             <ul>
-                <li><a href="members.html"><i class="bi bi-person"></i> Members</a></li> 
+                <li><a href="members.php"><i class="bi bi-person"></i> Members</a></li> 
                 <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/cobbertunity/" target="_blank"><i class="bi bi-chat-dots"></i> Cobbertunity</a></li> 
                 <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/" target="_blank"><i class="bi bi-award"></i> Programs</a></li>
                 <li><a href="https://cobberconnect.cord.edu/feeds?type=club&type_id=35499&tab=home/" target="_blank"><i class="bi bi-chat-quote"></i> Cobber Connect</a></li>

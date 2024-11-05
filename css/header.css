@@ -4,7 +4,7 @@
 
 /* ---------- HEADER STYLES ---------- */
 .header {
-   background-color: #6f1d46; /* background color */
+   background-color:#6D153F;
    position: fixed;
    width: 100%; /* full-width header */
    color: white; 
@@ -89,7 +89,7 @@ nav ul li a {
    margin-top: 10vh; /* align below the header */
    transform: translateX(300px); /* initially hidden off-screen */
    transition: transform 250ms ease-in-out; /* sliding transition */
-   background-color: #6f1d46; 
+   background-color:#6D153F;
    z-index: 9999; /* sidebar is above other content */
 }
 
