@@ -72,9 +72,10 @@
             <li draggable="true">Mary Smith</li>
         </ul>
     </div>
-   <div class="button">
-      <button onclick="saveOrder()">Save Order</button>
-   </div>
+
+   <div class="form-group">
+            <button onclick="saveOrder()">Save Changes</button>
+         </div>
 </div>
    </div>
 </div>

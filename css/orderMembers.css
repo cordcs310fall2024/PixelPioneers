@@ -54,7 +54,7 @@
 }
 .member-grid-item {
    width: calc(33.33% - 20px);
-   border: 1px solid #ccc;
+   border: 1px solid #F7A041;
    padding: 10px;
    text-align: center;
    cursor: grab;
@@ -81,14 +81,8 @@
    border: 1px solid #E34752;
    border-radius: 7px;
    color: white;
+   font-size: calc(5px + 0.7vh + 0.7vw);
    
 }
 
-.right-column li :hover {
-   background-color:  #e86871;
-   
-}
 
-.button {
-   height: 10px;
-}
