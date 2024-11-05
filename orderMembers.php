@@ -35,6 +35,18 @@
                   <div class="memberName">Jane Smith</div>
                </div>
             </div>
+            <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
+               <img src="img/ferrets/ferret1.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">John Doe</div>
+               </div>
+            </div>
+            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
+               <img src="img/ferrets/ferret2.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">Jane Smith</div>
+               </div>
+            </div>
             <!-- Add more members here -->
          </div>
       </div>
