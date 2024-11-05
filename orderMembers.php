@@ -4,7 +4,6 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Order Members</title>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/orderMembers.css">
@@ -13,9 +12,17 @@
 <body>
 
 <div class="admin-page">
-<div class="sidebar">
-      <button onclick="window.location.href='orderMembers.php'">Order Members</button>
-      <button onclick="window.location.href='adminMembers.php'">Edit Members</button>
+   <!-- Sidebar for actions -->
+   <div class="sidebar">
+      <button onclick="window.location.href='orderMembers.php'">
+         <i class="bi bi-list-ul"></i> Order Members
+      </button>
+      <button onclick="window.location.href='adminMembers.php'">
+         <i class="bi bi-pencil-square"></i> Edit Members
+      </button>
+      <button onclick="window.location.href='addMember.php'">
+         <i class="bi bi-person-plus"></i> Add Member
+      </button>
    </div>
 
    <!-- Content area -->
@@ -50,17 +57,31 @@
             <!-- Add more members here -->
          </div>
       </div>
-      </div>
 
-
+      <!-- Right Column - ORDER MEMBER -->
       <div class="right-column">
-      <div class="draggable-item" draggable="true" id="item1">Item 1</div>
-    <div class="draggable-item" draggable="true" id="item2">Item 2</div>
-    <div class="draggable-item" draggable="true" id="item3">Item 3</div>
-    <div class="draggable-item" draggable="true" id="item4">Item 4</div>
-      </div>
+   <h3>Reorder Members</h3>
+
+   <div class="sortable-list">
+        <ul id="sortable">
+            <li draggable="true">John Smith</li>
+            <li draggable="true">Jane Doe</li>
+            <li draggable="true">Fred Kruger</li>
+            <li draggable="true">Robert Smith</li>
+            <li draggable="true">Maria Rodriguez</li>
+            <li draggable="true">Mary Smith</li>
+        </ul>
+    </div>
+   <div class="button">
+      <button onclick="saveOrder()">Save Order</button>
+   </div>
+</div>
+   </div>
+</div>
+
+<script src="js/orderMembers.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
 
-      <script src="js/orderMembers.js"></script>
-      </body>
-      </html>
+</body>
+</html>

@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/adminMembers.css">
+   <link rel="stylesheet" href="css/addMember.css">
 
 </head>
 <body>
@@ -57,30 +57,10 @@
             <!-- Add more members here -->
          </div>
       </div>
-
-      <!-- Right Column - Edit Member Details -->
-      <div class="right-column">
-         <h3>Edit Member</h3>
-         <div class="form-group">
-            <label for="memberName">Name</label>
-            <input type="text" id="memberName" value="">
-         </div>
-         <div class="form-group">
-            <label for="memberPhoto">Photo URL</label>
-            <input type="text" id="memberPhoto" value="">
-         </div>
-         <div class="form-group">
-            <label for="memberBio">Bio</label>
-            <textarea id="memberBio"></textarea>
-         </div>
-         <div class="form-group">
-            <button onclick="saveMember()">Save Changes</button>
-         </div>
-      </div>
    </div>
 </div>
 
-<script src="js/adminMembers.js"></script>
+<script src="js/addMember.js"></script>
 
 </body>
 </html>

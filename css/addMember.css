@@ -1,0 +1,102 @@
+
+
+.admin-page {
+    display: flex;
+    height: 100vh;
+ }
+ .sidebar {
+    width: 20%;
+    background-color: #E34752;
+    padding: 20px;
+    border-right: 1px solid #E34752;
+ }
+ .sidebar button {
+    display: block;
+    width: calc(100% + 40px); /* Ensures the button occupies full width minus padding */
+    margin-left: -20px; /* Offset to align with the sidebar padding */
+    margin-bottom: 15px;
+    background-color: #E34752;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color;
+    font-size: calc(5px + 0.7vh + 0.7vw);
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom:15px;
+    letter-spacing: 2px;
+ }
+ 
+ .sidebar button:hover {
+    background-color:#e86871;
+ }
+ 
+ .content {
+    display: flex;
+    width: 80%;
+ }
+ .middle-column {
+    width: 60%;
+    padding: 20px;
+ }
+ .member-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+ }
+ .member-grid-item {
+    width: calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: grab;
+    transition: transform 0.3s;
+ }
+ .member-grid-item:hover {
+    transform: scale(1.05);
+ }
+ .middle img {
+    width: 100%;
+    height: auto;
+ }
+ .right-column {
+    width: 40%;
+    padding: 20px;
+    background-color: #FAFAFA;
+    border-left: 1px solid #E34752;
+ }
+ .right-column h3 {
+    margin-top: 0;
+ }
+ .form-group {
+    margin-bottom: 15px;
+ }
+ .form-group label {
+    display: block;
+    margin-bottom: 5px;
+ }
+ .form-group input,
+ .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }
+ .form-group textarea {
+    height: 100px;
+ }
+ .form-group button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ }
+ .form-group button:hover {
+    background-color: #218838;
+ }
+ 

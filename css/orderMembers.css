@@ -1,78 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
- .admin-page {
-    display: flex;
-    height: 100vh;
- }
- .sidebar {
-    width: 20%;
-    background-color: #6D153F;
-    padding: 20px;
-    border-right: 1px solid #6D153F;
- }
- .sidebar button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
- }
 
 
- .right-column {
-   width: 40%;
-   padding: 20px;
+.admin-page {
+   display: flex;
+   height: 100vh;
+}
+.sidebar {
+   width: 20%;
    background-color: #E34752;
-   border-left: 1px solid #E34752;
- }
+   padding: 20px;
+   border-right: 1px solid #E34752;
+}
 
- .content {
-    display: flex;
-    width: 80%;
-    padding: 20px;
- }
- .member-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
- }
- .member-grid-item {
-    width: calc(33.33% - 20px);
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    cursor: grab;
-    transition: transform 0.3s;
- }
- .member-grid-item.dragging {
-    opacity: 0.5;
-    transform: scale(1.05);
- }
 
- .container {
-       width: 300px;
-       margin: 10px auto;
-   }
+.h3{
+   padding-top: 10px;
+}
+.sidebar button {
+   display: block;
+   width: calc(100% + 40px); /* Ensures the button occupies full width minus padding */
+   margin-left: -20px; /* Offset to align with the sidebar padding */
+   margin-bottom: 15px;
+   background-color: #E34752;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color;
+   font-size: calc(5px + 0.7vh + 0.7vw);
+   text-align: left;
+   padding-left: 10px;
+   padding-top: 15px;
+   padding-bottom:15px;
+   letter-spacing: 2px;
 
-   .draggable-item {
-       padding: 15px;
-       margin-bottom: 5px;
-       background-color: #f1f1f1;
-       border: 1px solid #ccc;
-       cursor: move;
-       user-select: none;
-   }
+}
 
-   .draggable-item.over {
-       border: 2px dashed #000;
-   }
+.sidebar button:hover {
+   background-color:  #e86871;
+}
+
+.content {
+   display: flex;
+   width: 80%;
+}
+.middle-column {
+   width: 60%;
+   padding: 20px;
+}
+.member-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+.member-grid-item {
+   width: calc(33.33% - 20px);
+   border: 1px solid #ccc;
+   padding: 10px;
+   text-align: center;
+   cursor: grab;
+   transition: transform 0.3s;
+}
+.member-grid-item:hover {
+   transform: scale(1.05);
+}
+.middle img {
+   width: 100%;
+   height: auto;
+}
+.right-column ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.right-column li {
+   padding: 10px;
+   margin: 5px 0;
+   background-color: #E34752;
+   cursor: move;
+   border: 1px solid #E34752;
+   border-radius: 7px;
+   color: white;
+   
+}
+
+.right-column li :hover {
+   background-color:  #e86871;
+   
+}
+
+.button {
+   height: 10px;
+}
