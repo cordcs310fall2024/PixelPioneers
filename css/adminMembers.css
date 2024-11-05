@@ -3,6 +3,7 @@
 .admin-page {
    display: flex;
    height: 100vh;
+   
 }
 .sidebar {
    width: 20%;
@@ -65,7 +66,7 @@
 .right-column {
    width: 40%;
    padding: 20px;
-   border-left: 1px solid #E34752;
+   border-left: 2px solid #E34752;
 }
 .right-column h3 {
    font-size: calc(10px + 0.7vh + 0.7vw);

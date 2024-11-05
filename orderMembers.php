@@ -10,9 +10,6 @@
 
 </head>
 <body>
-<?php 
-require_once("header.php")
-?>
 
 <div class="admin-page">
    <!-- Sidebar for actions -->
@@ -87,25 +84,23 @@ require_once("header.php")
       <!-- Right Column - ORDER MEMBER -->
       <div class="right-column">
 
-         <h2>Reorder Members</h2>
-         <div class="form-group">
-                  <button onclick="saveOrder()">Save Changes</button>
+            <h2>Reorder Members</h2>
+            <div class="form-group">
+                     <button onclick="saveOrder()">Save Changes</button>
 
-   </div>
-   <div class="sortable-list">
-        <ul id="sortable">
-            <li draggable="true">John Smith</li>
-            <li draggable="true">Jane Doe</li>
-            <li draggable="true">Fred Kruger</li>
-            <li draggable="true">Robert Smith</li>
-            <li draggable="true">Maria Rodriguez</li>
-            <li draggable="true">Mary Smith</li>
-        </ul>
-    </div>
-
-
-</div>
-   </div>
+            </div>
+            <div class="sortable-list">
+               <ul id="sortable">
+                     <li draggable="true">John Smith</li>
+                     <li draggable="true">Jane Doe</li>
+                     <li draggable="true">Fred Kruger</li>
+                     <li draggable="true">Robert Smith</li>
+                     <li draggable="true">Maria Rodriguez</li>
+                     <li draggable="true">Mary Smith</li>
+               </ul>
+            </div>
+      </div>
+  </div>
 </div>
 
 <script src="js/orderMembers.js"></script>

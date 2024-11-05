@@ -20,16 +20,27 @@ require_once("header.php")
     <main>
     </main>
     <div class="contact-container">
-        <form action="" class = "contact-left">
-            <div class = "contact-left-title">
-            <h2>Get in touch</h2>
-            <hr>
-            </div> 
-            <input type="text" name = "name" placeholder = "Your Name" class = "contact-inputs" required>
-            <input type = "text" name = "email" placehoder = "Your Email" class = "contact-inputs" required>
-            <textarea name = "message" placeholder = "Your Message" class = "contact-inputs"></textarea>
-            <button type = "submit" >Submit </button>
-        </form>
+    <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder=" " required>
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder=" " required></textarea>
+        <label for="message">Message</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
         <div class = "contact-right">
 
         <img src = "img/contactImg/wave.png" alt = "">
