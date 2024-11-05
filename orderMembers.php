@@ -60,8 +60,12 @@
 
       <!-- Right Column - ORDER MEMBER -->
       <div class="right-column">
-   <h3>Reorder Members</h3>
-
+   <div class = rightHeader>
+         <h2>Reorder Members</h2>
+         <div class="form-group">
+                  <button onclick="saveOrder()">Save Changes</button>
+         </div>
+   </div>
    <div class="sortable-list">
         <ul id="sortable">
             <li draggable="true">John Smith</li>
@@ -73,9 +77,7 @@
         </ul>
     </div>
 
-   <div class="form-group">
-            <button onclick="saveOrder()">Save Changes</button>
-         </div>
+
 </div>
    </div>
 </div>
