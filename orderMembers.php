@@ -4,16 +4,16 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Order Members</title>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/adminMembers.css">
+   <link rel="stylesheet" href="css/orderMembers.css">
 
 </head>
 <body>
 
 <div class="admin-page">
-   <!-- Sidebar for actions -->
-   <div class="sidebar">
+<div class="sidebar">
       <button onclick="window.location.href='orderMembers.php'">Order Members</button>
       <button onclick="window.location.href='adminMembers.php'">Edit Members</button>
    </div>
@@ -38,30 +38,17 @@
             <!-- Add more members here -->
          </div>
       </div>
-
-      <!-- Right Column - Edit Member Details -->
-      <div class="right-column">
-         <h3>Edit Member</h3>
-         <div class="form-group">
-            <label for="memberName">Name</label>
-            <input type="text" id="memberName" value="">
-         </div>
-         <div class="form-group">
-            <label for="memberPhoto">Photo URL</label>
-            <input type="text" id="memberPhoto" value="">
-         </div>
-         <div class="form-group">
-            <label for="memberBio">Bio</label>
-            <textarea id="memberBio"></textarea>
-         </div>
-         <div class="form-group">
-            <button onclick="saveMember()">Save Changes</button>
-         </div>
       </div>
-   </div>
-</div>
 
-<script src="js/adminMembers.js"></script>
 
-</body>
-</html>
+      <div class="right-column">
+      <div class="draggable-item" draggable="true" id="item1">Item 1</div>
+    <div class="draggable-item" draggable="true" id="item2">Item 2</div>
+    <div class="draggable-item" draggable="true" id="item3">Item 3</div>
+    <div class="draggable-item" draggable="true" id="item4">Item 4</div>
+      </div>
+
+
+      <script src="js/orderMembers.js"></script>
+      </body>
+      </html>

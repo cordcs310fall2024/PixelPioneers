@@ -23,7 +23,6 @@ require_once("header.php")
         <h1>Meet Our Members</h1>
         <div class="member-btns">
             <button>Members</button>
-            <button>Executives</button>
         </div>
     </div>
  
