@@ -13,7 +13,7 @@
    justify-content: space-between; /* space between left and right sections */
    padding: 10px 20px; 
    z-index: 9998; 
-   height: 120;
+   height: 120px;
    margin: 0 auto; /* centered the header */
    max-width: 100%; /* doesn't shrink */
    box-shadow: none; 
@@ -189,6 +189,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    right: 15px;
    height: 35px;
    width: 35px;
+   position: fixed;
 }
 
 .spinner {
@@ -198,6 +199,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    height: 4px;
    width: 100%;
    background-color: #fff;
+   position: fixed;
 }
 
 .horizontal {
@@ -206,6 +208,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    position: relative;
    float: left;
    margin-top: 6px;
+   position: fixed;
 }
 
 .diagonal.part-1 {
@@ -213,6 +216,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    transition: all 0.3s;
    box-sizing: border-box;
    float: left;
+   position: fixed;
 }
 
 .diagonal.part-2 {
@@ -221,6 +225,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    position: relative;
    float: left;
    margin-top: 6px;
+   position: fixed;
 }
 
 /* ----- TOGGLE ANIMATIONS ----- */
