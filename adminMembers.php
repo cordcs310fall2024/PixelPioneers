@@ -43,13 +43,13 @@
                </div>
             </div>
             <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
+               <img src="img/ferrets/ferret3.png" alt="Member Photo">
                <div class="middle">
                   <div class="memberName">John Doe</div>
                </div>
             </div>
             <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
+               <img src="img/ferrets/ferret4.png" alt="Member Photo">
                <div class="middle">
                   <div class="memberName">Jane Smith</div>
                </div>
@@ -66,8 +66,11 @@
             <input type="text" id="memberName" value="">
          </div>
          <div class="form-group">
-            <label for="memberPhoto">Photo URL</label>
-            <input type="text" id="memberPhoto" value="">
+            <label for="memberPhoto">Photo</label>
+            <div class="photo-preview">
+               <img id="photoPreview" src="" alt="" style="width: 150px; height: auto;">
+            </div>
+            <input type="file" id="memberPhotoUpload" accept="image/*" onchange="previewPhoto()">
          </div>
          <div class="form-group">
             <label for="memberBio">Bio</label>

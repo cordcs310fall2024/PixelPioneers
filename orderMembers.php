@@ -43,28 +43,45 @@
                </div>
             </div>
             <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
+               <img src="img/ferrets/ferret3.png" alt="Member Photo">
                <div class="middle">
                   <div class="memberName">John Doe</div>
                </div>
             </div>
             <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
+               <img src="img/ferrets/ferret4.png" alt="Member Photo">
                <div class="middle">
                   <div class="memberName">Jane Smith</div>
                </div>
             </div>
-            <!-- Add more members here -->
+            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
+               <img src="img/ferrets/ferret5.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">Jane Smith</div>
+               </div>
+            </div>
+            <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
+               <img src="img/ferrets/ferret6.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">John Doe</div>
+               </div>
+            </div>
+            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
+               <img src="img/ferrets/ferret7.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">Jane Smith</div>
+               </div>
+            </div>
          </div>
       </div>
 
       <!-- Right Column - ORDER MEMBER -->
       <div class="right-column">
-   <div class = rightHeader>
+
          <h2>Reorder Members</h2>
          <div class="form-group">
                   <button onclick="saveOrder()">Save Changes</button>
-         </div>
+
    </div>
    <div class="sortable-list">
         <ul id="sortable">

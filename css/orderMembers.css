@@ -93,15 +93,7 @@
    
 }
 
-.rightHeader {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 20px; 
-
-}
-
-.rightHeader h2 {
+ h2 {
    font-size: calc(10px + 0.7vh + 0.7vw);
    margin: 0;
 }
