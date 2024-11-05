@@ -30,31 +30,54 @@
       <!-- Middle Column - Members Grid -->
       <div class="middle-column">
          <div class="member-grid">
-            <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
+            <div class="member-grid-item" onclick="editMember('Barbarian', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
                <img src="img/ferrets/ferret1.png" alt="Member Photo">
                <div class="middle">
-                  <div class="memberName">John Doe</div>
+                  <div class="memberName">Barbarian</div>
                </div>
             </div>
-            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
+            <div class="member-grid-item" onclick="editMember('Crusader', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
                <img src="img/ferrets/ferret2.png" alt="Member Photo">
                <div class="middle">
-                  <div class="memberName">Jane Smith</div>
+                  <div class="memberName">Crusader</div>
                </div>
             </div>
-            <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
+            <div class="member-grid-item" onclick="editMember('Demon Hunter', 'img/ferrets/ferret3.png', 'Lorem ipsum dolor sit amet...')">
                <img src="img/ferrets/ferret3.png" alt="Member Photo">
                <div class="middle">
-                  <div class="memberName">John Doe</div>
+                  <div class="memberName">Demon Hunter</div>
                </div>
             </div>
-            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
+            <div class="member-grid-item" onclick="editMember('Monk', 'img/ferrets/ferret4.png', 'Consectetur adipiscing elit...')">
                <img src="img/ferrets/ferret4.png" alt="Member Photo">
                <div class="middle">
-                  <div class="memberName">Jane Smith</div>
+                  <div class="memberName">Monk</div>
                </div>
             </div>
-            <!-- Add more members here -->
+            <div class="member-grid-item" onclick="editMember('Necromancer', 'img/ferrets/ferret5.png', 'Consectetur adipiscing elit...')">
+               <img src="img/ferrets/ferret5.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">Necromancer</div>
+               </div>
+            </div>
+            <div class="member-grid-item" onclick="editMember('Witch Doctor', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
+               <img src="img/ferrets/ferret1.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">Witch Doctor</div>
+               </div>
+            </div>
+            <div class="member-grid-item" onclick="editMember('Wizard', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
+               <img src="img/ferrets/ferret2.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">Wizard</div>
+               </div>
+            </div>
+            <div class="member-grid-item" onclick="editMember('The Nephalem', 'img/ferrets/ferret3.png', 'Consectetur adipiscing elit...')">
+               <img src="img/ferrets/ferret3.png" alt="Member Photo">
+               <div class="middle">
+                  <div class="memberName">The Nephalem</div>
+               </div>
+            </div>
          </div>
       </div>
 
@@ -78,6 +101,9 @@
          </div>
          <div class="form-group">
             <button onclick="saveMember()">Save Changes</button>
+         </div>
+         <div class="form-group">
+            <button id = "delete" >Delete Member</button>
          </div>
       </div>
    </div>

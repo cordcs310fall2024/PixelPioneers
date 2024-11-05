@@ -7,7 +7,6 @@
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/addMember.css">
-
 </head>
 <body>
 
@@ -25,42 +24,30 @@
       </button>
    </div>
 
-   <!-- Content area -->
-   <div class="content">
-      <!-- Middle Column - Members Grid -->
-      <div class="middle-column">
-         <div class="member-grid">
-            <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">John Doe</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Jane Smith</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('John Doe', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">John Doe</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Jane Smith', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Jane Smith</div>
-               </div>
-            </div>
-            <!-- Add more members here -->
-         </div>
-      </div>
-   </div>
-</div>
 
-<script src="js/addMember.js"></script>
+   <!-- Content area -->
+    <div class = "content">
+   <form id="member-form">
+             <h1>Add Member</h1>
+            <div class="form-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+            </div>
+
+            <div class="form-group">
+                <textarea id="bio" name="bio" rows="4" required></textarea>
+                <label for="bio">Bio</label>
+            </div>
+
+            <div class="form-group">
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                <label for="photo">Upload Photo</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+</div>
 
 </body>
 </html>
