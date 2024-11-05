@@ -70,7 +70,8 @@
    border-left: 1px solid #E34752;
 }
 .right-column h3 {
-   margin-top: 0;
+   font-size: calc(10px + 0.7vh + 0.7vw);
+   margin: 0;
 }
 .form-group {
    margin-bottom: 15px;
