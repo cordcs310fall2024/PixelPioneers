@@ -189,7 +189,6 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    right: 15px;
    height: 35px;
    width: 35px;
-   position: fixed;
 }
 
 .spinner {
@@ -199,7 +198,6 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    height: 4px;
    width: 100%;
    background-color: #fff;
-   position: fixed;
 }
 
 .horizontal {
@@ -208,7 +206,6 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    position: relative;
    float: left;
    margin-top: 6px;
-   position: fixed;
 }
 
 .diagonal.part-1 {
@@ -216,7 +213,6 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    transition: all 0.3s;
    box-sizing: border-box;
    float: left;
-   position: fixed;
 }
 
 .diagonal.part-2 {

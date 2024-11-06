@@ -1,8 +1,9 @@
 
-
 .admin-page {
    display: flex;
    height: 100vh;
+   background-color: #FAEDCD;
+   margin-top: 120px;
    
 }
 .sidebar {
