@@ -25,7 +25,7 @@ main{
 
 .top-section {
 
-    background-color: #6D153F;
+    background-color: #F18C44;
     position: relative;
 }
 
@@ -66,10 +66,10 @@ main{
 
 /* button styles */
 .mission-button {
-    background-color: #6f1d46;
+    background-color: #6D153F;
     text-align: center;
     justify-content: center;
-    color: #eaa82a;
+    color: #F18C44;
     font-size: calc(5px + 2vw);
     font-weight: 200;
     padding-top: 5vh;
@@ -87,7 +87,7 @@ main{
 
 /* mission statement */
 .mission-content {
-    color:  #6f1d46;
+    color:  #6D153F;
     font-size: calc(10px + 1vw);
     line-height: 1.5;
     letter-spacing: 0.1vw;
@@ -100,9 +100,9 @@ main{
 .mission-button:hover {
     width: 70%;
     max-width: 900px;
-    background-color:#6f1d46;
+    background-color:#6D153F;
     border-radius: 50px;
-    color:  #eaa82a;
+    color:  #F18C44;
     padding: 40px 20px;
     height: auto;
     white-space: normal;
@@ -165,7 +165,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #6f1d46;
+    background-color: #6D153F;
     padding: 1vw;
     border-radius: 10px;
     z-index: 2;
@@ -231,8 +231,8 @@ main{
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #eaa82a;
-    background-color: #6f1d46;
+    color:  #F18C44;
+    background-color: #6D153F;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
@@ -243,7 +243,7 @@ main{
 
 .buttonMembers:hover{
     background-color:  #eaa82a;
-    color: #6f1d46;
+    color: #6D153F;
 }
 
 
@@ -265,7 +265,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #6f1d46;
+    background-color: #6D153F;
     padding: 1vw;
     border-radius: 10px;
     z-index: 2;
@@ -281,7 +281,7 @@ main{
 
 .contentCobbertunity h1 {
 
-    color: #6f1d46;
+    color: #6D153F;
     font-size: 3vw; 
     font-weight: 300;
     text-align: right;
@@ -325,8 +325,8 @@ main{
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #eaa82a;
-    background-color: #6f1d46;
+    color:  #F18C44;
+    background-color: #6D153F;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
@@ -359,7 +359,7 @@ main{
     margin-top:5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #6f1d46;
+    background-color: #6D153F;
     padding: 1vw;
     border-radius: 10px;
     z-index: 2;
@@ -420,8 +420,8 @@ main{
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #eaa82a;
-    background-color: #6f1d46;
+    color:  #F18C44;
+    background-color: #6D153F;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
@@ -455,7 +455,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #6f1d46;
+    background-color: #6D153F;
     padding: 1vw;
     border-radius: 10px;
     z-index: 2;
@@ -514,8 +514,8 @@ main{
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #eaa82a;
-    background-color: #6f1d46;
+    color:  #F18C44;
+    background-color: #6D153F;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
@@ -548,7 +548,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #6f1d46;
+    background-color: #6D153F;
     padding: 1vw;
     border-radius: 10px;
     z-index: 2;
@@ -564,7 +564,7 @@ main{
 
 .contentSocial h1 {
 
-    color: #6f1d46;
+    color: #6D153F;
     font-size: 3vw; 
     font-weight: 300;
     text-align: left;
@@ -595,7 +595,7 @@ main{
     align-items: center;
     text-align: center; 
     font-size: 30px; 
-    color:  #6f1d46;
+    color:  #6D153F;
     text-decoration: none; 
     display: flex;
     justify-content: flex-start; 
@@ -605,7 +605,7 @@ main{
 
 .buttonSocial {
     letter-spacing: 2px;
-    color:  #6f1d46;
+    color:  #6D153F;
 }
 
 .bi-instagram {
