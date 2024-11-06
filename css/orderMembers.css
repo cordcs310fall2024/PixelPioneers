@@ -3,14 +3,14 @@
    display: flex;
    height: 100vh;
    background-color: #FAEDCD;
-   margin-top: 120px;
+   padding-top: 120px;
    
 }
 .sidebar {
    width: 20%;
-   background-color: #E34752;
+   background-color: #6D153F;
    padding: 20px;
-   border-right: 1px solid #E34752;
+   border-right: 1px solid #6D153F;
 }
 
 .sidebar button {
@@ -18,7 +18,7 @@
    width: calc(100% + 40px);
    margin-left: -20px; 
    margin-bottom: 15px;
-   background-color: #E34752;
+   background-color: #6D153F;
    color: #fff;
    border: none;
    border-radius: 5px;
@@ -70,7 +70,7 @@
 }
 
 .right-column {
-   border-left: 2px solid #E34752;
+   border-left: 2px solid #6D153F;
    padding: 20px;
    position: relative; 
 }
@@ -85,9 +85,9 @@
 .right-column li {
    padding: 10px;
    margin: 5px 0;
-   background-color: #E34752;
+   background-color: #6D153F;
    cursor: move;
-   border: 1px solid #E34752;
+   border: 1px solid #6D153F;
    border-radius: 7px;
    color: white;
    font-size: calc(5px + 0.7vh + 0.7vw);

@@ -3,19 +3,20 @@
 .admin-page {
     display: flex;
     height: 100vh;
+    padding-top: 120px;
  }
  .sidebar {
     width: 20%;
-    background-color: #E34752;
+    background-color: #6D153F;
     padding: 20px;
-    border-right: 1px solid #E34752;
+    border-right: 1px solid #6D153F;
  }
  .sidebar button {
     display: block;
     width: calc(100% + 40px); /* Ensures the button occupies full width minus padding */
     margin-left: -20px; /* Offset to align with the sidebar padding */
     margin-bottom: 15px;
-    background-color: #E34752;
+    background-color: #6D153F;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -30,7 +31,7 @@
  }
  
  .sidebar button:hover {
-    background-color:#e86871;
+    background-color:#6D153F;
  }
  
  .content {

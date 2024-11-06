@@ -2,31 +2,46 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #FAEDCD;
     padding: 20px;
     border-radius: 8px;
     max-width: 900px;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
+
+body{
+    background-color: #FAEDCD;
+}
+
 
 form {
     flex: 1;
     padding-right: 20px;
+    padding-top: 200px;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: calc(20px + 1vh + 1vw);
     margin-bottom: 15px;
-    color: #333;
+    color: #DD2C54;
+}
+
+hr {
+    height: 4px;
+    color: #DD2C54;
+    background: #DD2C54;
+    font-size: 0;
+    border: 0;
+    width: 40%;
 }
 
 input[type="text"], input[type="email"], textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-radius: 40px;
     font-size: 16px;
     box-sizing: border-box;
     background-color: #fff;
@@ -43,11 +58,11 @@ input::placeholder, textarea::placeholder {
 }
 
 input[type="submit"] {
-    width: 100%;
+    width: 30%;
     padding: 12px;
-    background-color: #4CAF50;
+    background-color: #DD2C54;
     border: none;
-    border-radius: 4px;
+    border-radius: 40px;
     color: white;
     font-size: 16px;
     cursor: pointer;

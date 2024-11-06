@@ -17,9 +17,11 @@ require_once("header.php")
 ?>
 
 <!---------------------- CONTENT ---------------------->
+<div class = "page">
     <div class="contact-container">
         <form>
             <h2>Get In Touch</h2>
+            <hr />
             <label for="name"></label><br>
             <input type="text" id="name" name="name" placeholder="Name"> <br>
 
@@ -36,5 +38,6 @@ require_once("header.php")
             <img src = "img/contactImg/wave.png" alt = "">
         </div>
     </div>
+ </div>
 </body>
 </html>
