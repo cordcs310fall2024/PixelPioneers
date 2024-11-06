@@ -51,7 +51,7 @@
 }
 .member-grid-item {
    width: calc(33.33% - 20px);
-   border: 2px solid #F7A041;
+   border: 1px solid #F7A041;
    border-radius: 6px;
    padding: 10px;
    text-align: center;
