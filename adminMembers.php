@@ -26,11 +26,11 @@
       <button onclick="window.location.href='addMember.php'">
          <i class="bi bi-person-plus"></i> Add Member
       </button>
-      <button onclick="window.location.href='adminEventEdit.php'">
-         <i class="bi bi-person-plus"></i> Edit Event
-      </button>
       <button onclick="window.location.href='adminEventAdd.php'">
          <i class="bi bi-person-plus"></i> Add Event
+      </button>
+      <button onclick="window.location.href='adminEventEdit.php'">
+         <i class="bi bi-pencil-square"></i> Edit Event
       </button>
    </div>
 

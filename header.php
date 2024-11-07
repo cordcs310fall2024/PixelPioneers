@@ -11,64 +11,63 @@
 
 </head>
 <body>
-   <!-- Header -->
-   <header class="header">
-      <nav id="mainNav">
-         <div id="leftHeader">
-            <a href="index.php"><img src="img/ConcoHeader.jpg" class="header-logo"></a>
-         </div>
-         <div id="rightHeader">
-            <ul>
-               <li><a href="about.php">About</a></li>
-               <li><a href="schedule.php">Schedule</a></li>
-               <li><a href="contact.php">Contact</a></li>
-            </ul>
-         </div>
-      </nav>
+<!---------------------- HEADER ---------------------->
 
-      <!-- Sidebar Toggle Icon -->
-      <input type="checkbox" id="openSidebarMenu" style="display:none;">
-      <label for="openSidebarMenu" class="sidebarIconToggle" onclick="toggleSidebar()">
-         <div class="spinner diagonal part-1"></div>
-         <div class="spinner horizontal"></div>
-         <div class="spinner diagonal part-2"></div>
-      </label>
-   </header>
-
-   <!-- Sidebar  -->
-   <div id="sidebarMenu">
-      <ul class="sidebarMenuInner">
-         <li><a href="about.php">About</a>
+<!-- header.php???? -->
+<header class="header">
+    <nav id="mainNav">
+        <div id = "leftHeader">
+                <a href="index.php"> <img src="img/ConcoHeader.jpg" class="header-logo"></a>
+        </div>
+        <div id="rightHeader">
+        <ul>
+            <li><a href="about.php">About</a></li>
+            <li><a href="schedule.php">Schedule</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+ <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+ </label>
+        
+    </div>
+    </nav>
+ </header>
+ 
+ <!-- Sidebar -->
+ <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+        <li>
+            <a href="about.php">About</a>
             <ul>
-               <li><a href="members.php"><i class="bi bi-person"></i> Members</a></li>
-               <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/cobbertunity/" target="_blank"><i class="bi bi-chat-dots"></i> Cobbertunity</a></li>
-               <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/" target="_blank"><i class="bi bi-award"></i> Programs</a></li>
-               <li><a href="https://cobberconnect.cord.edu/feeds?type=club&type_id=35499&tab=home/" target="_blank"><i class="bi bi-chat-quote"></i> Cobber Connect</a></li>
-               <li><a href="https://www.instagram.com/cobberentrepreneurs/" target="_blank"><i class="bi bi-instagram"></i> Social Media</a></li>
+                <li><a href="members.php"><i class="bi bi-person"></i> Members</a></li> 
+                <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/cobbertunity/" target="_blank"><i class="bi bi-chat-dots"></i> Cobbertunity</a></li> 
+                <li><a href="https://www.concordiacollege.edu/academics/programs-of-study/offutt-school-of-business/" target="_blank"><i class="bi bi-award"></i> Programs</a></li>
+                <li><a href="https://cobberconnect.cord.edu/feeds?type=club&type_id=35499&tab=home/" target="_blank"><i class="bi bi-chat-quote"></i> Cobber Connect</a></li>
+                <li><a href="https://www.instagram.com/cobberentrepreneurs/" target="_blank"><i class="bi bi-instagram"></i> Social Media</a></li> 
             </ul>
-         </li>
-         <li><a href="schedule.php">Schedule</a>
+        </li>
+        <li>
+            <a href="schedule.php">Schedule</a>
             <ul>
-               <li><a href="schedule.html"><i class="bi bi-calendar-event"></i> Events</a></li>
-               <li><a href="schedule.html"><i class="bi bi-clock"></i> Meetings</a></li>
+                <li><a href="schedule.html"><i class="bi bi-calendar-event"></i> Events</a></li> 
+                <li><a href="schedule.html"><i class="bi bi-clock"></i> Meetings</a></li> 
             </ul>
-         </li>
-         <li><a href="contact.php">Contact</a>
+        </li>
+        <li>
+            <a href="contact.php">Contact</a>
             <ul>
-               <li><a href="contact.php"><i class="bi bi-person-plus"></i> Join</a></li>
+                <li><a href="contact.php"><i class="bi bi-person-plus"></i> Join</a></li> 
             </ul>
-         </li>
-      </ul>
-      <div class="adminLogin">
-         <a href="login.php"><i class="bi bi-shield-lock"></i> Admin Login</a>
-      </div>
-   </div>
+        </li>
+    </ul>
+    <div class="adminLogin">
+        <a href="login.php"><i class="bi bi-shield-lock"></i> Admin Login</a>
+    </div>
+</div>
 
 
-   <script>
-      function toggleSidebar() {
-         const sidebarMenu = document.getElementById('sidebarMenu');
-         sidebarMenu.style.transform = sidebarMenu.style.transform === 'translateX(0px)' ? 'translateX(300px)' : 'translateX(0px)';
-      }
-   </script>
 </body>
+</html>

@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project</title>
-    <!-- Bootstrap Icons CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/adminMemberEvent.css"> 
-    <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/addMember.css">
 </head>
 <body>
+<?php 
+  require_once("header.php")
+?>
+<div class="admin-page">
+   <!-- Sidebar for actions -->
+   <div class="sidebar">
+      <button onclick="window.location.href='orderMembers.php'">
+         <i class="bi bi-list-ul"></i> Order Members
+      </button>
+      <button onclick="window.location.href='adminMembers.php'">
+         <i class="bi bi-pencil-square"></i> Edit Members
+      </button>
+      <button onclick="window.location.href='addMember.php'">
+         <i class="bi bi-person-plus"></i> Add Member
+      </button>
+      <button onclick="window.location.href='adminEventAdd.php'">
+         <i class="bi bi-person-plus"></i> Add Event
+      </button>
+      <button onclick="window.location.href='adminEventEdit.php'">
+         <i class="bi bi-pencil-square"></i> Edit Event
+      </button>
+   </div>
 
-    <?php 
-    require_once("header.php")
-    ?>
-    
-<!-- -------------------- MAIN CONTENT ---------------------->
-<main>
-    <div id="editForm" class="editFormEvent"> 
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-        
-            <label for="date">Date:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
-        
-            <label for="description">Description:</label><br>
-            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
-        
-            <label for="image">Upload Image:</label><br>
-            <input type="file" id="image" name="image" accept="image/*" required><br><br>
-        
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</main>
+   <!-- Content area -->
+   <div class="content">
+      <form id="event-form">
+         <h1>Add Event</h1>
+         <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Title</label>
+         </div>
 
+         <div class="form-group">
+            <textarea id="bio" name="bio" rows="4" required></textarea>
+            <label for="bio">Description</label>
+         </div>
+
+         <div class="form-group">
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <label for="photo">Upload Photo</label>
+         </div>
+         <div class="form-group">
+            <input type="date" id="eventDate" name="eventDate" required>
+            <label for="eventDate">Event Date</label>
+         </div>
+
+         <button type="submit">Submit</button>
+      </form>
+   </div>
+</div>
 
 </body>
 </html>
