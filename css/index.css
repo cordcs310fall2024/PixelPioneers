@@ -72,6 +72,15 @@ text-align: center;
   align-items: center; 
 }
 
+.contact .title {
+  font-size: 20px;
+}
+
+.event .title {
+  font-size: 20px;
+}
+
+
 .AboutLink {
   display: flex;
   background-color: #6f1d46;
@@ -245,4 +254,64 @@ max-width: 900px;
 margin: 0 auto;
 display: block; 
 margin-bottom: 20px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Stack event sections vertically */
+  .event {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .leftSide, .rightSide {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .recentEvents {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-item img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Center title and container alignment on smaller screens */
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imgContainer img {
+    margin-top: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .EventLink {
+    margin: 0 auto;
+  }
+
+  .pContainer {
+    text-align: center;
+    padding: 0 20px;
+    margin: 20px auto;
+  }
 }
