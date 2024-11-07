@@ -6,7 +6,7 @@
     max-width: 63.75vw;
     border-top: 3.75vh #6D153F solid;
     margin: 0 auto;
-    padding: 2.25vh 0 2.25vh 2.25vw; 
+    padding: 2vh 0 2vh 2vw; 
     box-shadow: 0 0.45vw 0.6vw rgba(0, 0, 0, 0.4);
     position: relative;
 }
@@ -24,17 +24,17 @@ form {
 }
 
 h2 {
-    font-size: calc(1.125rem + 0.75vh + 0.75vw);
-    margin-bottom: 1.125vh;
+    font-size: calc(1.125rem + 1vh + 1vw);
     margin-top: 2vh;
     color: #af1c3d;
 }
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
+    margin-top: 2vh;
     max-width: 60vw; 
-    padding: 1.5vh 1.5vw;
-    margin-bottom: 1.125vh; 
+    padding: 2.5vh 1.5vw;
+    margin-bottom: 1vh; 
     border: none;
     border-radius: 1.5vw;
     font-size: 0.75rem; 
@@ -42,24 +42,27 @@ input[type="text"], input[type="email"], textarea {
 }
 
 textarea {
-    height: calc(100px + 3vh);
+    height: calc(100px + 5vh);
     resize: none;
+    margin-top: 2vh;
 }
 
 input::placeholder, textarea::placeholder {
     color: #828282;
     font-style: italic;
+    font-size: 1.2rem;
 }
 
 input[type="submit"] {
-    width: 40%; 
+    width: 60%; 
     max-width: 30vw; 
-    padding: 1vh 0; 
+    padding: 2vh 0; 
     background-color: #DD2C54;
     border: none;
     border-radius: 3vw;
+    margin-top: 2vh;
     color: white;
-    font-size: 0.75rem; 
+    font-size: 1.2rem; 
     transition: background-color 0.3s ease;
 }
 
@@ -70,6 +73,7 @@ input[type="submit"]:hover {
 .contact-right {
     flex: 1;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     margin-top: 4.5vh; 
@@ -79,6 +83,118 @@ input[type="submit"]:hover {
 .contact-right img {
     width: 100%;
     height: auto;
-    max-width: 60vw; 
-    margin: 0.075vw;
+}
+
+.star-icon1 {
+    position: absolute;
+    top: 20%; /* Adjust this to move the icon vertically */
+    left: 55%; /* Adjust this to move the icon further to the left */
+    width: auto;
+    max-width: 1.2vw; /* Set a maximum width relative to the viewport */
+    height: auto; /* Maintains the original aspect ratio */
+    cursor: move;
+    animation: spin 4s linear infinite; 
+}
+
+.star-icon2 {
+    position: absolute;
+    top: 87%; 
+    left: 28%; 
+    width: auto;
+    max-width: 0.7vw;
+    height: auto; 
+    cursor: move;
+    animation: spin 3s linear infinite; 
+}
+
+.star-icon3 {
+    position: absolute;
+    top: 38%;
+    left: 75%; 
+    width: auto;
+    max-width: 1.1vw; 
+    height: auto; 
+    cursor: move;
+    animation: spin 3s linear infinite; 
+}
+
+.mail_icon {
+    position: absolute;
+    top: 10%; 
+    left: 70%;
+    width: auto;
+    max-width: 6.5vw;
+    height: auto; 
+    cursor: move;
+    animation: diagonal-move 4s linear infinite; 
+}
+
+.phone_icon {
+    position: absolute;
+    top: 38%; 
+    left: 40%; 
+    width: auto;
+    max-width: 5.8vw; 
+    height: auto;
+    cursor: move;
+    animation: vertical-move 3s linear infinite; 
+}
+
+.question_icon {
+    position: absolute;
+    top: 68%;
+    left: 13%;
+    width: auto;
+    max-width: 5.8vw;
+    height: auto;
+    cursor: move;
+    animation: question_rotate 4s linear infinite; 
+}
+
+/* ANIMATIONS */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes question_rotate {
+    0% {
+        transform: rotate(-60deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+
+@keyframes diagonal-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px); 
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes vertical-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 23px); 
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

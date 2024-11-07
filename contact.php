@@ -34,8 +34,14 @@ require_once("header.php")
             <input type="submit" value="Submit">
 
         </form>
-        <div class = "contact-right">
-            <img src = "img/contactImg/fullImage2.png" alt = "">
+        <div class="contact-right">
+                <img src="img/contactImg/fullImage2.png" alt="">
+                <img src="img/contactImg/StarRotate1.png" class="star-icon1">
+                <img src="img/contactImg/StarRotate1.png" class="star-icon2">
+                <img src="img/contactImg/StarRotate3.png" class="star-icon3">
+                <img src="img/contactImg/Mail_Icon.png" class="mail_icon">
+                <img src="img/contactImg/Phone_Icon.png" class="phone_icon">
+                <img src="img/contactImg/Question_Icon.png" class="question_icon">
         </div>
  </div>
 </body>
