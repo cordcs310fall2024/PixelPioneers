@@ -13,7 +13,7 @@
    justify-content: space-between; /* space between left and right sections */
    padding: 10px 20px; 
    z-index: 9998; 
-   height: 80px;
+   height: 60px;
    margin: 0 auto; /* centered the header */
    max-width: 100%; /* doesn't shrink */
    box-shadow: none; 
@@ -60,14 +60,14 @@ nav {
 nav ul {
    list-style: none;
    display: flex; /* horizontal alignment of items */
-   font-size: 2rem; 
+   font-size: 1.5rem; 
    align-items: center;
    justify-content: center; 
 }
 
 /* each indivudal list item in the navigation */
 nav ul li {
-   margin-left: 20px; /* spacing between nav items */
+   margin-left: 10px; /* spacing between nav items */
 }
 
 /* anchor tag styling for navigation links */
@@ -82,20 +82,36 @@ nav ul li a {
 
 /* siderbar container */
 #sidebarMenu {
-   height: calc(100% - 100px); /* Adjust height to fit below the header */
+   height: calc(100% - 60px); /* Adjust height to fit below the header */
    position: fixed;
    right: 0;
    width: 300px;
+   top: 60px;
    transform: translateX(300px); /* Initially hidden off-screen */
    transition: transform 250ms ease-in-out; /* Sliding transition */
    background-color: #6D153F;
    z-index: 9997; /* Sidebar is above other content */
+   overflow-y: auto;
 }
 
 /* Inner sidebar content styling */
 .sidebarMenuInner {
    margin: 0;
    padding: 0;
+}
+
+/* Custom scrollbar styling */
+#sidebarMenu::-webkit-scrollbar {
+   width: 8px;
+}
+
+#sidebarMenu::-webkit-scrollbar-track {
+   background: #6D153F;
+}
+
+#sidebarMenu::-webkit-scrollbar-thumb {
+   background-color: #eaa82a; 
+   border-radius: 4px;
 }
 
 /* outer links (main categories) in the sidebar */
@@ -183,17 +199,18 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: fixed;
    z-index: 1000;
-   top: 30px;
-   right: 20px;
-   height: 35px;
-   width: 35px;
+   top: 32px;
+   right: 17px;
+   height: 30px;
+   width: 40px;
+   margin-top: -10px;
 }
 
 .spinner {
    transition: all 0.3s;
    box-sizing: border-box;
    position: absolute;
-   height: 4px;
+   height: 2px;
    width: 100%;
    background-color: #fff;
 }
@@ -228,12 +245,14 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
 
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
    transform: rotate(135deg);
-   margin-top: 12px;
+   margin-top: 14px;
+   background-color: #eaa82a;
 }
 
 input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
    transform: rotate(-135deg);
-   margin-top: -14px;  /* needs to be more for some reason */
+   margin-top: -11px;  /* needs to be more for some reason */
+   background-color: #eaa82a;
 }
 
 
@@ -242,7 +261,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 /* styling for the admin login link in the sidebar */
 .adminLogin {
    position: absolute;
-   bottom: 12vh; /* put towards the bottom */
+   margin-bottom: 0vh; /* put towards the bottom */
    right: 10px; /* align right */
    font-size: calc(12px + 1vh); 
 }

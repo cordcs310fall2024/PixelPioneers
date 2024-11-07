@@ -35,7 +35,7 @@ require_once("header.php")
 
         </form>
         <div class = "contact-right">
-            <img src = "img/contactImg/fullImage.png" alt = "">
+            <img src = "img/contactImg/fullImage2.png" alt = "">
         </div>
  </div>
 </body>
