@@ -3,7 +3,7 @@
 .admin-page {
     display: flex;
     height: 100vh;
-    padding-top: 120px;
+    padding-top:80px;
  }
  .sidebar {
     width: 20%;

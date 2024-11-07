@@ -35,7 +35,7 @@ require_once("header.php")
 
         </form>
         <div class = "contact-right">
-            <img src = "img/blobAnimation.json" alt = "">
+            <img src = "img/contactImg/fullImage.png" alt = "">
         </div>
     </div>
  </div>

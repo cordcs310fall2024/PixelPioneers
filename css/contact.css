@@ -1,14 +1,14 @@
 .contact-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top of the container */
     background-color: #FAEDCD;
     padding: 20px;
     border-radius: 8px;
     max-width: 900px;
     margin: 0 auto;
-
 }
+
 
 body{
     background-color: #FAEDCD;
@@ -18,6 +18,7 @@ body{
 form {
     flex: 1;
     padding-right: 20px;
+    margin-top: 80px;
 }
 
 h2 {
@@ -64,23 +65,24 @@ input[type="submit"] {
     border-radius: 40px;
     color: white;
     font-size: 16px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #dd4569;
 }
 
 .contact-right {
-    flex: 0.5;
+    flex: 1; /* Increase this to make the image container larger */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
 .contact-right img {
-    max-width: 100%;
+    width: 100%; /* Adjust to control the image size */
     height: auto;
+    max-width: 600px; /* Limits the maximum width of the image */
     border-radius: 8px;
 }
