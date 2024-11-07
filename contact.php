@@ -20,8 +20,8 @@ require_once("header.php")
 <div class = "page">
     <div class="contact-container">
         <form>
-            <h2>Get In Touch</h2>
-            <hr />
+            <h2>Contact Us</h2>
+  
             <label for="name"></label><br>
             <input type="text" id="name" name="name" placeholder="Name"> <br>
 
@@ -37,7 +37,6 @@ require_once("header.php")
         <div class = "contact-right">
             <img src = "img/contactImg/fullImage.png" alt = "">
         </div>
-    </div>
  </div>
 </body>
 </html>

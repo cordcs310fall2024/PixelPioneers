@@ -25,17 +25,18 @@
             <li><a href="schedule.php">Schedule</a></li>
             <li><a href="contact.php">Contact</a></li>
         </ul>
-    </div>
-    </nav>
- </header>
- 
- <!-- Sidebar -->
- <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
  <label for="openSidebarMenu" class="sidebarIconToggle">
     <div class="spinner diagonal part-1"></div>
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
  </label>
+        
+    </div>
+    </nav>
+ </header>
+ 
+ <!-- Sidebar -->
  <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
         <li>

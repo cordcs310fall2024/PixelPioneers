@@ -35,7 +35,7 @@
    align-items: center;
    justify-content: flex-end; 
    flex: 1; 
-   margin-right: 3vw;
+   margin-right: 1vw;
 }
 
 /* ----- LOGO STYLES ----- */
@@ -85,8 +85,8 @@ nav ul li a {
    height: 100%; 
    position: fixed;
    right: 0;
+   margin-top: 80px;
    width: 300px; 
-   margin-top: 10vh; /* align below the header */
    transform: translateX(300px); /* initially hidden off-screen */
    transition: transform 250ms ease-in-out; /* sliding transition */
    background-color:#6D153F;
@@ -185,7 +185,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: absolute;
    z-index: 9999;
-   top: 37px;
+   top: 10px;
    right: 15px;
    height: 35px;
    width: 35px;
