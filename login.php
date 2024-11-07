@@ -29,7 +29,7 @@ require_once("header.php")
         <body>
             <div class="main">
                 <h1>Admin</h1>
-                <form action="adminMembers.php">
+                <form action="admin.php">
                     <label for="first">
                         Username:
                     </label>

@@ -196,6 +196,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 /* ----- SIDEBAR ICON TOGGLE STYLES ----- */
 
 .sidebarIconToggle {
+   transition: all 0.3s;
    box-sizing: border-box;
    position: fixed;
    z-index: 1000;
