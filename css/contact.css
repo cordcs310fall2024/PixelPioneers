@@ -87,11 +87,11 @@ input[type="submit"]:hover {
 
 .star-icon1 {
     position: absolute;
-    top: 20%; /* Adjust this to move the icon vertically */
-    left: 55%; /* Adjust this to move the icon further to the left */
+    top: 20%;
+    left: 55%; 
     width: auto;
-    max-width: 1.2vw; /* Set a maximum width relative to the viewport */
-    height: auto; /* Maintains the original aspect ratio */
+    max-width: 1.5vw;
+    height: auto; 
     cursor: move;
     animation: spin 4s linear infinite; 
 }
@@ -101,7 +101,7 @@ input[type="submit"]:hover {
     top: 87%; 
     left: 28%; 
     width: auto;
-    max-width: 0.7vw;
+    max-width: 1vw;
     height: auto; 
     cursor: move;
     animation: spin 3s linear infinite; 
@@ -112,7 +112,7 @@ input[type="submit"]:hover {
     top: 38%;
     left: 75%; 
     width: auto;
-    max-width: 1.1vw; 
+    max-width: 1.4vw; 
     height: auto; 
     cursor: move;
     animation: spin 3s linear infinite; 
