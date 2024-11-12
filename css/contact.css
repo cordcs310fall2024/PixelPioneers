@@ -24,8 +24,8 @@ form {
 }
 
 h2 {
-    font-size: calc(1.125rem + 1vh + 1vw);
-    margin-top: 2vh;
+    font-size: calc(1.125rem + 1.2vh + 1.2vw);
+    margin-top: 2.2vh;
     color: #af1c3d;
 }
 
@@ -90,7 +90,7 @@ input[type="submit"]:hover {
     top: 20%;
     left: 55%; 
     width: auto;
-    max-width: 1.5vw;
+    max-width: 1.7vw;
     height: auto; 
     cursor: move;
     animation: spin 4s linear infinite; 
@@ -101,7 +101,7 @@ input[type="submit"]:hover {
     top: 87%; 
     left: 28%; 
     width: auto;
-    max-width: 1vw;
+    max-width: 1.2vw;
     height: auto; 
     cursor: move;
     animation: spin 3s linear infinite; 
@@ -112,29 +112,60 @@ input[type="submit"]:hover {
     top: 38%;
     left: 75%; 
     width: auto;
-    max-width: 1.4vw; 
+    max-width: 1.6vw; 
     height: auto; 
     cursor: move;
     animation: spin 3s linear infinite; 
 }
 
+.star-icon4 {
+    position: absolute;
+    top: 88%;
+    left: 92%; 
+    width: auto;
+    max-width: 1vw; 
+    height: auto; 
+    cursor: move;
+}
+
+
+.star-icon5 {
+    position: absolute;
+    top: 72%;
+    left: 87%; 
+    width: auto;
+    max-width: 1.5vw; 
+    height: auto; 
+    cursor: move;
+}
+
+.star-icon6 {
+    position: absolute;
+    top: 63%;
+    left:50%; 
+    width: auto;
+    max-width: 1.3vw; 
+    height: auto; 
+    cursor: move;
+}
+
 .mail_icon {
     position: absolute;
     top: 10%; 
-    left: 70%;
+    left: 67%;
     width: auto;
-    max-width: 6.5vw;
+    max-width: 7vw;
     height: auto; 
     cursor: move;
-    animation: diagonal-move 4s linear infinite; 
+    animation: diagonal-move 3.5s linear infinite; 
 }
 
 .phone_icon {
     position: absolute;
-    top: 38%; 
+    top: 36%; 
     left: 40%; 
     width: auto;
-    max-width: 5.8vw; 
+    max-width: 6.3vw; 
     height: auto;
     cursor: move;
     animation: vertical-move 3s linear infinite; 
@@ -143,9 +174,9 @@ input[type="submit"]:hover {
 .question_icon {
     position: absolute;
     top: 68%;
-    left: 17%;
+    left: 14%;
     width: auto;
-    max-width: 5.8vw;
+    max-width: 7vw;
     height: auto;
     cursor: move;
     animation: question_rotate 4s linear infinite; 
@@ -164,13 +195,13 @@ input[type="submit"]:hover {
 
 @keyframes question_rotate {
     0% {
-        transform: rotate(-60deg);
+        transform: rotate(-50deg);
     }
     50% {
-        transform: rotate(60deg);
+        transform: rotate(50deg);
     }
     100% {
-        transform: rotate(-60deg);
+        transform: rotate(-50deg);
     }
 }
 
