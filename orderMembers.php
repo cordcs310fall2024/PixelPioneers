@@ -114,6 +114,9 @@
 <script src="js/orderMembers.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
-
+<?php 
+    require_once("footer.php")
+    ?>
+    
 </body>
 </html>

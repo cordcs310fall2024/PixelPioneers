@@ -90,12 +90,13 @@ text-align: center;
   text-decoration: none;
   width: 125px;
   height: 75px;
-  line-height: 50px;
+  line-height: normal;
   text-align: center;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-
+  font-size: 18px; 
+  margin: 0; 
 }
 
 .AboutLink:hover {

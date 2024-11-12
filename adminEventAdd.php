@@ -88,6 +88,8 @@
 </div>
 
 <script src="js/adminEvents.js"></script>
-
+<?php 
+    require_once("footer.php")
+    ?>
 </body>
 </html>
