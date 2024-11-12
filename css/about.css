@@ -1,137 +1,56 @@
 
-
-
 main{
-    background-color: #fdfdfd;
-}
-
-
-.header {
-
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
-
-}
-#title h1{
-    font-size:calc(10px + 3.5vw);
-    text-align: left;
-    padding-top: 100px;
-    margin-left: 6vw;
-    padding-bottom: 6vw;
-    letter-spacing: 0.2vw;
-    line-height: 12vh;
-    color:  #fff0d4;
-    padding-top: 200px;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4); 
+    background-color: #FBF7F2
 }
 
 
 .top-section {
-
-    background-color: #6D153F;
-    position: relative;
-}
-
-/* https://www.shapedivider.app/ */
-
-.custom-shape-divider-bottom-1729120949 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    display: flex;
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    pointer-events: none;
-}
-
-.custom-shape-divider-bottom-1729120949 svg {
-    position: relative;
-    display: block;
-    width: calc(175% + 1.3px);
-    height: 299px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom-1729120949 .shape-fill {
-    fill: #FFFFFF;
-}
- 
-/* button wrapper */
-.mission-button-wrapper {
-    position: relative;
-    text-align: right;
-    margin-top: -11vh;
-    margin-right: 6vw;
-    margin-bottom: 10vh;
-    z-index: 10;
-}
-
-/* button styles */
-.mission-button {
-    background-color: #6D153F;
-    text-align: center;
-    justify-content: center;
-    color: #F18C44;
-    font-size: calc(5px + 2vw);
-    font-weight: 200;
-    padding-top: 5vh;
-    padding-bottom: 40px;
-    border-radius: 50px;
-    border: none;
-    transition: all 1s ease;
-    width: 30vw;
-    height: 14vh;
-    overflow: hidden;
-    white-space: wrap;
-    flex: 1;
-    
-}
-
-/* mission statement */
-.mission-content {
-    color:  #6D153F;
-    font-size: calc(10px + 1vw);
-    line-height: 1.5;
-    letter-spacing: 0.1vw;
-    padding: 20px;
-    font-weight: 50px;
-    text-align: left;
-}
-
-/* morph the button into a container */
-.mission-button:hover {
-    width: 70%;
-    max-width: 900px;
-    background-color:#6D153F;
-    border-radius: 50px;
-    color:  #F18C44;
-    padding: 40px 20px;
     height: auto;
-    white-space: normal;
-    transition: all 0.6s ease;
-    border: 8px solid #fdfdfd; ;
-}
+    margin-bottom: 4rem;
+    padding-top: 60px;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #fdfdfd;
 
-/* show mission content on hover */
-.mission-button:hover .mission-content {
-    display: block;
-    color:  #fff0d4;
-    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .left-section h1 {
+    font-size: calc(12px + 3vw); 
+    line-height: 1.7;
+    color: #333;
+    padding-left: 1vw;
+    font-family: Verdana, sans-serif;
+    letter-spacing: 5px;
+  }
+  .highlight {
+    font-weight: bold;
+    color: #F7A041;
+    font-size: calc(16px + 3vw); 
+    font-style: italic;
+    transform: skew(3deg);
+    letter-spacing: normal;
 }
+  
+  .right-section {
+    flex: 1;
+    background-color:  #fdfdfd;
+  }
+  
+  .right-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: -4px;
+  }
+  
 
-.mission-button:hover .button-text {
-    display: none; /* hide button text when morphing */
-}
-
-/* fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 .container {
     position: relative; 
@@ -145,13 +64,13 @@ main{
 }
 
 .container:hover {
-    transform: scale(1.06) translate(0, 10px); 
+    transform: scale(1.03) translate(0, 3px); 
 }
 
 
 /* --------------------CONTAINER 1 MEMBERS-------------------- */
 .contentMembers {
-    background-color: #FAEDCD;
+    background-color: #fdfdfd;
     padding-bottom: 0.5vh;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -167,9 +86,9 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
+    background-color: #da525b;
+    padding: 0.5vw;
+    border-radius: 8px;
     z-index: 2;
     justify-content: center;
     align-items: center;
@@ -182,9 +101,9 @@ main{
 
 .contentMembers h1 {
 
-    color: #6f1d46;
+    color: #F7A041;
     font-size: calc(20px + 1.5vw); 
-    font-weight: 300;
+    font-weight: 550;
     text-align: left;
     margin-left: 1.5vw;
     padding-top: 8vh;
@@ -197,7 +116,6 @@ main{
     font-size: calc(10px + 0.75vw);
     line-height: 1.5;
     padding-right: 110px; 
-    font-weight: 20;
     letter-spacing: 0.1vw;
 }
 
@@ -205,7 +123,7 @@ main{
     width: 100%;
     height: 100%; 
     object-fit: cover; /* image covers the container */
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .buttonMembersAlign {
@@ -225,16 +143,16 @@ main{
     justify-content: center; 
     align-items: center; 
     font-size: calc(10px + 1vw);
-    font-weight: 10px;
+    font-weight: 15px;
     padding: 0.5vw;
-    border-radius: 50px;
+    border-radius: 8px;
     letter-spacing: 2px;
     min-width: 300px;
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
+    background-color:  #6D153F;
+    color: #F7A041;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
@@ -243,15 +161,10 @@ main{
 
 }
 
-.buttonMembers:hover{
-    background-color:  #eaa82a;
-    color: #6D153F;
-}
-
 
 /* --------------------CONTAINER 2 COBBERTUNITY -------------------- */
 .contentCobbertunity {
-    background-color: #FAEDCD;
+    background-color:  #fdfdfd;
     padding-bottom: 0.5vh;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -267,9 +180,9 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
+    background-color: #da525b;
+    padding: 0.5vw;
+    border-radius: 8px;
     z-index: 2;
     justify-content: center;
     align-items: center;
@@ -283,9 +196,9 @@ main{
 
 .contentCobbertunity h1 {
 
-    color: #6D153F;
+    color: #F7A041;
     font-size: 3vw; 
-    font-weight: 300;
+    font-weight: 550;
     text-align: right;
     margin-right: 1.5vw;
     padding-top: 8vh;
@@ -306,12 +219,12 @@ main{
     width: 100%;
     height: 100%; 
     object-fit: cover; /* image covers the container */
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .buttonCobbertunityAlign {
     display: flex;
-    justify-content: flex-end; /* Aligns the button to the right */
+    justify-content: flex-end; /
 }
 
 .buttonCobbertunity{
@@ -321,532 +234,14 @@ main{
     font-size: calc(10px + 1vw);
     font-weight: 10px;
     padding: 0.5vw;
-    border-radius: 50px;
+    border-radius: 15px;
     letter-spacing: 2px;
     min-width: 300px;
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    
-
-}
-
-.buttonCobbertunity:hover{
-    background-color:  #eaa82a;
-    color: #6f1d46;
-}
-
-
-/* --------------------CONTAINER 3 PROGRAMS -------------------- */
-.contentPrograms {
-    background-color: #FAEDCD;
-    padding-bottom: 0.5vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
-    border-radius: 10px;
-    z-index: 1;
-    display: flex;
-    z-index: 1;
-    flex: 1;
-    flex-basis: 55%;   
-}
-
-.imagePrograms {
-    margin-top:5vh;
-    margin-bottom: 5vh;
-    margin-left: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    display: flex;
-    flex: 1;
-    z-index: 2;
-    flex-basis: 45%;   
-}
-
-
-.contentPrograms h1 {
-
-    color: #6f1d46;
-    font-size: 3vw; 
-    font-weight: 300;
-    text-align: left;
-    margin-left: 1.5vw;
-    padding-top: 8vh;
-}
-
-.contentPrograms p {
-    text-align: left;
-    margin: 2vh 0;
-    margin-left: 1.5vw;
-    font-size: calc(10px + 0.75vw);
-    line-height: 1.5;
-    padding-right: 110px; 
-    font-weight: 20;
-    letter-spacing: 0.1vw;
-}
-
-#ferret3 {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; /* image covers the container */
-    border-radius: 10px;
-}
-
-.buttonProgramsAlign {
-    display: flex;
-    justify-content: flex-start; 
-}
-
-
-.buttonPrograms{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    font-size: calc(10px + 1vw);
-    font-weight: 10px;
-    padding: 0.5vw;
-    border-radius: 50px;
-    letter-spacing: 2px;
-    min-width: 300px;
-    width: 13vw;
-    height: 5vw;
-    text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    
-
-}
-
-.buttonPrograms:hover{
-    background-color:  #eaa82a;
-    color: #6f1d46;
-}
-
-
-
-/* --------------------CONTAINER 4 CONNECT -------------------- */
-.contentConnect {
-    background-color: #FAEDCD;
-    padding-bottom: 0.5vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
-    border-radius: 10px;
-    z-index: 1;
-    display: flex;
-    z-index: 1;
-    flex: 1;
-    flex-basis: 55%;   
-}
-
-.imageConnect {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-right: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    display: flex;
-    flex: 1;
-    z-index: 2;
-    flex-basis: 45%;   
-}
-
-
-.contentConnect h1 {
-
-    color: #6f1d46;
-    font-size: 3vw; 
-    font-weight: 300;
-    text-align: right;
-    margin-right: 1.5vw;
-    padding-top: 8vh;
-}
-
-.contentConnect p {
-    text-align: right;
-    margin: 2vh 0;
-    margin-right: 1.5vw;
-    font-size: calc(10px + 0.75vw);
-    line-height: 1.5;
-    padding-left: 110px; 
-    font-weight: 20;
-    letter-spacing: 0.1vw;
-}
-
-#ferret4 {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; /* image covers the container */
-    border-radius: 10px;
-}
-
-.buttonConnectAlign {
-    display: flex;
-    justify-content: flex-end; 
-}
-.buttonConnect{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    font-size: calc(10px + 1vw);
-    font-weight: 10px;
-    padding: 0.5vw;
-    border-radius: 50px;
-    letter-spacing: 2px;
-    min-width: 300px;
-    width: 13vw;
-    height: 5vw;
-    text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    
-
-}
-
-.buttonConnect:hover{
-    background-color:  #eaa82a;
-    color: #6f1d46;
-}
-
-
-/* --------------------CONTAINER 5 SOCIAL MEDIA -------------------- */
-.contentSocial {
-    background-color: #FAEDCD;
-    padding-bottom: 0.5vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
-    border-radius: 10px;
-    z-index: 1;
-    display: flex;
-    z-index: 1;
-    flex: 1;
-    flex-basis: 55%;   
-}
-
-.imageSocial {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    display: flex;
-    flex: 1;
-    z-index: 2;
-    flex-basis: 45%;   
-}
-
-
-.contentSocial h1 {
-
-    color: #6D153F;
-    font-size: 3vw; 
-    font-weight: 300;
-    text-align: left;
-    margin-left: 1.5vw;
-    padding-top: 8vh;
-}
-
-.contentSocial p {
-    text-align: left;
-    margin: 2vh 0;
-    margin-left: 1.5vw;
-    font-size: calc(10px + 0.75vw);
-    line-height: 1.5;
-    padding-right: 110px; 
-    font-weight: 20;
-    letter-spacing: 0.1vw;
-}
-
-#ferret5 {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; /* image covers the container */
-    border-radius: 10px;
-}
-
-.buttonSocialAlign a {
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    font-size: 30px; 
-    color:  #6D153F;
-    text-decoration: none; 
-    display: flex;
-    justify-content: flex-start; 
-    padding-right: 10px;
-    padding-top: 20px;
-}
-
-.buttonSocial {
-    letter-spacing: 2px;
-    color:  #6D153F;
-}
-
-.bi-instagram {
-    margin-left: 1.5vw; 
-}
-
-main{
-    background-color: #fdfdfd;
-}
-
-.header {
-
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
-
-}
-#title h1{
-    font-size:calc(10px + 3.5vw);
-    text-align: left;
-    padding-top: 100px;
-    margin-left: 6vw;
-    padding-bottom: 6vw;
-    letter-spacing: 0.2vw;
-    line-height: 12vh;
-    color:  #fff0d4;
-    padding-top: 200px;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4); 
-}
-
-
-.top-section {
-
-    background-color: #6D153F;
-    position: relative;
-}
-
-/* https://www.shapedivider.app/ */
-
-.custom-shape-divider-bottom-1729120949 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    pointer-events: none;
-}
-
-.custom-shape-divider-bottom-1729120949 svg {
-    position: relative;
-    display: block;
-    width: calc(175% + 1.3px);
-    height: 299px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom-1729120949 .shape-fill {
-    fill: #FFFFFF;
-}
- 
-/* button wrapper */
-.mission-button-wrapper {
-    position: relative;
-    text-align: right;
-    margin-top: -11vh;
-    margin-right: 6vw;
-    margin-bottom: 10vh;
-    z-index: 10;
-}
-
-/* button styles */
-.mission-button {
-    background-color: #6D153F;
-    text-align: center;
-    justify-content: center;
-    color: #F18C44;
-    font-size: calc(5px + 2vw);
-    font-weight: 200;
-    padding-top: 5vh;
-    padding-bottom: 40px;
-    border-radius: 50px;
-    border: none;
-    transition: all 1s ease;
-    width: 30vw;
-    height: 14vh;
-    overflow: hidden;
-    white-space: wrap;
-    flex: 1;
-    
-}
-
-/* mission statement */
-.mission-content {
-    color:  #6D153F;
-    font-size: calc(10px + 1vw);
-    line-height: 1.5;
-    letter-spacing: 0.1vw;
-    padding: 20px;
-    font-weight: 50px;
-    text-align: left;
-}
-
-/* morph the button into a container */
-.mission-button:hover {
-    width: 70%;
-    max-width: 900px;
-    background-color:#6D153F;
-    border-radius: 50px;
-    color:  #F18C44;
-    padding: 40px 20px;
-    height: auto;
-    white-space: normal;
-    transition: all 0.6s ease;
-    border: 8px solid #fdfdfd; ;
-}
-
-/* show mission content on hover */
-.mission-button:hover .mission-content {
-    display: block;
-    color:  #fff0d4;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.mission-button:hover .button-text {
-    display: none; /* hide button text when morphing */
-}
-
-/* fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.container {
-    position: relative; 
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap; 
-    transition: transform 0.3s ease;
-    margin-bottom: 100px;
-}
-
-.container:hover {
-    transform: scale(1.06) translate(0, 10px); 
-}
-
-
-/* --------------------CONTAINER 1 MEMBERS-------------------- */
-.contentMembers {
-    background-color: #FAEDCD;
-    padding-bottom: 0.5vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
-    border-radius: 10px;
-    z-index: 1;
-    display: flex;
-    z-index: 1;
-    flex: 1;
-    flex-basis: 55%; 
-}
-
-.imageContainerMembers {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    display: flex;
-    flex: 1;
-    z-index: 2;
-    flex-basis: 45%; 
-}
-
-.contentMembers h1 {
-
-    color: #6f1d46;
-    font-size: calc(20px + 1.5vw); 
-    font-weight: 300;
-    text-align: left;
-    margin-left: 1.5vw;
-    padding-top: 8vh;
-}
-
-.contentMembers p {
-    text-align: left;
-    margin: 2vh 0;
-    margin-left: 1.5vw;
-    font-size: calc(10px + 0.75vw);
-    line-height: 1.5;
-    padding-right: 110px; 
-    font-weight: 20;
-    letter-spacing: 0.1vw;
-}
-
-#ferret1 {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; /* image covers the container */
-    border-radius: 10px;
-}
-
-.buttonMembersAlign {
-    display: flex;
-    justify-content: flex-start; 
-}
-
-.pageTotal {
-    width: 100%;
-    transition: width 0.3s ease;
-}
-
-
-
-.buttonMembers{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    font-size: calc(10px + 1vw);
-    font-weight: 10px;
-    padding: 0.5vw;
-    border-radius: 50px;
-    letter-spacing: 2px;
-    min-width: 300px;
-    width: 13vw;
-    height: 5vw;
-    text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
+    background-color:  #6D153F;
+    color: #F7A041;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
@@ -855,109 +250,10 @@ main{
 
 }
 
-.buttonMembers:hover{
-    background-color:  #eaa82a;
-    color: #6D153F;
-}
-
-
-/* --------------------CONTAINER 2 COBBERTUNITY -------------------- */
-.contentCobbertunity {
-    background-color: #FAEDCD;
-    padding-bottom: 0.5vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
-    border-radius: 10px;
-    z-index: 1;
-    display: flex;
-    z-index: 1;
-    flex: 1;
-    flex-basis: 55%;   
-}
-
-.imageCobbertunity {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-right: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    display: flex;
-    flex: 1;
-    z-index: 2;
-    flex-basis: 45%;   
-}
-
-
-.contentCobbertunity h1 {
-
-    color: #6D153F;
-    font-size: 3vw; 
-    font-weight: 300;
-    text-align: right;
-    margin-right: 1.5vw;
-    padding-top: 8vh;
-}
-
-.contentCobbertunity p {
-    text-align: right;
-    margin: 2vh 0;
-    margin-right: 1.5vw;
-    font-size: calc(10px + 0.75vw);
-    line-height: 1.5;
-    padding-left: 110px; 
-    font-weight: 20;
-    letter-spacing: 0.1vw;
-}
-
-#ferret2 {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; /* image covers the container */
-    border-radius: 10px;
-}
-
-.buttonCobbertunityAlign {
-    display: flex;
-    justify-content: flex-end; /* Aligns the button to the right */
-}
-
-.buttonCobbertunity{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    font-size: calc(10px + 1vw);
-    font-weight: 10px;
-    padding: 0.5vw;
-    border-radius: 50px;
-    letter-spacing: 2px;
-    min-width: 300px;
-    width: 13vw;
-    height: 5vw;
-    text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    
-
-}
-
-.buttonCobbertunity:hover{
-    background-color:  #eaa82a;
-    color: #6f1d46;
-}
-
 
 /* --------------------CONTAINER 3 PROGRAMS -------------------- */
 .contentPrograms {
-    background-color: #FAEDCD;
+    background-color: #fdfdfd;
     padding-bottom: 0.5vh;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -973,9 +269,9 @@ main{
     margin-top:5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
+    background-color: #da525b;
+    padding: 0.5vw;
+    border-radius: 8px;
     z-index: 2;
     justify-content: center;
     align-items: center;
@@ -989,9 +285,9 @@ main{
 
 .contentPrograms h1 {
 
-    color: #6f1d46;
+    color: #F7A041;
     font-size: 3vw; 
-    font-weight: 300;
+    font-weight: 550;
     text-align: left;
     margin-left: 1.5vw;
     padding-top: 8vh;
@@ -1012,7 +308,7 @@ main{
     width: 100%;
     height: 100%; 
     object-fit: cover; /* image covers the container */
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .buttonProgramsAlign {
@@ -1028,32 +324,28 @@ main{
     font-size: calc(10px + 1vw);
     font-weight: 10px;
     padding: 0.5vw;
-    border-radius: 50px;
+    border-radius: 15px;
     letter-spacing: 2px;
     min-width: 300px;
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
+    background-color:  #6D153F;
+    color: #F7A041;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
     margin-bottom: 2vh;
-    
+    margin-left: 1vw;
 
 }
 
-.buttonPrograms:hover{
-    background-color:  #eaa82a;
-    color: #6f1d46;
-}
 
 
 
 /* --------------------CONTAINER 4 CONNECT -------------------- */
 .contentConnect {
-    background-color: #FAEDCD;
+    background-color: #fdfdfd;
     padding-bottom: 0.5vh;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -1069,9 +361,9 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
+    background-color: #da525b;
+    padding: 0.5vw;
+    border-radius: 8px;
     z-index: 2;
     justify-content: center;
     align-items: center;
@@ -1085,9 +377,9 @@ main{
 
 .contentConnect h1 {
 
-    color: #6f1d46;
+    color: #F7A041;
     font-size: 3vw; 
-    font-weight: 300;
+    font-weight: 550;
     text-align: right;
     margin-right: 1.5vw;
     padding-top: 8vh;
@@ -1108,7 +400,7 @@ main{
     width: 100%;
     height: 100%; 
     object-fit: cover; /* image covers the container */
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .buttonConnectAlign {
@@ -1122,31 +414,26 @@ main{
     font-size: calc(10px + 1vw);
     font-weight: 10px;
     padding: 0.5vw;
-    border-radius: 50px;
+    border-radius: 15px;
     letter-spacing: 2px;
     min-width: 300px;
     width: 13vw;
     height: 5vw;
     text-align: center;
-    color:  #F18C44;
-    background-color: #6D153F;
+    background-color:  #6D153F;
+    color: #F7A041;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin-top: 5vh;
     margin-bottom: 2vh;
-    
+    margin-left: 1vw;
 
-}
-
-.buttonConnect:hover{
-    background-color:  #eaa82a;
-    color: #6f1d46;
 }
 
 
 /* --------------------CONTAINER 5 SOCIAL MEDIA -------------------- */
 .contentSocial {
-    background-color: #FAEDCD;
+    background-color: #fdfdfd;
     padding-bottom: 0.5vh;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -1162,9 +449,9 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #6D153F;
-    padding: 1vw;
-    border-radius: 10px;
+    background-color: #da525b;
+    padding: 0.5vw;
+    border-radius: 8px;
     z-index: 2;
     justify-content: center;
     align-items: center;
@@ -1178,9 +465,9 @@ main{
 
 .contentSocial h1 {
 
-    color: #6D153F;
+    color: #F7A041;
     font-size: 3vw; 
-    font-weight: 300;
+    font-weight: 550;
     text-align: left;
     margin-left: 1.5vw;
     padding-top: 8vh;
@@ -1201,7 +488,7 @@ main{
     width: 100%;
     height: 100%; 
     object-fit: cover; /* image covers the container */
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .buttonSocialAlign a {
@@ -1209,7 +496,7 @@ main{
     align-items: center;
     text-align: center; 
     font-size: 30px; 
-    color:  #6D153F;
+    color: #F7A041;
     text-decoration: none; 
     display: flex;
     justify-content: flex-start; 
@@ -1217,10 +504,6 @@ main{
     padding-top: 20px;
 }
 
-.buttonSocial {
-    letter-spacing: 2px;
-    color:  #6D153F;
-}
 
 .bi-instagram {
     margin-left: 1.5vw; 

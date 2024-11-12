@@ -20,28 +20,13 @@ require_once("header.php")
 <body>
 <div class = "pageTotal">
 <main>
-    <div class = "top-section">
-      <div id = "title">
-            <h1>The Entrepreneurship <br>Club<br></h1>
-        </div>
-        <div class="custom-shape-divider-bottom-1729120949">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
+    <div class="top-section">
+    <div class="left-section">
+        <h1>The <br /><span class="highlight">Entrepreneurship</span> <br />Club</h1>
+    </div>  
+    <div class="right-section">
+        <img src="img/contactImg/about.png" alt="About the Club">
     </div>
-    <div class="mission-button-wrapper">
-        <button class="mission-button">
-            <span class="button-text">Our Mission Statement</span>
-            <p class="mission-content">
-                "The Entrepreneurship Club is a student organization 
-                intended to complement the entrepreneurial curriculum offered at the 
-                Offutt School of Business while further contributing to the entrepreneurial 
-                spirit of Concordia College. The club provides students with tangible resources 
-                that expose, expand, and elucidate the entrepreneurial 
-                journey intended to prepare each student for successful entrepreneurial pursuit."
-            </p>
-        </button>
     </div>
 <!---------------------- CONTAINER 1 MEMBERS---------------------->
    <div class = "container">
