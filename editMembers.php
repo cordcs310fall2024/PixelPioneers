@@ -26,12 +26,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID, member_name, member_bio, member_img FROM members";
+$sql = "SELECT ID, member_name, member_bio, member_img FROM members"; //select all the fields from the database
 $result = $conn->query($sql);
 ?>
 
 <div class="admin-page">
-   <!-- Sidebar for actions -->
+      <!--------------------------- Left Column (sidebar) --------------------------->
    <div class="sidebar">
    <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
@@ -50,9 +50,8 @@ $result = $conn->query($sql);
       </button>
    </div>
 
- <!-- Content -->
+      <!--------------------------- Middle Column --------------------------->
  <div class="content">
-      <!-- Middle Column -->
       <div class="middle-column">
          <div class="member-grid">
             <?php if ($result->num_rows > 0): ?> <!---check if there are members in the database---->
@@ -74,40 +73,41 @@ $result = $conn->query($sql);
                   </div>
                <?php endwhile; ?>
             <?php else: ?>
-                     <!-- error if no members are found in the table -->
+                     <!-- error if no members are found in the table (usually not connecting to table) -->
                <p>No members found.</p>
             <?php endif; ?>
          </div>
       </div>
 
-      <!-- Right Column -->
+      <!--------------------------- Right Column --------------------------->
       <div class="right-column">
          <h3>Edit Member</h3>
          <div class="form-group">
             <label for="memberName">Name</label>
-            <input type="text" id="memberName" value="">
+            <input type="text" id="memberName" value=""> <!----memberName----->
          </div>
          <div class="form-group">
             <label for="memberPhoto">Photo</label>
             <div class="photo-preview">
-               <img id="photoPreview" src="" alt="" style="width: 150px; height: auto;">
+               <img id="photoPreview" src="" alt="" style="width: 300px; height: auto;"> <!---styling for photo cuz there are too many css files----->
             </div>
+            <!----photoPreview----->
             <input type="file" id="memberPhotoUpload" accept="image/*" onchange="previewPhoto()"> <!----preview using js in editMembers.js----->
          </div>
          <div class="form-group">
             <label for="memberBio">Bio</label>
-            <textarea id="memberBio"></textarea>
+            <textarea id="memberBio"></textarea> <!----memberBio----->
          </div>
          <div class="form-group">
-            <button onclick="saveMember()">Save Changes</button>
+            <button onclick="saveMember()">Save Changes</button> <!----currently works----->
          </div>
          <div class="form-group">
-            <button id="delete" >Delete Member</button>
+            <button id="delete" >Delete Member</button> <!---doesn't work  yet------>
          </div>
       </div>
    </div>
 </div>
 
-<script src="js/editMembers.js"></script>
+<script src="js/editMembers.js"></script> 
 
 <?php $conn->close(); ?>
