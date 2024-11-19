@@ -19,7 +19,7 @@
       <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
       </button>
-      <button onclick="window.location.href='adminMembers.php'">
+      <button onclick="window.location.href='editMembers.php'">
          <i class="bi bi-pencil-square"></i> Edit Members
       </button>
       <button onclick="window.location.href='addMember.php'">

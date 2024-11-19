@@ -15,10 +15,10 @@
 <div class="admin-page">
    <!-- Sidebar for actions -->
    <div class="sidebar">
-      <button onclick="window.location.href='orderMembers.php'">
+   <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
       </button>
-      <button onclick="window.location.href='adminMembers.php'">
+      <button onclick="window.location.href='editMembers.php'">
          <i class="bi bi-pencil-square"></i> Edit Members
       </button>
       <button onclick="window.location.href='addMember.php'">
@@ -32,30 +32,34 @@
       </button>
    </div>
 
-
-   <!-- Content area -->
-    <div class = "content">
-   <form id="member-form">
-             <h1>Add Member</h1>
+  <!-- Content -->
+  <div class="content">
+      <div class="right-column">
+         <h3>Add New Member</h3>
+         <form id="addMemberForm">
             <div class="form-group">
-                <input type="text" id="name" name="name" required>
-                <label for="name">Name</label>
+               <label for="newMemberName">Name</label>
+               <input type="text" id="newMemberName" required>
             </div>
-
             <div class="form-group">
-                <textarea id="bio" name="bio" rows="4" required></textarea>
-                <label for="bio">Bio</label>
+               <label for="newMemberPhoto">Photo</label>
+               <div class="photo-preview">
+                  <img id="newPhotoPreview" src="" alt="" style="width: 150px; height: auto; display: none;">
+               </div>
+               <input type="file" id="newMemberPhotoUpload" accept="image/*" onchange="previewNewPhoto()">
             </div>
-
             <div class="form-group">
-                <input type="file" id="photo" name="photo" accept="image/*" required>
-                <label for="photo">Upload Photo</label>
+               <label for="newMemberBio">Bio</label>
+               <textarea id="newMemberBio" required></textarea>
             </div>
-
-            <button type="submit">Submit</button>
-        </form>
-        </div>
+            <div class="form-group">
+               <button type="button" onclick="addNewMember()">Add Member</button>
+            </div>
+         </form>
+      </div>
+   </div>
 </div>
 
-</body>
-</html>
+<script src="js/addMember.js"></script>
+
+<?php $conn->close(); ?>
