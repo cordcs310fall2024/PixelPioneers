@@ -28,7 +28,7 @@ require_once("header.php")
               <div class="title">
                 <h1>What do we do?</h1>
               </div>
-              <a href="about.html" class="AboutLink">Read More</a>
+              <a href="about.php" class="AboutLink">Read More</a>
             </div>
             <div class="imgContainer">
               <img src="img/ferrets/ferret2.png" alt="aboutHome"> 
@@ -72,7 +72,7 @@ require_once("header.php")
               <div class="imgContainer">
                 <img src="img/ferrets/ferret3.png" alt="eventHome"> 
               </div>
-              <a href="schedule.html" class="EventLink">Schedule</a>
+              <a href="schedule.php" class="EventLink">Schedule</a>
             </div>
           </div>
            <!----Contact Page-->
@@ -93,7 +93,7 @@ require_once("header.php")
             Come be part of Concordia College’s vibrant entrepreneurial spirit!
               </p>
             </div>
-            <a href="contact.html" class="ContactLink">Read More</a>
+            <a href="contact.php" class="ContactLink">Read More</a>
             </div>
           </div>
           </div>

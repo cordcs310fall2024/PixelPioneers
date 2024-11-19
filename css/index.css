@@ -219,6 +219,7 @@ border: none;
 text-decoration: none;
 margin-top: 10px;
 border-radius: 5px;
+
 }
 
 .EventLink:hover {
@@ -304,12 +305,21 @@ margin-bottom: 20px;
     margin-top: 20px;
     max-width: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
   }
 
-  .EventLink {
+  .txtContainer {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .EventLink, .AboutLink {
     margin: 0 auto;
   }
 
+.about, .event, .contact{
+  margin-top: 50px;
+}
   .pContainer {
     text-align: center;
     padding: 0 20px;
