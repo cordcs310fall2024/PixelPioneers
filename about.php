@@ -156,6 +156,8 @@ var gradient = new Gradient();
 gradient.initGradient("#canvas");
 </script>
 
-
+<?php 
+    require_once("footer.php")
+    ?>
 </body>
 </html>

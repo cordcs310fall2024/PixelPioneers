@@ -56,5 +56,8 @@ require_once("header.php")
         </div>
         <img src="img/scheduleImgs/meeting_2.jpg" alt="Central Image" class="central-image"/> <!-- Bottom center image -->
     </div>
+    <?php 
+    require_once("footer.php")
+    ?>
 </body>
 </html>

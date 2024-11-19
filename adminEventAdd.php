@@ -6,13 +6,12 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/adminMembers.css">
+   <link rel="stylesheet" href="css/addMember.css">
 </head>
 <body>
 <?php 
   require_once("header.php")
 ?>
-
 <div class="admin-page">
    <!-- Sidebar for actions -->
    <div class="sidebar">
@@ -35,59 +34,33 @@
 
    <!-- Content area -->
    <div class="content">
-      <!-- Middle Column - Members Grid -->
-      <div class="middle-column">
-         <div class="member-grid">
-            <div class="member-grid-item" onclick="editEvents('Barbarian', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Barbarian</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editEvents('Crusader', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Crusader</div>
-               </div>
-            </div>
+      <form id="event-form">
+         <h1>Add Event</h1>
+         <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Title</label>
          </div>
-      </div>
 
-      <!-- Right Column - Edit Member Details -->
-      <div class="right-column">
-         <h3>Edit Event</h3>
          <div class="form-group">
-            <label for="memberName">Title</label>
-            <input type="text" id="memberName" value="">
+            <textarea id="bio" name="bio" rows="4" required></textarea>
+            <label for="bio">Description</label>
+         </div>
+
+         <div class="form-group">
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <label for="photo">Upload Photo</label>
          </div>
          <div class="form-group">
-            <label for="memberPhoto">Photo</label>
-            <div class="photo-preview">
-               <img id="photoPreview" src="" alt="" style="width: 150px; height: auto;">
-            </div>
-            <input type="file" id="memberPhotoUpload" accept="image/*" onchange="previewPhoto()">
-         </div>
-         <div class="form-group">
-            <label for="memberBio">Description</label>
-            <textarea id="memberBio"></textarea>
-         </div>
-        
-         <div class="form-group">
+            <input type="date" id="eventDate" name="eventDate" required>
             <label for="eventDate">Event Date</label>
-            <input type="date" id="eventDate" value="">
          </div>
 
-         <div class="form-group">
-            <button onclick="saveEvents()">Save Changes</button>
-         </div>
-         <div class="form-group">
-            <button id="delete">Delete Event</button>
-         </div>
-      </div>
+         <button type="submit">Submit</button>
+      </form>
    </div>
 </div>
-
-<script src="js/adminEvents.js"></script>
-
+<?php 
+    require_once("footer.php")
+    ?>
 </body>
 </html>

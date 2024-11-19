@@ -59,7 +59,9 @@
       </div>
    </div>
 </div>
-
+<?php 
+    require_once("footer.php")
+    ?>
 <script src="js/addMember.js"></script>
 
 <?php $conn->close(); ?>

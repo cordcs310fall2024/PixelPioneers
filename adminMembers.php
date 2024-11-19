@@ -6,20 +6,21 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/orderMembers.css">
+   <link rel="stylesheet" href="css/adminMembers.css">
 
 </head>
 <body>
 <?php 
   require_once("header.php")
   ?>
+
 <div class="admin-page">
    <!-- Sidebar for actions -->
    <div class="sidebar">
-   <button onclick="window.location.href='orderMembers.php'">
+      <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
       </button>
-      <button onclick="window.location.href='editMembers.php'">
+      <button onclick="window.location.href='adminMembers.php'">
          <i class="bi bi-pencil-square"></i> Edit Members
       </button>
       <button onclick="window.location.href='addMember.php'">
@@ -89,34 +90,37 @@
          </div>
       </div>
 
-      <!-- Right Column - ORDER MEMBER -->
+      <!-- Right Column - Edit Member Details -->
       <div class="right-column">
-
-            <h2>Reorder Members</h2>
-            <div class="form-group">
-                     <button onclick="saveOrder()">Save Changes</button>
-
+         <h3>Edit Member</h3>
+         <div class="form-group">
+            <label for="memberName">Name</label>
+            <input type="text" id="memberName" value="">
+         </div>
+         <div class="form-group">
+            <label for="memberPhoto">Photo</label>
+            <div class="photo-preview">
+               <img id="photoPreview" src="" alt="" style="width: 150px; height: auto;">
             </div>
-            <div class="sortable-list">
-               <ul id="sortable">
-                     <li draggable="true">John Smith</li>
-                     <li draggable="true">Jane Doe</li>
-                     <li draggable="true">Fred Kruger</li>
-                     <li draggable="true">Robert Smith</li>
-                     <li draggable="true">Maria Rodriguez</li>
-                     <li draggable="true">Mary Smith</li>
-               </ul>
-            </div>
+            <input type="file" id="memberPhotoUpload" accept="image/*" onchange="previewPhoto()">
+         </div>
+         <div class="form-group">
+            <label for="memberBio">Bio</label>
+            <textarea id="memberBio"></textarea>
+         </div>
+         <div class="form-group">
+            <button onclick="saveMember()">Save Changes</button>
+         </div>
+         <div class="form-group">
+            <button id = "delete" >Delete Member</button>
+         </div>
       </div>
-  </div>
+   </div>
 </div>
 
-<script src="js/orderMembers.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-
+<script src="js/adminMembers.js"></script>
 <?php 
     require_once("footer.php")
     ?>
-    
 </body>
 </html>
