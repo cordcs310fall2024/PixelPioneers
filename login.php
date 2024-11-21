@@ -1,4 +1,6 @@
 <?php
+session_start();  // Start the session to track failed attempts
+
 $host = "localhost";
 $username = "root";
 $dbname = "ClubDatabase";
@@ -13,6 +15,11 @@ if ($conn->connect_error) {
 
 // Initialize variables
 $error = "";
+
+// Check if the failed attempts counter is set in the session, if not initialize it
+if (!isset($_SESSION['failed_attempts'])) {
+    $_SESSION['failed_attempts'] = 0;
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login_email = $_POST['first']; // Assuming 'first' is the username/email input field
@@ -30,21 +37,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify password
         if (password_verify($login_pass, $hashed_password)) {
+            // Reset failed attempts counter on successful login
+            $_SESSION['failed_attempts'] = 0;
             header("Location: editMembers.php"); // Redirect on successful login
             exit();
         } else {
+            $_SESSION['failed_attempts']++;  // Increment the failed attempts counter
             $error = "Invalid password.";
         }
     } else {
-        $error = "No user found with this email.";
+        $_SESSION['failed_attempts']++;  // Increment the failed attempts counter
+        $error = "User not found";
+    }
+
+    //fun
+    if ($_SESSION['failed_attempts'] >= 4) {
+        header("Location: https://www.youtube.com/watch?v=cvh0nX08nRw"); // Redirect to YouTube
+        exit();
     }
 
     $stmt->close();
 }
 
 //delete before deploy, this prints out what the hashed password is so you can put it in db
-echo password_hash("test", PASSWORD_DEFAULT);
-//username test, password test
+echo password_hash("test", PASSWORD_DEFAULT);  // username test, password test
 
 $conn->close();
 ?>
