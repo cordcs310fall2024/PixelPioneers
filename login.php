@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //fun
-    if ($_SESSION['failed_attempts'] >= 4) {
+    if ($_SESSION['failed_attempts'] >= 10) {
         header("Location: https://www.youtube.com/watch?v=cvh0nX08nRw"); // Redirect to YouTube
         exit();
     }
