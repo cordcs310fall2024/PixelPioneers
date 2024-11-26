@@ -157,7 +157,7 @@ input[type="submit"]:hover {
     max-width: 7vw;
     height: auto; 
     cursor: move;
-    animation: diagonal-move 3.5s linear infinite; 
+    animation: vertical-move 3.5s linear infinite; 
 }
 
 .phone_icon {
@@ -173,13 +173,13 @@ input[type="submit"]:hover {
 
 .question_icon {
     position: absolute;
-    top: 68%;
+    top: 62%;
     left: 14%;
     width: auto;
     max-width: 7vw;
     height: auto;
     cursor: move;
-    animation: question_rotate 4s linear infinite; 
+    animation: vertical-move 4s linear infinite; 
 }
 
 /* ANIMATIONS */

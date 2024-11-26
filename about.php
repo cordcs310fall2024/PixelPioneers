@@ -40,7 +40,7 @@ require_once("header.php")
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                </p>
                <div class = "buttonMembersAlign">
-                   <a href = "members.html" class = "buttonMembers">Meet Our Members</a>
+                   <a href = "members.php" class = "buttonMembers">Meet Our Members</a>
                 </div>
            </div>
        </div>
@@ -151,10 +151,6 @@ require_once("header.php")
 
 
 <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
-<script>
-var gradient = new Gradient();
-gradient.initGradient("#canvas");
-</script>
 
 <?php 
     require_once("footer.php")

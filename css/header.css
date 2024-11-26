@@ -13,7 +13,7 @@
    justify-content: space-between; /* space between left and right sections */
    padding: 10px 20px; 
    z-index: 9998; 
-   height: 60px;
+   height: 75px;
    margin: 0 auto; /* centered the header */
    max-width: 100%; /* doesn't shrink */
    box-shadow: none; 
