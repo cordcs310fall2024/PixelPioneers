@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background */
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-pane {
+    width: 300px;
+    background-color: #800020; /* Maroon */
+    color: #FFFFE0; /* Light Yellow */
+    padding: 10px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Add spacing between nav and grid */
+  }
+  
+  .nav-button {
+    background-color: #FFD700; /* Gold */
+    color: #800020; /* Maroon */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #currentMonth {
+    font-weight: bold;
+  }
+  
+  #calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    /* No need for explicit height; flexbox handles it */
+  }
+  
+  .calendar-day {
+    background-color: #FFD700; /* Gold */
+    color: #800020; /* Maroon */
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .calendar-day.current { /* Added style for current day */
+    background-color: #FF8C00; /* Darker Gold */
+  }
+  
+  .right-pane {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #FFFFE0; /* Light Yellow */
+    color: #800020; /* Maroon */
+  }
+
+  .event {
+    border: 1px solid #ccc; /* Existing border */
+    margin-bottom: 15px; /* Increased margin for breathing room */
+    padding: 15px;       /* Increased padding for breathing room */
+    border-radius: 5px;   /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* For hover effect */
+    padding: 10px;
+  }
+
+  .event:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    background-color: #FF8C00; /* Light gray background on hover */
+  }
+  
+  /* Add styles for icons (you'll need to add the actual icon images) */
+  .event .icon {
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+  }
+
+ 
+
+
+
+
