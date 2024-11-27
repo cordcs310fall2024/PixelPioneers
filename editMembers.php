@@ -13,7 +13,13 @@
 <?php 
   require_once("header.php")
 ?>
-
+<?php 
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+   // Redirect to the login page if not authenticated
+   header("Location: login.php"); 
+   exit();
+}
+?>
 <?php
 $host = "localhost";
 $username = "root";
@@ -26,12 +32,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID, member_name, member_bio, member_img FROM members"; //select all the fields from the database
+$sql = "SELECT ID, member_name, member_bio, member_img FROM members";
 $result = $conn->query($sql);
 ?>
 
 <div class="admin-page">
-      <!--------------------------- Left Column (sidebar) --------------------------->
+   <!-- Sidebar for actions -->
    <div class="sidebar">
    <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
@@ -50,8 +56,9 @@ $result = $conn->query($sql);
       </button>
    </div>
 
-      <!--------------------------- Middle Column --------------------------->
+ <!-- Content -->
  <div class="content">
+      <!-- Middle Column -->
       <div class="middle-column">
          <div class="member-grid">
             <?php if ($result->num_rows > 0): ?> <!---check if there are members in the database---->
@@ -73,41 +80,40 @@ $result = $conn->query($sql);
                   </div>
                <?php endwhile; ?>
             <?php else: ?>
-                     <!-- error if no members are found in the table (usually not connecting to table) -->
+                     <!-- error if no members are found in the table -->
                <p>No members found.</p>
             <?php endif; ?>
          </div>
       </div>
 
-      <!--------------------------- Right Column --------------------------->
+      <!-- Right Column -->
       <div class="right-column">
          <h3>Edit Member</h3>
          <div class="form-group">
             <label for="memberName">Name</label>
-            <input type="text" id="memberName" value=""> <!----memberName----->
+            <input type="text" id="memberName" value="">
          </div>
          <div class="form-group">
             <label for="memberPhoto">Photo</label>
             <div class="photo-preview">
-               <img id="photoPreview" src="" alt="" style="width: 300px; height: auto;"> <!---styling for photo cuz there are too many css files----->
+               <img id="photoPreview" src="" alt="" style="width: 150px; height: auto;">
             </div>
-            <!----photoPreview----->
             <input type="file" id="memberPhotoUpload" accept="image/*" onchange="previewPhoto()"> <!----preview using js in editMembers.js----->
          </div>
          <div class="form-group">
             <label for="memberBio">Bio</label>
-            <textarea id="memberBio"></textarea> <!----memberBio----->
+            <textarea id="memberBio"></textarea>
          </div>
          <div class="form-group">
-            <button onclick="saveMember()">Save Changes</button> <!----currently works----->
+            <button onclick="saveMember()">Save Changes</button>
          </div>
          <div class="form-group">
-            <button id="delete" >Delete Member</button> <!---doesn't work  yet------>
+            <button id="delete" >Delete Member</button>
          </div>
       </div>
    </div>
 </div>
 
-<script src="js/editMembers.js"></script> 
+<script src="js/editMembers.js"></script>
 
 <?php $conn->close(); ?>
