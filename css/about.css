@@ -86,7 +86,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #da525b;
+    background-color: #ba444c;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -180,7 +180,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #da525b;
+    background-color: #ba444c;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -269,7 +269,7 @@ main{
     margin-top:5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #da525b;
+    background-color: #ba444c;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -361,7 +361,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #da525b;
+    background-color: #ba444c;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -507,4 +507,89 @@ main{
 
 .bi-instagram {
     margin-left: 1.5vw; 
+}
+ 
+.right-section{
+    position: relative; /* Ensure this section is the positioning context */
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.right-section img {
+    width: 100%;
+    height: auto;
+}
+
+.flowerPot {
+    position: absolute; 
+    top: 86%;
+    left: 18%; 
+    z-index: 2; 
+    width: auto;
+    max-width: 6vw;
+    height: auto;
+    animation: spin 3s linear infinite; 
+}
+.leaf1 {
+    position: absolute; 
+    top: 64.5%; 
+    left: 21.5%; 
+    z-index: 5;
+    width: auto;
+    max-width: 1.4vw;
+    height: auto;
+    z-index: 13;
+    animation: wave1 5s ease-in-out infinite; 
+    transform-origin: bottom center; 
+
+}
+.leaf2 {
+    position: absolute; 
+    top: 60.5%; 
+    left: 23%; 
+    z-index: 4;
+    width: auto;
+    max-width: 1.2vw;
+    height: auto;
+    animation: wave2 5s ease-in-out infinite; 
+    transform-origin: bottom center; 
+}
+.leaf3 {
+    position: absolute; 
+    top: 64.5%; 
+    left: 24%; 
+    z-index: 3;
+    width: auto;
+    max-width: 1.4vw;
+    height: auto;
+    animation: wave3 5s ease-in-out infinite; 
+    transform-origin: bottom center; 
+}
+
+@keyframes wave1 {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(23deg);
+    }
+}
+
+@keyframes wave2 {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes wave3 {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
 }

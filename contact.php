@@ -36,7 +36,6 @@ require_once("header.php")
         </form>
         <div class="contact-right">
                 <img src="img/contactImg/fullImage2.png" alt="">
-                <img src="img/contactImg/StarRotate1.png" class="star-icon1">
                 <img src="img/contactImg/StarRotate1.png" class="star-icon2">
                 <img src="img/contactImg/StarRotate3.png" class="star-icon3">
                 <img src="img/contactImg/StarRotate1.png" class="star-icon4">
