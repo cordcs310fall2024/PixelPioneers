@@ -13,6 +13,7 @@
   require_once("header.php")
 ?>
 <?php 
+session_start();
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
    // Redirect to the login page if not authenticated
    header("Location: login.php"); 

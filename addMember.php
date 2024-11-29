@@ -12,6 +12,15 @@
 <?php 
   require_once("header.php")
   ?>
+
+<?php 
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+   header("Location: login.php"); 
+   exit();
+}
+?>
+
 <div class="admin-page">
    <!-- Sidebar for actions -->
    <div class="sidebar">
@@ -58,7 +67,7 @@
             </div>
          </form>
       </div>
-   </div>
+  div>
 </div>
 <?php 
     require_once("footer.php")
