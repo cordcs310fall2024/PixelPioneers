@@ -12,14 +12,29 @@
 <?php 
   require_once("header.php")
 ?>
-<?php 
+
+<?php
 session_start();
+
+// Set session timeout duration (20 minutes)
+$timeout_duration = 1200; // 20 minutes in seconds
+
+// Check if the session has expired
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout_duration) {
+    // Destroy the session if it has expired
+    session_unset();
+    session_destroy();
+    header("Location: login.php?timeout=true"); 
+    exit();
+}
+
+$_SESSION['last_activity'] = time();
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-   // Redirect to the login page if not authenticated
-   header("Location: login.php"); 
+   header("Location: login.php");  
    exit();
 }
 ?>
+
 <?php
 $host = "localhost";
 $username = "root";
