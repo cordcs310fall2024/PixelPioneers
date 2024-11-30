@@ -53,6 +53,9 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
       <button onclick="window.location.href='adminEventEdit.php'">
          <i class="bi bi-pencil-square"></i> Edit Event
       </button>
+      <button onclick="window.location.href='adminSignUp.php'">
+            <i class="bi bi-person-plus"></i> Add User
+        </button>
    </div>
 
    <!-- Content area -->
