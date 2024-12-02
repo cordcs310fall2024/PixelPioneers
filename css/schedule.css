@@ -1,131 +1,288 @@
-
-
-.banner-image {
-    width: 100%; /*  image stretched across the full width */
-    height: 300px; 
-    object-fit: cover; /* No distortion of image*/
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f0f0f0; /* Light background */
+}
+  
+.main-container {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh; 
 }
 
-.sidebar {
-    background-color: #6f1d46; /* Maroon color */
-    width: 200px; /* Width of the sidebar */
-    padding: 20px; /* Padding inside the panel */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
-    transition: background-color 0.3s ease; /* Transition effect for hover */
-    margin-top: 20px; /* Distance from the top of the page */
-    height: 100%;
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-grow: 1; /* Allow the container to grow and take up available space */
+}
+  
+.left-pane {
+  width: 300px;
+  background-color: #f0f0f0; 
+  color: #FFFFE0; 
+  padding: 10px;
+  display: flex; 
+  flex-direction: column; /* Stack items vertically */
+  /*height:1401px;*/
+  margin-top:74px;
+  border-radius: 5px;   
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+  
 }
 
-.sidebar:hover {
-    color: #6f1d46; /* Darker maroon on hover */
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Add spacing between nav and grid */
 }
 
-h2 {
-    color: #eaa82a; /* Heading color */
-    text-align: center; /* Centering the heading */
-    margin: 0 0 20px 0; /* Bottom margin for spacing */
+.nav-button {
+  background-color: #FFD700; 
+  color: #800020; 
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.month-button {
-    background-color: #eaa82a; /* Deep yellow color for buttons */
-    color: #000; /* Button text color */
-    border: none; /* No border */
-    padding: 10px; /* Padding inside the buttons */
-    margin: 5px 0; /* Space between buttons */
-    width: 100%; /* Full width of the sidebar */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Transition effect for hover */
-    font-size: 16px; /* Button text size */
+#currentMonth {
+  font-weight: bold;
+  color: #800020;
 }
 
-.month-button:hover {
-    background-color: #FFC107; /* Lighter yellow on hover */
+#calendar-grid {
+  display: grid;
+  border: 1px solid #d3d3d3;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  border-radius: 5px;  
+  padding: 5px;
 }
 
-.description-box {
-    background-color: transparent; /* No background color */
-    border: 3px solid #6f1d46; /* Thick maroon border */
-    border-radius: 15px; /* Smooth edges */
-    padding: 10px; /* Padding inside the textbox */
-    width: 800px; /* Width */
-    max-height: 80px; /* Height restricted to just about 3 lines*/
-    margin: 10px auto; /* Centering the textbox and space from top */
-    position: absolute; /* Absolute positioning to overlay the banner image */
-    top: 240px; /* Below banner positioning*/
-    left: 50%; /* Center horizontally */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s ease; /* Transition for bulge effect */
+.calendar-day {
+  background-color: #F7A041; 
+  color: #800020; 
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.description-box:hover {
-    transform: scale(1.5); /* Bulge outwards on hover */
+.calendar-day.current { 
+  background-color: #FF8C00;
 }
 
-.description-box p {
-    font-size: 20px; 
-    color: #eaa82a; /* Deep yellow text color */
-    margin: 0; 
-    text-align: center; /* Center text in the textbox */
-    font-weight: bold; /* Make text bold */
-    line-height: 1.2; /* Line height for spacing between lines */
-}
-.event-container {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: space-between; /* Equal spacing between boxes */
-    padding: 20px; /* Padding for the event container */
-    position: absolute; /* Position to allow flexibility */
-    top: 400px; /*Below banner*/
-    left: 220px; /* Position next to the sidebar */
-    right: 0;
-    margin: auto; /* Center the container */
+.right-pane {
+  flex-grow: 1;
+  padding: 10px;
+  color: #800020; 
+  margin-top:74px;
+  overflow-y: auto; /* Add a vertical scrollbar if needed */
+  height:auto;
+  padding-right: 20px;
+  
 }
 
-.event-box {
-    background-color: #eaa82a; /* Deep yellow background */
-    border-radius: 10px; /* Smooth corners */
-    color: black; /* Text color */
-    font-weight: bold; /* Make font bold */
-    padding: 15px; /* Padding within each box */
-    flex: 1; /* Allow boxes to grow equally */
-    margin: 0 10px; /* Space between event boxes */
-    text-align: center; /* Center text */
+.event {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 15px;      
+  border-radius: 5px;  
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* For hover effect */
 }
 
-.event-box:hover {
-    transform: scale(1.05); /* Slight bulge effect on hover */
-    transition: transform 0.3s ease; /* Transition for hover effect */
-}
-.large-description-box {
-    background-color: white; /* Background color of the large box */
-    border-radius: 15px; /* Smooth edges */
-    top: 600px; 
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); 
-    padding: 20px; /* Padding inside the large box */
-    width: 90%; /* Responsive width */
-    max-width: 800px; /* Maximum width */
-    height: 445px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; 
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Keep spacing uniform */
-    position: absolute; /* Positioning */
-    margin: 0; 
+.event:hover {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  background-color: #ebdac6; /* Light gray background on hover */
 }
 
-.large-description-box h2 {
-    text-align: center; /* Center text */
+
+.event .icon {
+  margin-right: 10px; 
+  vertical-align: middle; 
+  width: 300px;
+  height: 300px;
+  margin-left: auto; /* Push icon to the right */
+  margin-bottom: 10px; 
+
 }
 
-.large-description-box .content {
-    text-align: center; /* Center text for content */
+.event h3 { 
+  font-size: 1.9em; 
+  color: #F7A041; 
+  margin-bottom: 5px; 
+  margin-left: 10px; 
+  flex-grow: 1; 
 }
 
-.large-description-box img {
-    width: 100%; /* Makes the image responsive */
-    max-width: 400px; /* Maximum width for the image */
-    height: auto; /* Keep aspect ratio */
-    display: block; /* Make sure it's block element */
-    margin: 20px auto; /* Center the image */
+.event p {
+  margin-left: 10px; 
 }
+
+.icon-title {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 10px; 
+}
+
+.event-details { 
+  display: flex;
+  flex-direction: column; 
+}
+
+.event-details p {
+  margin: 5px 0; 
+}
+
+#footerdiv{
+
+  margin-top: -120px;
+  
+}
+
+.navigation-container {
+  background-color: #8a2424; 
+  border: 2px solid #DAA520;
+  border-radius: 10px; 
+  padding: 20px; 
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); 
+  width:280px;
+}
+
+.navigation-container h3 {
+  color: White; 
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.navigation-container #year-display {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.all-events-container {
+  background-color: #8a2424; 
+  border: 1px solid #DAA520;
+  border-radius: 10px;
+  padding: 2px;
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:280px;
+}
+
+.event-list {
+  max-height: 400px; 
+  overflow-y: auto;
+  border-radius: 8px;
+  margin-top:15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right:15px;
+  padding-left:15px;
+}
+  
+.all-events-container h3 {
+  padding-top: 15px;
+  text-align: center;
+}
+.all-events-container h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+  
+.all-events-container ol {
+  list-style: none; 
+  padding: 0;
+}
+  
+.all-events-container li {
+  background-color: #800020;
+  border: 1px solid #DAA520;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; 
+}
+  
+.all-events-container li .icon {
+  margin-right: 5px; 
+width: 32px;
+height: 32px; 
+}
+
+.all-events-container li .event-info {
+  flex-grow: 1; /* Allow event info to take up remaining space */
+}
+
+.all-events-container li:hover {
+  background-color: #FF8C00; 
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); 
+  cursor: pointer; 
+}
+
+.year-navigator select {
+  padding: 8px 12px; 
+  font-size: 1em; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background-color: #fff; 
+  color:#800020; 
+  appearance: none; 
+  -webkit-appearance: none; /* Remove default arrow for Safari */
+  -moz-appearance: none; /* Remove default arrow for Firefox */
+
+}
+
+.year-navigator select::after {
+  content: "\279C"; 
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+
+.month-link {
+cursor: pointer;
+  padding: 8px 12px;
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none; 
+  color: yellow; 
+  transition: text-decoration 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.month-link:hover {
+text-decoration: underline; 
+  color: yellow; 
+  transform: scale(1.05);
+  box-shadow: 0px 2px 5px rgba(255, 255, 0, 0.3); /* Yellowish shadow on hover */
+}
+
+.no-events-message {
+  color: yellow; 
+  text-align: center; 
+  padding: 10px; 
+}
+
+#currentYearDisplay {
+  color: #800020; 
+}
+
+
+
+
+
+
