@@ -81,14 +81,54 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/editMembers.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/editMembers.css">
 </head>
 <body>
+<?php 
+  require_once("header.php")
+?>
+<?php
+session_start();
+
+// Set session timeout duration (20 minutes)
+$timeout_duration = 1200; // 20 minutes in seconds
+
+// Check if the session has expired
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout_duration) {
+    // Destroy the session if it has expired
+    session_unset();
+    session_destroy();
+    header("Location: login.php?timeout=true"); 
+    exit();
+}
+
+$_SESSION['last_activity'] = time();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+   header("Location: login.php");  
+   exit();
+}
+?>
+
+<?php
+$host = "localhost";
+$username = "root";
+$dbname = "ClubDatabase";
+$password = "";
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT ID, event_title, event_desc, event_img, event_date FROM events";
+$result = $conn->query($sql);
+?>
 
 <!-- Sidebar for actions -->
 <div class="admin-page">
@@ -113,30 +153,31 @@ $result = $conn->query($sql);
         </button>
     </div>
 
-    <!-- Content -->
-    <div class="content">
-        <div class="middle-column">
-            <div class="member-grid">
-                <?php if ($result->num_rows > 0): ?> 
-                    <?php while ($row = $result->fetch_assoc()): ?>        
-                        <div class="member-grid-item" 
-                            onclick="editEvent('<?php echo addslashes($row['event_title']); ?>', 
-                                                'data:image/jpeg;base64,<?php echo base64_encode($row['event_img']); ?>', 
-                                                '<?php echo addslashes($row['event_desc']); ?>',
-                                                '<?php echo addslashes($row['event_date']); ?>',
-                                                <?php echo $row['ID']; ?>)">
-                            <img src="data:image/jpeg;base64,<?php echo base64_encode($row['event_img']); ?>" alt="Event Photo">
-                            <div class="middle">
-                                <div class="eventName"><?php echo htmlspecialchars($row['event_title']); ?></div>
-                                <div class="eventName"><?php echo htmlspecialchars($row['event_date']); ?></div>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <p>No events found.</p>
-                <?php endif; ?>
-            </div>
-        </div>
+      <!-- Content -->
+   <div class="content">
+      <!-- Middle Column -->
+      <div class="middle-column">
+         <div class="member-grid">
+            <?php if ($result->num_rows > 0): ?> 
+               <?php while ($row = $result->fetch_assoc()): ?>        
+                  <div class="member-grid-item" 
+                       onclick="editEvent('<?php echo addslashes($row['event_title']); ?>', 
+                                          'data:image/jpeg;base64,<?php echo base64_encode($row['event_img']); ?>', 
+                                          '<?php echo addslashes($row['event_desc']); ?>',
+                                          '<?php echo addslashes($row['event_date']); ?>',
+                                          <?php echo $row['ID']; ?>)">
+                     <img src="data:image/jpeg;base64,<?php echo base64_encode($row['event_img']); ?>" alt="Event Photo">
+                     <div class="middle">
+                        <div class="eventName"><?php echo htmlspecialchars($row['event_title']); ?></div>
+                        <div class="eventName"><?php echo htmlspecialchars($row['event_date']); ?></div>
+                     </div>
+                  </div>
+               <?php endwhile; ?>
+            <?php else: ?>
+               <p>No events found.</p>
+            <?php endif; ?>
+         </div>
+      </div>
 
         <!-- Right Column - Edit Event Details -->
         <div class="right-column">
@@ -178,44 +219,14 @@ $result = $conn->query($sql);
     </div>
 </div>
 
-<script>
-    let currentEventId = null;
-
-    function editEvent(title, img, desc, date, id) {
-        // Set current event ID to be used later for editing or deleting
-        currentEventId = id;
-        
-        // Populate the fields with the current event data
-        document.getElementById('eventTitle').value = title;
-        document.getElementById('eventDesc').value = desc;
-        document.getElementById('eventDate').value = date;
-        
-        // If no image exists, leave the image preview blank or set it to an existing image
-        if (img) {
-            document.getElementById('photoPreview').src = img;
-        } else {
-            document.getElementById('photoPreview').src = '';  // Clear if no image
-        }
-
-        // Set event ID in the hidden input for form submission
-        document.getElementById('event_id').value = id;
-    }
-
-    function previewPhoto() {
-        const file = document.getElementById('eventPhotoUpload').files[0];
-        const reader = new FileReader();
-        reader.onloadend = function() {
-            document.getElementById('photoPreview').src = reader.result;
-        }
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    }
-</script>
-
-<?php require_once("footer.php"); ?>
-
+<script src="js/editEvents.js"></script>
+<?php 
+    require_once("footer.php")
+    ?>
 </body>
+
+<?php $conn->close(); ?>
+
 </html>
 
 <?php
