@@ -14,6 +14,14 @@
   require_once("header.php")
   ?>
 
+<?php 
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+   // Redirect to the login page if not authenticated
+   header("Location: login.php"); 
+   exit();
+}
+?>
+
 <div class="admin-page">
    <!-- Sidebar for actions -->
    <div class="sidebar">

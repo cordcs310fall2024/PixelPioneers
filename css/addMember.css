@@ -13,8 +13,8 @@
  }
  .sidebar button {
     display: block;
-    width: calc(100% + 40px); 
-    margin-left: -20px; 
+    width: calc(100% + 40px); /* Ensures the button occupies full width minus padding */
+    margin-left: -20px; /* Offset to align with the sidebar padding */
     margin-bottom: 15px;
     background-color: #6D153F;
     color: #fff;
@@ -86,10 +86,20 @@ label {
    transform: translateY(-50%);
    background-color: #fff;
    padding: 0 5px;
+   transition: all 0.3s ease;
    pointer-events: none;
    color: #aaa;
 }
 
+input[type="text"]:focus + label,
+textarea:focus + label,
+input[type="text"]:valid + label,
+textarea:valid + label {
+   top: -10px;
+   left: 10px;
+   font-size: 12px;
+   color: #F7A041;
+}
 
 button {
    padding: 10px;
