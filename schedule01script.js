@@ -46,7 +46,18 @@ const events = [
     eventType: "financial",
     description: "Master the essentials of financial planning for your business.",
     detailedDescription: "This workshop will cover budgeting, forecasting, cash flow management, and other key financial aspects of running a successful business."
+},
+
+{
+  title: "Trial for creation of a new list item",
+  date: "2023-07-12",
+  time: "10:00 AM",
+  eventType: "speaker",
+  description: "This is to try and see whether a new list item will be created automatically.",
+  detailedDescription: "This workshop will cover budgeting, forecasting, cash flow management, and other key financial aspects of running a successful business."
 }
+
+
 ];
 
 function getIcon(event) {
@@ -66,6 +77,38 @@ function getIcon(event) {
     }
   }
 
+  function updateYearDisplay() {
+    const yearDisplay = document.getElementById('currentYearDisplay');
+    yearDisplay.textContent = currentDate.getFullYear();
+  }
+  
+  const prevYearButton = document.getElementById('prevYear');
+  const nextYearButton = document.getElementById('nextYear');
+  
+  prevYearButton.addEventListener('click', () => {
+    currentDate.setFullYear(currentDate.getFullYear() - 1);
+    updateCalendar();
+    updateNavigation();
+    updateYearDisplay();
+  });
+  
+  nextYearButton.addEventListener('click', () => {
+    currentDate.setFullYear(currentDate.getFullYear() + 1);
+    updateCalendar();
+    updateNavigation();
+    updateYearDisplay();
+  });
+
+
+
+
+
+
+
+
+
+
+
 
 function filterEventsByMonth(events, year, month) {
   return events.filter(event => {
@@ -78,7 +121,17 @@ function filterEventsByMonth(events, year, month) {
 function displayEvents(monthEvents) {
     const eventList = document.getElementById('eventList');
     eventList.innerHTML = ''; // Clear previous events
-  
+    if (monthEvents.length === 0) {
+      // Display "No events" message and animation
+      const noEventsMessage = document.createElement('div');
+      noEventsMessage.classList.add('no-events');
+      noEventsMessage.innerHTML = `
+        <img src="no-events-animation.gif" alt="No Events Animation">
+        <h2 style="color: #DAA520; font-size: 2em; margin-top: 20px;">No events for this month</h2>
+      `;
+      eventList.appendChild(noEventsMessage);
+    } else {
+
     monthEvents.forEach(event => {
       const iconSrc = getIcon(event); // Get icon source once
   
@@ -93,8 +146,61 @@ function displayEvents(monthEvents) {
       `;
   
       eventList.insertAdjacentHTML('beforeend', eventHTML);
+    
     });
   }
+  }
+
+  function updateNavigation() {
+    const year = currentDate.getFullYear();
+    const yearDisplay = document.getElementById('year-display');
+    yearDisplay.textContent = year;
+  
+    const monthList = document.getElementById('month-list');
+    monthList.innerHTML = ''; // Clear previous months
+  
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+                       "July", "August", "September", "October", "November", "December"];
+  
+    monthNames.forEach((monthName, index) => {
+      const monthButton = document.createElement('button');
+      monthButton.textContent = monthName;
+      monthButton.addEventListener('click', () => {
+        currentDate.setMonth(index);
+        updateCalendar();
+        updateNavigation(); // Update navigation to reflect the selected month
+      });
+      monthList.appendChild(monthButton);
+    });
+  }
+
+  function displayAllEvents() {
+    const eventListAll = document.getElementById('event-list-all');
+    eventListAll.innerHTML = ''; // Clear previous list
+  
+    // Sort events by date
+    const sortedEvents = [...events].sort((a, b) => new Date(a.date) - new Date(b.date));
+  
+    sortedEvents.forEach((event, index) => {
+      const iconSrc = getIcon(event);
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `
+        <img class="icon" src="${iconSrc}" alt="Event Icon">
+        <div class="event-info">
+          ${index + 1}. ${event.title}<br>
+          ${event.date} at ${event.time}
+        </div>
+      `;
+      listItem.addEventListener('click', () => {
+        currentDate = new Date(event.date);
+        updateCalendar();
+        updateNavigation();
+        displayEvents(filterEventsByMonth(events, currentDate.getFullYear(), currentDate.getMonth()));
+      });
+      eventListAll.appendChild(listItem);
+    });
+  }
+
 
 
 
@@ -130,19 +236,37 @@ function updateCalendar() {
   }
   const monthEvents = filterEventsByMonth(events, year, month);
   displayEvents(monthEvents);
+
+  displayAllEvents();
+  updateNavigation();
+  updateYearDisplay();
 }
 
 prevMonthButton.addEventListener('click', () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
   updateCalendar();
+  updateNavigation();
 });
 
 nextMonthButton.addEventListener('click', () => {
   currentDate.setMonth(currentDate.getMonth() + 1);
   updateCalendar();
+  updateNavigation();
 });
 
 updateCalendar();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
