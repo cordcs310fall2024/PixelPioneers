@@ -18,7 +18,7 @@
    max-width: 100%; /* doesn't shrink */
    box-shadow: none; 
    overflow: hidden;
-   padding-right: 5vw; /* right padding for space between the header and sidebar toggle */
+   padding-right: 2vw; /* right padding for space between the header and sidebar toggle */
 }
 
 /* ----- LOGO ----- */
@@ -216,11 +216,11 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 
 .sidebarIconToggle {
    transition: all 0.3s;
-   box-sizing: border-box;
-   position: fixed;
+   position: relative;
+   align-items: center;
+   justify-content: center;
    z-index: 1000;
-   top: 32px;
-   right: 17px;
+   top: 10px;
    height: 30px;
    width: 40px;
    margin-top: -10px;
