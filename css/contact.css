@@ -157,15 +157,7 @@ input[type="submit"]:hover {
     max-width: 7vw;
     height: auto; 
     cursor: move;
-<<<<<<< HEAD
-<<<<<<< HEAD
     animation: diagonal-move 3.5s linear infinite; 
-=======
-    animation: vertical-move 4s linear infinite; 
->>>>>>> d44f2e4 (About Animations and Member Updates)
-=======
-    animation: diagonal-move 3.5s linear infinite; 
->>>>>>> bc0e690 (Edit Event Works)
 }
 
 .phone_icon {
@@ -187,15 +179,7 @@ input[type="submit"]:hover {
     max-width: 7vw;
     height: auto;
     cursor: move;
-<<<<<<< HEAD
-<<<<<<< HEAD
     animation: question_rotate 4s linear infinite; 
-=======
-    animation: vertical-move 4.5s linear infinite; 
->>>>>>> d44f2e4 (About Animations and Member Updates)
-=======
-    animation: question_rotate 4s linear infinite; 
->>>>>>> bc0e690 (Edit Event Works)
 }
 
 /* ANIMATIONS */
