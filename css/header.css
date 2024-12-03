@@ -13,7 +13,7 @@
    justify-content: space-between; /* space between left and right sections */
    padding: 10px 20px; 
    z-index: 9998; 
-   height: 75px;
+   height: 80px;
    margin: 0 auto; /* centered the header */
    max-width: 100%; /* doesn't shrink */
    box-shadow: none; 
@@ -38,6 +38,8 @@
    margin-right: 1vw;
    padding-right: 2vw;
 }
+
+
 
 /* ----- LOGO STYLES ----- */
 
@@ -79,6 +81,22 @@ nav ul li a {
 }
 
 
+/* underline hover effect */
+nav ul li a:hover {
+   color: #eaa82a; 
+}
+
+/* underline styling */
+nav ul li a:hover::after {
+   content: '';
+   position: absolute; 
+   bottom: 0; 
+   left: 0;
+   width: 100%; 
+   height: 2px; 
+   background-color: #eaa82a;
+}
+
 /* ----- SIDEBAR STYLES ----- */
 
 /* siderbar container */
@@ -111,7 +129,7 @@ nav ul li a {
 }
 
 #sidebarMenu::-webkit-scrollbar-thumb {
-   background-color: #c89332; 
+   background-color: #eaa82a; 
    border-radius: 4px;
 }
 
@@ -201,7 +219,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: fixed;
    z-index: 1000;
-   top: 36px;
+   top: 32px;
    right: 17px;
    height: 30px;
    width: 40px;
@@ -222,7 +240,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: relative;
    float: left;
-   margin-top: 7px;
+   margin-top: 6px;
 }
 
 .diagonal.part-1 {
@@ -237,7 +255,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
    box-sizing: border-box;
    position: relative;
    float: left;
-   margin-top: 7px;
+   margin-top: 6px;
 }
 
 /* ----- TOGGLE ANIMATIONS ----- */

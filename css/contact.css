@@ -85,6 +85,16 @@ input[type="submit"]:hover {
     height: auto;
 }
 
+.star-icon1 {
+    position: absolute;
+    top: 20%;
+    left: 55%; 
+    width: auto;
+    max-width: 1.7vw;
+    height: auto; 
+    cursor: move;
+    animation: spin 4s linear infinite; 
+}
 
 .star-icon2 {
     position: absolute;
@@ -147,7 +157,7 @@ input[type="submit"]:hover {
     max-width: 7vw;
     height: auto; 
     cursor: move;
-    animation: vertical-move 4s linear infinite; 
+    animation: diagonal-move 3.5s linear infinite; 
 }
 
 .phone_icon {
@@ -158,18 +168,18 @@ input[type="submit"]:hover {
     max-width: 6.3vw; 
     height: auto;
     cursor: move;
-    animation: vertical-move 3.5s linear infinite; 
+    animation: vertical-move 3s linear infinite; 
 }
 
 .question_icon {
     position: absolute;
-    top: 62%;
+    top: 68%;
     left: 14%;
     width: auto;
     max-width: 7vw;
     height: auto;
     cursor: move;
-    animation: vertical-move 4.5s linear infinite; 
+    animation: question_rotate 4s linear infinite; 
 }
 
 /* ANIMATIONS */

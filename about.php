@@ -25,11 +25,7 @@ require_once("header.php")
         <h1>The <br /><span class="highlight">Entrepreneurship</span> <br />Club</h1>
     </div>  
     <div class="right-section">
-        <img src="img/contactImg/about.png">
-        <img src = "img/contactImg/flowerPot.png" class = "flowerPot">
-        <img src = "img/contactImg/aboutLeftLeaf.png" class = "leaf1">
-        <img src = "img/contactImg/aboutMiddleLeaf.png" class = "leaf2">
-        <img src = "img/contactImg/aboutRightLeaf.png" class = "leaf3">
+        <img src="img/contactImg/about.png" alt="About the Club">
     </div>
     </div>
 <!---------------------- CONTAINER 1 MEMBERS---------------------->
@@ -44,7 +40,7 @@ require_once("header.php")
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                </p>
                <div class = "buttonMembersAlign">
-                   <a href = "members.php" class = "buttonMembers">Meet Our Members</a>
+                   <a href = "members.html" class = "buttonMembers">Meet Our Members</a>
                 </div>
            </div>
        </div>
@@ -155,6 +151,10 @@ require_once("header.php")
 
 
 <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+<script>
+var gradient = new Gradient();
+gradient.initGradient("#canvas");
+</script>
 
 <?php 
     require_once("footer.php")
