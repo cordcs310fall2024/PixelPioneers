@@ -31,6 +31,7 @@ if (!isset($_SESSION['failed_attempts'])) {
     $_SESSION['failed_attempts'] = 0;
 }
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login_email = $_POST['first'];
     $login_pass = $_POST['password'];

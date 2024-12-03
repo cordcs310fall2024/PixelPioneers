@@ -9,9 +9,6 @@
    <link rel="stylesheet" href="css/addMember.css">
 </head>
 <body>
-<?php 
-  require_once("header.php")
-  ?>
 
 <?php
 session_start();
@@ -34,11 +31,15 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
    exit();
 }
 ?>
+<?php 
+  require_once("header.php")
+  ?>
+
 
 <div class="admin-page">
    <!-- Sidebar for actions -->
    <div class="sidebar">
-   <button onclick="window.location.href='orderMembers.php'">
+      <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
       </button>
       <button onclick="window.location.href='editMembers.php'">
@@ -58,37 +59,33 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
         </button>
    </div>
 
-  <!-- Content -->
-  <div class="content">
-      <div class="right-column">
-         <h3>Add New Member</h3>
-         <form id="addMemberForm">
-            <div class="form-group">
-               <label for="newMemberName">Name</label>
-               <input type="text" id="newMemberName" required>
-            </div>
-            <div class="form-group">
-               <label for="newMemberPhoto">Photo</label>
+   <!-- Content area -->
+   <div class="content">
+      <form id="event-form" enctype="multipart/form-data">
+         <h1>Add Member</h1>
+         <div class="form-group">
+            <input type="text" id="memberName" name="memberName" required>
+            <label for="memberName">Name</label>
+         </div>
+
+         <div class="form-group">
+            <textarea id="memberBio" rows="4" name = "memberBio" required></textarea>
+            <label for="memberBio">Bio</label>
+         </div>
+
+         <div class="form-group">
                <div class="photo-preview">
                   <img id="newPhotoPreview" src="" alt="" style="width: 150px; height: auto; display: none;">
                </div>
-               <input type="file" id="newMemberPhotoUpload" accept="image/*" onchange="previewNewPhoto()">
-            </div>
-            <div class="form-group">
-               <label for="newMemberBio">Bio</label>
-               <textarea id="newMemberBio" required></textarea>
-            </div>
-            
-            <div class="form-group">
-               <button type="button" onclick="addNewMember()">Add Member</button>
-            </div>
-         </form>
-      </div>
-  div>
+            <input type="file" id="newEventPhotoUpload" name = "event_img" accept="image/*" onchange="previewNewPhoto()">
+            <label for="newEventPhoto"></label>
+         </div>
+
+         <button type="button" onclick="addMember.js">Submit</button>
+      </form>
+   </div>
 </div>
-<?php 
-    require_once("footer.php")
-    ?>
+
 <script src="js/addMember.js"></script>
 
 <?php $conn->close(); ?>
