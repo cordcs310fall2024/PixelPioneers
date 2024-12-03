@@ -1,10 +1,7 @@
 <?php
 session_start(); 
 
-$host = "localhost";
-$username = "root";
-$dbname = "ClubDatabase";
-$password = "";
+require_once('db_config.php');
 
 // Establish connection
 $conn = new mysqli($host, $username, $password, $dbname);
@@ -64,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Redirect to a fun page after 10 failed attempts
     if ($_SESSION['failed_attempts'] >= 10) {
-        header("Location: https://www.youtube.com/watch?v=cvh0nX08nRw"); // Redirect to YouTube
+        header("Location: https://www.youtube.com/watch?v=XB805Ej9ZzM"); // Redirect to YouTube
         exit();
     }
 

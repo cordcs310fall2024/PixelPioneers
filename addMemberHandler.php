@@ -1,8 +1,5 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = ""; // Adjust based on your setup
-$dbname = "ClubDatabase";
+require_once('db_config.php');
 
 $conn = new mysqli($host, $username, $password, $dbname);
 

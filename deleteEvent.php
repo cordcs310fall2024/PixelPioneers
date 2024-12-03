@@ -1,14 +1,18 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = ""; 
-$dbname = "ClubDatabase";
+ require_once('db_config.php');
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Read the raw POST data
     $data = json_decode(file_get_contents('php://input'), true);
+
+    // Debug: Check the received data
+    if ($data) {
+        // Print the data for debugging
+        error_log(print_r($data, true));
+    }
+
     if (isset($data['id'])) {
         $id = $data['id'];
 
