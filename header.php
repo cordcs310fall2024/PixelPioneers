@@ -15,7 +15,7 @@
    <header class="header">
       <nav id="mainNav">
          <div id="leftHeader">
-            <a href="index.php"><img src="img/ConcoHeader.jpg" class="header-logo"></a>
+            <a href="index.php"><img src="img/ConcoHeader.png" class="header-logo"></a>
          </div>
          <div id="rightHeader">
             <ul>

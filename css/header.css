@@ -44,10 +44,12 @@
 /* ----- LOGO STYLES ----- */
 
 .header-logo {
-   height: 10vh;
-   max-height: 100px; /* doesn't grow too large */
+   height: 65px;
+   max-height: 65px; /* doesn't grow too large */
    width: auto; /* maintain aspect ratio */
-   margin-left: -1vw;
+   margin-left: 10px;
+   justify-content: center;
+   align-items: center;
 }
 
 /* ----- NAVIGATION STYLES ----- */
