@@ -121,7 +121,7 @@ require_once("header.php")
             Come be part of Concordia College’s vibrant entrepreneurial spirit!
               </p>
             </div>
-            <a href="contact.php" class="ContactLink">Read More</a>
+                <a href="contact.php" class="ContactLink">Read More</a>
             </div>
           </div>
           </div>

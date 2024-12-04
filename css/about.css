@@ -627,6 +627,30 @@ main{
     animation: wave3 5s ease-in-out infinite;
     transform-origin: bottom center;
  }
+
+ .head {
+   position: absolute;
+   top: 39.5%;
+   left: 84%;
+   z-index: 3;
+   width: auto;
+   max-width: 2.5vw;
+   height: auto;
+   animation: head 5s ease-in-out infinite;
+   transform-origin: bottom center;
+}
+
+.arm {
+   position: absolute;
+   top: 46%;
+   left: 82%;
+   z-index: 4;
+   width: auto;
+   max-width: 3.5vw;
+   height: auto;
+   animation: arm 5s ease-in-out infinite;
+   transform-origin: bottom center;
+}
  
  
  @keyframes wave1 {
@@ -657,4 +681,21 @@ main{
         transform: rotate(-20deg);
     }
  }
- 
+
+ @keyframes head {
+   0%, 100% {
+       transform: rotate(0deg);
+   }
+   50% {
+       transform: rotate(-10deg);
+   }
+}
+
+@keyframes arm {
+   0%, 100% {
+       transform: rotate(0deg);
+   }
+   50% {
+       transform: rotate(-13deg);
+   }
+}

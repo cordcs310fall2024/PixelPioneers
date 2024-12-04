@@ -12,9 +12,12 @@
 <body>
 <?php 
   require_once("header.php")
-  ?>
+?>
+
 
 <?php
+
+
 session_start();
 
 // Set session timeout duration (20 minutes)
@@ -34,6 +37,26 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
    header("Location: login.php");  
    exit();
 }
+?>
+
+<?php
+$host = "localhost";
+$username = "root";
+$dbname = "ClubDatabase";
+$password = "";
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT m.ID, m.member_name, m.member_bio, m.member_img, mo.display_order 
+        FROM members m
+        JOIN memberOrder mo ON m.ID = mo.member_id
+        ORDER BY mo.display_order";
+$result = $conn->query($sql);
+
 ?>
 <div class="admin-page">
    <!-- Sidebar for actions -->
@@ -60,60 +83,23 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
    <!-- Content area -->
    <div class="content">
-      <!-- Middle Column - Members Grid -->
-      <div class="middle-column">
-         <div class="member-grid">
-            <div class="member-grid-item" onclick="editMember('Barbarian', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Barbarian</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Crusader', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Crusader</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Demon Hunter', 'img/ferrets/ferret3.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret3.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Demon Hunter</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Monk', 'img/ferrets/ferret4.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret4.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Monk</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Necromancer', 'img/ferrets/ferret5.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret5.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Necromancer</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Witch Doctor', 'img/ferrets/ferret1.png', 'Lorem ipsum dolor sit amet...')">
-               <img src="img/ferrets/ferret1.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Witch Doctor</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('Wizard', 'img/ferrets/ferret2.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret2.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">Wizard</div>
-               </div>
-            </div>
-            <div class="member-grid-item" onclick="editMember('The Nephalem', 'img/ferrets/ferret3.png', 'Consectetur adipiscing elit...')">
-               <img src="img/ferrets/ferret3.png" alt="Member Photo">
-               <div class="middle">
-                  <div class="memberName">The Nephalem</div>
-               </div>
-            </div>
-         </div>
+          <!-- Middle Column -->
+          <div class="middle-column">
+          <div class="member-grid">
+            <?php if ($result->num_rows > 0): ?>
+               <?php while ($row = $result->fetch_assoc()): ?>
+                  <div class="member-grid-item">
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($row['member_img']); ?>" alt="Member Photo">
+                        <div class="middle">
+                           <div class="memberName"><?php echo htmlspecialchars($row['member_name']); ?></div>
+                        </div>
+                  </div>
+               <?php endwhile; ?>
+            <?php else: ?>
+               <p>No members found.</p>
+            <?php endif; ?>
+</div>
       </div>
-
       <!-- Right Column - ORDER MEMBER -->
       <div class="right-column">
 
@@ -123,14 +109,16 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
             </div>
             <div class="sortable-list">
-               <ul id="sortable">
-                     <li draggable="true">John Smith</li>
-                     <li draggable="true">Jane Doe</li>
-                     <li draggable="true">Fred Kruger</li>
-                     <li draggable="true">Robert Smith</li>
-                     <li draggable="true">Maria Rodriguez</li>
-                     <li draggable="true">Mary Smith</li>
-               </ul>
+            <ul id="sortable">
+               <?php if ($result->num_rows > 0): ?>
+                  <?php $result->data_seek(0); // Reset the result pointer ?>
+                  <?php while ($row = $result->fetch_assoc()): ?>
+                     <li draggable="true" data-id="<?php echo $row['ID']; ?>">
+                           <?php echo htmlspecialchars($row['member_name']); ?>
+                     </li>
+                  <?php endwhile; ?>
+               <?php endif; ?>
+            </ul>
             </div>
       </div>
   </div>

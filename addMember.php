@@ -89,3 +89,10 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <script src="js/addMember.js"></script>
 
 <?php $conn->close(); ?>
+
+
+<?php
+   require_once("footer.php")
+   ?>
+</body>
+</html>

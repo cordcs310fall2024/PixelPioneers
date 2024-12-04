@@ -32,10 +32,8 @@
 
 }
 
-
-
 .sidebar button:hover {
-   background-color:  #e86871;
+   background-color:#65183d;
 }
 
 .content {
@@ -98,6 +96,7 @@
    font-size: calc(10px + 0.7vh + 0.7vw);
    margin: 0;
 }
+
 
 
 

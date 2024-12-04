@@ -33,6 +33,8 @@ require_once("header.php")
        <img src = "img/contactImg/aboutLeftLeaf.png" class = "leaf1">
        <img src = "img/contactImg/aboutMiddleLeaf.png" class = "leaf2">
        <img src = "img/contactImg/aboutRightLeaf.png" class = "leaf3">
+       <img src = "img/contactImg/aboutArm.png" class = "arm">
+       <img src = "img/contactImg/aboutHead.png" class = "head">
    </div>
    </div>
 <!---------------------- CONTAINER 1 MEMBERS---------------------->

@@ -72,3 +72,26 @@ const getDragAfterElement = (
         }
     ).element;
 };
+function saveOrder() {
+    const items = Array.from(document.querySelectorAll("#sortable li"));
+    const order = items.map((item, index) => ({
+        member_id: item.getAttribute("data-id"),
+        display_order: index + 1
+    }));
+
+    fetch("saveOrder.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(order)
+    }).then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert("Order updated successfully!");
+              location.reload();
+          } else {
+              alert("Failed to update order.");
+          }
+      });
+}

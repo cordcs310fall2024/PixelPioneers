@@ -47,7 +47,7 @@
    height: 65px;
    max-height: 65px; /* doesn't grow too large */
    width: auto; /* maintain aspect ratio */
-   margin-left: 10px;
+   margin-left: 2px;
    justify-content: center;
    align-items: center;
 }

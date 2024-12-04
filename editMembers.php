@@ -136,3 +136,9 @@ $result = $conn->query($sql);
 <script src="js/editMembers.js"></script>
 
 <?php $conn->close(); ?>
+
+<?php
+   require_once("footer.php")
+   ?>
+</body>
+</html>
