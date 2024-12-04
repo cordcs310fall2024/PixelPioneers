@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -60,7 +61,7 @@ require_once("header.php")
 
 
 <!---------------------- CONTAINER 2 COBBERTUNITY---------------------->
-<div class = "container">
+<div class = "container" data-aos="fade-left" data-aos-duration="150">
    <div class = "imageCobbertunity">
        <img id = "ferret2" src="img/ferrets/ferret2.png">
    </div>
@@ -87,7 +88,7 @@ require_once("header.php")
 
 
 <!---------------------- CONTAINER 3 PROGRAMS ---------------------->
-<div class = "container">
+<div class = "container" data-aos="fade-right" data-aos-duration="150">
    <div class = "contentPrograms">
        <div>
            <h1>Programs</h1>
@@ -112,7 +113,7 @@ require_once("header.php")
 
 
 <!---------------------- CONTAINER 4 CONNECT ---------------------->
-   <div class = "container">
+   <div class = "container" data-aos="fade-left" data-aos-duration="150">
        <div class = "imageConnect">
            <img id = "ferret4" src="img/ferrets/ferret4.png">
        </div>
@@ -139,7 +140,7 @@ require_once("header.php")
 
 
 <!---------------------- CONTAINER 5 SOCIAL MEDIA ---------------------->
-<div class = "container">
+<div class = "container" data-aos="fade-right" data-aos-duration="150">
    <div class = "contentSocial">
        <div>
            <h1>Social Media</h1>
@@ -177,6 +178,12 @@ require_once("header.php")
 <script>
 var gradient = new Gradient();
 gradient.initGradient("#canvas");
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
 </script>
 
 
