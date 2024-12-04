@@ -1,39 +1,28 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = ""; 
-$dbname = "ClubDatabase";
-
+require_once('db_config.php');
 $conn = new mysqli($host, $username, $password, $dbname);
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = json_decode(file_get_contents('php://input'), true);
-    if (isset($data['id'])) {
-        $id = $data['id'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete']) && isset($_POST['event_id'])) {
+    $event_id = $_POST['event_id'];
+    
+    // Ensure the ID is an integer to prevent SQL injection
+    $event_id = (int)$event_id;
 
-        // Database connection
-        $conn = new mysqli($host, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+    // SQL to delete the event
+    $sql = "DELETE FROM events WHERE ID = $event_id";
 
-        // Delete the event
-        $sql = "DELETE FROM events WHERE ID = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-
-        if ($stmt->affected_rows > 0) {
-            echo "Event deleted successfully!";
-        } else {
-            echo "Failed to delete event.";
-        }
-
-        $stmt->close();
-        $conn->close();
+    if ($conn->query($sql) === TRUE) {
+        header("Location: adminEventEdit.php?success=1");
+        exit();
     } else {
-        echo "No event ID provided.";
+        echo "Error deleting event: " . $conn->error;
     }
 }
+
+$conn->close();
 ?>
+
