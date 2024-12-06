@@ -50,12 +50,12 @@ require_once("header.php")
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <div class = "buttonMembersAlign">
-                  <a href = "members.html" class = "buttonMembers">Meet Our Members</a>
+                  <a href = "members.php" class = "buttonMembers">Meet Our Members</a>
                </div>
           </div>
       </div>
       <div class = "imageContainerMembers">
-          <img id = "ferret1" src="img/ferrets/ferret1.png">
+          <img id = "aboutMem" src="img/ActualPhotos/members.jpeg">
       </div>
   </div>
 
@@ -63,7 +63,7 @@ require_once("header.php")
 <!---------------------- CONTAINER 2 COBBERTUNITY---------------------->
 <div class = "container" data-aos="fade-left" data-aos-duration="150">
    <div class = "imageCobbertunity">
-       <img id = "ferret2" src="img/ferrets/ferret2.png">
+       <img id = "ferret2" src="img/ActualPhotos/cobber.jpeg">
    </div>
    <div class = "contentCobbertunity">
        <div>
@@ -115,7 +115,7 @@ require_once("header.php")
 <!---------------------- CONTAINER 4 CONNECT ---------------------->
    <div class = "container" data-aos="fade-left" data-aos-duration="150">
        <div class = "imageConnect">
-           <img id = "ferret4" src="img/ferrets/ferret4.png">
+           <img id = "ferret4" src="img/ActualPhotos/connect.jpg">
        </div>
        <div class = "contentConnect">
            <div>

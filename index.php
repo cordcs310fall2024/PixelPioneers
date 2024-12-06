@@ -60,7 +60,7 @@ require_once("header.php")
               <a href="about.php" class="AboutLink">Read More</a>
             </div>
             <div class="imgContainer">
-              <img src="img/ferrets/ferret2.png" alt="aboutHome"> 
+              <img src="img/ActualPhotos/table.jpeg" alt="aboutHome"> 
             </div>
             <div class="pContainer">
               <p>
@@ -97,7 +97,7 @@ require_once("header.php")
     </div>
     <div class="rightSide">
         <div class="imgContainer">
-            <img src="img/ferrets/ferret3.png" alt="eventHome">
+            <img src="img\ActualPhotos/schedule.jpeg" alt="eventHome">
         </div>
         <a href="schedule.php" class="EventLink">Schedule</a>
     </div>
@@ -107,7 +107,7 @@ require_once("header.php")
            <div class="contact">
             <div class="txtContainer">
               <div class="contactImgContainer">
-                <img src="img/ferrets/ferret5.png" alt="contactHome"> 
+                <img src="img\ActualPhotos/contact.jpeg" alt="contactHome"> 
               </div>
               <div class="title">
                 <h1>Join Us!</h1>
