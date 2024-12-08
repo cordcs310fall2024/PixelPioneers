@@ -72,37 +72,47 @@ $result = $conn->query($sql);
       <button onclick="window.location.href='adminEventEdit.php'">
          <i class="bi bi-pencil-square"></i> Edit Event
       </button>
+      <button onclick="window.location.href='adminSignUp.php'">
+            <i class="bi bi-person-plus"></i> Add User
+        </button>
    </div>
 
    <!-- Content area -->
    <div class="content">
-      <form id="event-form">
+      <form id="event-form" enctype="multipart/form-data">
          <h1>Add Event</h1>
          <div class="form-group">
-            <input type="text" id="name" name="name" required>
-            <label for="name">Title</label>
+            <input type="text" id="newEventTitle" name="event_title" required>
+            <label for="newEventTitle">Title</label>
          </div>
 
          <div class="form-group">
-            <textarea id="bio" name="bio" rows="4" required></textarea>
-            <label for="bio">Description</label>
+            <textarea id="newEventDesc" rows="4" name = "event_desc" required></textarea>
+            <label for="newEventDesc">Description</label>
          </div>
 
          <div class="form-group">
-            <input type="file" id="photo" name="photo" accept="image/*" required>
-            <label for="photo">Upload Photo</label>
+               <div class="photo-preview">
+                  <img id="newPhotoPreview" src="" alt="" style="width: 150px; height: auto; display: none;">
+               </div>
+            <input type="file" id="newEventPhotoUpload" name = "event_img" accept="image/*" onchange="previewNewPhoto()">
+            <label for="newEventPhoto"></label>
          </div>
          <div class="form-group">
-            <input type="date" id="eventDate" name="eventDate" required>
-            <label for="eventDate">Event Date</label>
+            <input type="date" id="newEventDate" name = "event_date" required>
+            <label for="newEventDate"></label>
          </div>
 
-         <button type="submit">Submit</button>
+         <button type="button" onclick="addNewEvent()">Submit</button>
       </form>
    </div>
 </div>
 <?php 
     require_once("footer.php")
     ?>
+<script src="js/addEvent.js"></script>
+
+<?php $conn->close(); ?>
+
 </body>
 </html>

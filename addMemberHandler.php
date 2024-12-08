@@ -1,8 +1,5 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "Lennox2000"; // Adjust based on your setup
-$dbname = "ClubDatabase_copy";
+require_once('db_config.php');
 
 $conn = new mysqli($host, $username, $password, $dbname);
 

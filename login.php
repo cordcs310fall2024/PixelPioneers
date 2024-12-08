@@ -1,10 +1,7 @@
 <?php
-session_start();  // Start the session to track failed attempts
+session_start(); 
 
-$host = "localhost";
-$username = "root";
-$dbname = "ClubDatabase_copy";
-$password = "Lennox2000";
+require_once('db_config.php');
 
 // Establish connection
 $conn = new mysqli($host, $username, $password, $dbname);
@@ -16,16 +13,28 @@ if ($conn->connect_error) {
 // Initialize variables
 $error = "";
 
-// Check if the failed attempts counter is set in the session, if not initialize it
+
+$timeout_duration = 1200; // 20 minutes in seconds
+
+// Check if the session is already active
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+    if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout_duration) {
+        session_unset();
+        session_destroy();
+        header("Location: login.php?timeout=true"); 
+        exit();
+    }
+    // Update last activity timestamp
+    $_SESSION['last_activity'] = time();
+}
 if (!isset($_SESSION['failed_attempts'])) {
     $_SESSION['failed_attempts'] = 0;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $login_email = $_POST['first']; // Assuming 'first' is the username/email input field
-    $login_pass = $_POST['password'];
 
-    // Prepare and bind query to prevent SQL injection
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $login_email = $_POST['first'];
+    $login_pass = $_POST['password'];
     $stmt = $conn->prepare("SELECT login_pass FROM login WHERE login_email = ?");
     $stmt->bind_param("s", $login_email);
     $stmt->execute();
@@ -37,29 +46,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify password
         if (password_verify($login_pass, $hashed_password)) {
-            // Reset failed attempts counter on successful login
             $_SESSION['failed_attempts'] = 0;
-            header("Location: editMembers.php"); // Redirect on successful login
+            $_SESSION['logged_in'] = true;
+            $_SESSION['last_activity'] = time(); 
+            header("Location: editMembers.php"); 
             exit();
         } else {
-            $_SESSION['failed_attempts']++;  // Increment the failed attempts counter
+            $_SESSION['failed_attempts']++; 
             $error = "Invalid password.";
         }
     } else {
-        $_SESSION['failed_attempts']++;  // Increment the failed attempts counter
+        $_SESSION['failed_attempts']++;
         $error = "User not found";
     }
 
-    //fun
+    // Redirect to a fun page after 10 failed attempts
     if ($_SESSION['failed_attempts'] >= 10) {
-        header("Location: https://www.youtube.com/watch?v=cvh0nX08nRw"); // Redirect to YouTube
+        header("Location: https://www.youtube.com/watch?v=XB805Ej9ZzM"); // Redirect to YouTube
         exit();
     }
 
     $stmt->close();
 }
 
-//delete before deploy, this prints out what the hashed password is so you can put it in db
+// Delete before deploy, this prints out what the hashed password is so you can put it in db
 echo password_hash("test", PASSWORD_DEFAULT);  // username test, password test
 
 $conn->close();
@@ -98,6 +108,11 @@ $conn->close();
                 <button type="submit">Submit</button>
             </div>
         </form>
+
+        <?php if (isset($_GET['timeout']) && $_GET['timeout'] === 'true'): ?>
+            <div style="color: red;">Your session has expired due to inactivity. Please log in again.</div>
+        <?php endif; ?>
+
     </div>
 </main>
 

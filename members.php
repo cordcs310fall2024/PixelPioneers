@@ -12,147 +12,63 @@
 </head>
 <body>
 
-
 <?php 
-require_once("header.php")
+require_once("header.php");
+
+// Database configuration
+$servername = "localhost";
+$username = "root"; // Replace with your database username
+$password = ""; // Replace with your database password
+$dbname = "ClubDatabase";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>
 <!---------------------- CONTENT ---------------------->
-<div class = "pageTotal">
+<div class="pageTotal">
 <main>
     <div class="top-section">
         <h1>Meet Our Members</h1>
-        <div class="member-btns">
-            <button>Members</button>
-        </div>
     </div>
  
-    <!-- Image Grid -->
     <div class="member-grid">
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret1.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret2.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret3.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret4.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret5.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret6.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret7.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret1.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret2.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret3.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret4.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
-        <div class="member-grid-item">
-            <img src="img/ferrets/ferret5.png">
-            <div class="middle">
-                <div class="memberName">John Doe</div>
-                <div class="memberDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-            </div>
-        </div>
+        <?php
+        // get members from the database
+        $sql = "SELECT member_name, member_bio, member_img FROM members";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // output each member
+            while ($row = $result->fetch_assoc()) {
+                $member_name = htmlspecialchars($row['member_name'], ENT_QUOTES, 'UTF-8');
+                $member_bio = htmlspecialchars($row['member_bio'], ENT_QUOTES, 'UTF-8');
+                $member_img = base64_encode($row['member_img']); // Encode binary data to Base64
+
+                echo '<div class="member-grid-item">';
+                echo '<img src="data:image/jpeg;base64,' . $member_img . '" alt="' . $member_name . '">';
+                echo '<div class="middle">';
+                echo '<div class="memberName">' . $member_name . '</div>';
+                echo '<div class="memberDescription">' . $member_bio . '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo "<p>No members found.</p>";
+        }
+
+        $conn->close();
+        ?>
     </div>
  </main>
 </div>
+
 <?php 
-    require_once("footer.php")
-    ?>
+require_once("footer.php");
+?>
 </body>
 </html>

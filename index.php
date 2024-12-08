@@ -73,37 +73,36 @@ require_once("header.php")
           </div>
           <!----Events Page-->
           <div class="event">
-            <div class="leftSide">
-              <div class="title">
-                <h1>Events</h1>
-              </div>
-              <div class="recentEvents">
-                <h2>Coming Up</h2>
-                <div class="event-item">
-                  <img src="img/ferrets/ferret4.png" alt="recentEvents1">
-                  <p>
-                    Super Cool Event<br>
-                    10/17/2024<br>
-                    Where you are standing
-                  </p>
-                </div>
-                <div class="event-item">
-                  <img src="img/ferrets/ferret5.png" alt="recentEvents2">
-                  <p>
-                    Website Launches<br>
-                    12/20/2024<br>
-                    Offut School of Business
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="rightSide">
-              <div class="imgContainer">
-                <img src="img/ferrets/ferret3.png" alt="eventHome"> 
-              </div>
-              <a href="schedule.php" class="EventLink">Schedule</a>
-            </div>
-          </div>
+    <div class="leftSide">
+        <div class="title">
+            <h1>Events</h1>
+        </div>
+        <div class="recentEvents">
+            <h2>Coming Up</h2>
+            <?php if (!empty($events)): ?>
+                <?php foreach ($events as $event): ?>
+                    <div class="event-item">
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($event['event_img']); ?>" alt="eventImage">
+                        <p>
+                            <?php echo htmlspecialchars($event['event_title']); ?><br>
+                            <?php echo date('m/d/Y', strtotime($event['event_date'])); ?><br>
+                            <?php echo htmlspecialchars($event['event_desc']); ?>
+                        </p>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No upcoming events found.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="rightSide">
+        <div class="imgContainer">
+            <img src="img/ferrets/ferret3.png" alt="eventHome">
+        </div>
+        <a href="schedule.php" class="EventLink">Schedule</a>
+    </div>
+</div>
+
            <!----Contact Page-->
            <div class="contact">
             <div class="txtContainer">
