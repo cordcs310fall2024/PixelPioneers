@@ -3,8 +3,8 @@ session_start();  // Start the session to track failed attempts
 
 $host = "localhost";
 $username = "root";
-$dbname = "ClubDatabase";
-$password = "";
+$dbname = "ClubDatabase_copy";
+$password = "Lennox2000";
 
 // Establish connection
 $conn = new mysqli($host, $username, $password, $dbname);

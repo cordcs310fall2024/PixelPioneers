@@ -12,6 +12,35 @@
 </head>
 <body>
 
+<?php
+// Database connection details
+$host = "localhost";
+$username = "root";
+$password = "Lennox2000";
+$dbname = "ClubDatabase_copy";
+
+// Create connection
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to fetch the two soonest events
+$sql = "SELECT event_title, event_date, event_desc, event_img FROM events WHERE event_date >= CURDATE() ORDER BY event_date ASC LIMIT 2";
+$result = $conn->query($sql);
+
+// Fetch the events into an array for later use
+$events = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $events[] = $row;
+    }
+}
+$conn->close();
+?>
+
 
 <?php 
 require_once("header.php")
