@@ -1,62 +1,68 @@
-let currentEventId = null; 
+let currentEventId = null;
 
-function editEvent(title, photo, desc, id, date) {
-   // set form fields to the input from the php files
-   document.getElementById('eventTitle').value = title;
-   document.getElementById('photoPreview').src = photo;
-   document.getElementById('eventDesc').value = desc;
-   document.getElementById('eventDate').value = date;
-   currentEventId = id; 
+function editEvent(title, shortDesc, detailedDesc, time, type, imgPath, date, eventId) {
+    // Set form fields to the input from the PHP files
+    document.getElementById('eventTitle').value = title;
+    // Update image preview ONLY if imgPath is not empty
+    if (imgPath) {
+        document.getElementById('photoPreview').src = imgPath;
+    } else {
+        document.getElementById('photoPreview').src = ""; // Clear preview if no image
+    }
+    document.getElementById('eventDesc').value = shortDesc;
+    document.getElementById('eventDetailedDesc').value = detailedDesc; 
+    document.getElementById('eventTime').value = time; 
+    document.getElementById('eventType').value = type; 
+    document.getElementById('eventDate').value = date;
+    currentEventId = eventId;
 }
 
 
-//save changes button
+// Save changes button
 function saveEvent() {
+    const title = document.getElementById('eventTitle').value;
+    const shortDesc = document.getElementById('eventDesc').value;
+    const detailedDesc = document.getElementById('eventDetailedDesc').value; 
+    const time = document.getElementById('eventTime').value; 
+    const type = document.getElementById('eventType').value; 
+    const photoUpload = document.getElementById('eventPhotoUpload');
+    const date = document.getElementById('eventDate').value;
 
-   const title = document.getElementById('eventTitle').value;
-   const desc = document.getElementById('eventDesc').value;
-   const photoUpload = document.getElementById('eventPhotoUpload');
-   const date = document.getElementById('eventDate').value;
+    // Create a FormData object
+    const formData = new FormData();
+    formData.append('id', currentEventId);
+    formData.append('title', title);
+    formData.append('shortDesc', shortDesc); 
+    formData.append('detailedDesc', detailedDesc); 
+    formData.append('time', time); 
+    formData.append('type', type); 
+    formData.append('date', date);
 
-   //create a FormData object to send to the database https://javascript.info/formdata
-   const formData = new FormData();
-   formData.append('id', currentEventId);
-   formData.append('title', title);
-   formData.append('desc', desc);
-   formData.append('date', date);
+    // Only append the photo if a file was selected
+    if (photoUpload.files && photoUpload.files[0]) {
+        formData.append('photo', photoUpload.files[0]);
+    }
 
-   //if a new photo is uploaded then include that too
-   if (photoUpload.files && photoUpload.files[0]) {
-      formData.append('photo', photoUpload.files[0]);
-   }
-
-   // Send the data to the table using the `fetch` API  https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-   fetch('updateEvent.php', {
-      method: 'POST', //post method
-      body: formData, //send the FormData object
-   })
-   .then(response => response.text()) // parse the localhost response as text
-   .then(data => {
-      alert(data);  // show localhost response to confirm it worked
-      location.reload(); 
-   })
-   .catch(error => console.error('Error:', error)); //log any errors because yeah
+    // Send the data using the Fetch API
+    fetch('updateEvent.php', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); 
+        location.reload();
+    })
+    .catch(error => console.error('Error:', error));
 }
 
 
-
-//preview photo in editMember.php
+// Preview photo
 function previewPhoto() {
-   //get file input from form
-   const photoUpload = document.getElementById('eventPhotoUpload');
-
-   //check if a file is selected before opening it otherwise it hates you
-   if (photoUpload.files && photoUpload.files[0]) {
-      //set image as an element
-       const preview = document.getElementById('photoPreview');
-       //create a temporary url for viewing before submitting to the table
-       //https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static
-       preview.src = URL.createObjectURL(photoUpload.files[0]);
-   }
+    const photoUpload = document.getElementById('eventPhotoUpload');
+    if (photoUpload.files && photoUpload.files[0]) {
+        const preview = document.getElementById('photoPreview');
+        preview.src = URL.createObjectURL(photoUpload.files[0]);
+    }
 }
 
