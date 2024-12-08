@@ -1,66 +1,29 @@
-
-//This data will be moved to the database shortly
-const events = [
-{
-    title: "Entrepreneurship Workshop: Idea Validation",
-    date: "2024-03-15",
-    time: "6:00 PM",
-    eventType: "workshop",
-    description: "Learn how to validate your business ideas.",
-    detailedDescription: "This workshop will cover various methods for validating your business idea, including market research, customer interviews, and competitor analysis.  Guest speaker:  Sarah Chen, Founder of InnovateTech."
-},
-{
-    title: "Networking Mixer",
-    date: "2017-03-22",
-    time: "7:00 PM",
-    eventType: "networking",
-    description: "Connect with fellow entrepreneurs and investors.",
-    detailedDescription: "Join us for an evening of networking and socializing.  Meet potential collaborators, mentors, and investors.  Light refreshments will be served."
-},
-{
-    title: "Pitch Competition",
-    date: "2024-03-29",
-    time: "2:00 PM",
-    eventType: "competition",
-    description: "Showcase your business idea and compete for prizes!",
-    detailedDescription: "This is your chance to pitch your business idea to a panel of judges and compete for valuable prizes.  Prepare a concise and compelling presentation."
-},
-{
-    title: "Guest Speaker:  Funding Your Startup",
-    date: "2024-04-05",
-    time: "6:30 PM",
-    eventType: "speaker",
-    description: "Learn about different funding options for startups.",
-    detailedDescription: "Our guest speaker, David Lee, a successful angel investor, will share insights into securing funding for your startup, including bootstrapping, angel investors, venture capital, and crowdfunding."
-},
-{
-  title: "Guest Speaker:  Funding Your Startup 1",
-  date: "2024-03-05",
-  time: "6:30 PM",
-  eventType: "speaker",
-  description: "Learn about different funding options for startups.",
-  detailedDescription: "Our guest speaker, David Lee, a successful angel investor, will share insights into securing funding for your startup, including bootstrapping, angel investors, venture capital, and crowdfunding."
-},
-{
-    title: "Financial Planning for Entrepreneurs",
-    date: "2029-04-12",
-    time: "10:00 AM",
-    eventType: "financial",
-    description: "Master the essentials of financial planning for your business.",
-    detailedDescription: "This workshop will cover budgeting, forecasting, cash flow management, and other key financial aspects of running a successful business."
-},
-
-{
-  title: "Trial for creation of a new list item",
-  date: "2023-07-12",
-  time: "10:00 AM",
-  eventType: "speaker",
-  description: "This is to try and see whether a new list item will be created automatically.",
-  detailedDescription: "This workshop will cover budgeting, forecasting, cash flow management, and other key financial aspects of running a successful business."
+async function fetchEventsFromDatabase() {
+    try {
+        const response = await fetch('./scheduleRetrieveal.php');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        if (data.error) {
+            console.error("Error fetching events:", data.error);
+            return [];
+        }
+        if (!Array.isArray(data)) {
+            console.error("Invalid data format received from server. Expected an array.");
+            return [];
+        }
+        //console.log("Events data from server:", data);
+        return data;
+    } catch (error) {
+        console.error('Error fetching events:', error);
+        return [];
+    }
 }
 
-];
-
+async function getEvents() {
+    const events = await fetchEventsFromDatabase();
+    
 let currentDate = new Date();
 const calendarGrid = document.getElementById('calendar-grid');
 const currentMonthDisplay = document.getElementById('currentMonth');
@@ -70,9 +33,9 @@ const nextMonthButton = document.getElementById('nextMonth');
 function getYearsWithEvents() {
   const years = new Set();
   events.forEach(event => {
-      years.add(new Date(event.date).getFullYear());
+      years.add(new Date(event.event_date).getFullYear());
   });
-  console.log(years);
+  //console.log(years);
   return Array.from(years).sort((a, b) => a - b); // Sort years ascending
 }
 
@@ -80,7 +43,7 @@ function getYearsWithEvents() {
 function getMonthsWithEvents(year) {
   const months = new Set();
   events.forEach(event => {
-      const eventDate = new Date(event.date);
+      const eventDate = new Date(event.event_date);
       if (eventDate.getFullYear() === year) {
           months.add(eventDate.getMonth());
       }
@@ -109,7 +72,7 @@ function updateYearDisplay() {
   }
 }
 function getIcon(event) {
-  switch (event.eventType.toLowerCase()) {
+  switch (event.event_type.toLowerCase()) {
       case "workshop":
           return "scheduleIcons/clubMeeting.png"; 
       case "networking":
@@ -129,10 +92,21 @@ function getIcon(event) {
 
 function filterEventsByMonth(events, year, month) {
   return events.filter(event => {
-      const eventDate = new Date(event.date);
+      const eventDate = new Date(event.event_date);
       return eventDate.getFullYear() === year && eventDate.getMonth() === month;
   });
 }
+
+function getIconOrImage(event) {
+    if (event.event_img) {
+        //If event_img exists, return the image path. 
+        return event.event_img; 
+    } else {
+        //Otherwise, use the getIcon function to get the appropriate icon.
+        return getIcon(event);
+    }
+}
+
 
 function displayEvents(monthEvents) {
   const eventList = document.getElementById('eventList');
@@ -148,17 +122,17 @@ function displayEvents(monthEvents) {
       eventList.appendChild(noEventsMessage);
   } else {
       monthEvents.forEach(event => {
-          const iconSrc = getIcon(event); 
+          const imgSrc = getIconOrImage(event);
           const eventHTML = `
           <div class="event">
               <div class="icon-title">
-                  <img class="icon" src="${iconSrc}" alt="Event Icon">
-                  <h3>${event.title}</h3>
+                  <img class="icon" src="${imgSrc}" alt="${imgSrc === getIcon(event) ? 'Event Icon' : 'Event Image'}">
+                  <h3>${event.event_title}</h3>
               </div>
               <div class="event-details"> 
-                  <p>${event.date} at ${event.time}</p>
-                  <p>${event.description}</p>
-                  <p>${event.detailedDescription}</p>
+                  <p>${event.event_date} at ${event.event_time}</p>
+                  <p>${event.event_desc}</p>
+                  <p>${event.event_detailed_desc}</p>
               </div>
           </div>
       `;
@@ -179,12 +153,12 @@ function displayAllEvents() {
       listItem.innerHTML = `
           <img class="icon" src="${iconSrc}" alt="Event Icon">
           <div class="event-info">
-              ${index + 1}. ${event.title}<br>
-              ${event.date} at ${event.time}
+              ${index + 1}. ${event.event_title}<br>
+              ${event.event_date} at ${event.event_time}
           </div>
       `;
       listItem.addEventListener('click', () => {
-          currentDate = new Date(event.date);
+          currentDate = new Date(event.event_date);
           updateCalendar();
           displayEvents(filterEventsByMonth(events, currentDate.getFullYear(), currentDate.getMonth()));
       });
@@ -300,7 +274,7 @@ function findClosestEventDate() {
   let closestFutureEvent = null;
   for (const event of sortedEvents) {
       // Explicitly set time to midnight to avoid time zone issues
-      const eventDate = new Date(event.date);
+      const eventDate = new Date(event.event_date);
       eventDate.setHours(0, 0, 0, 0); // Set time to midnight
 
       if (eventDate >= today) {
@@ -324,19 +298,9 @@ if (closestEventDate) {
     updateCalendar();
 } else {
     // Handle the case where there are no events at all
-    console.log("No events found.");
+    console.log("No events were found.");
 }
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+getEvents();

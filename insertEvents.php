@@ -1,9 +1,9 @@
 <?php
 // Database credentials (REPLACE WITH YOUR ACTUAL CREDENTIALS)
-$servername = "localhost";
+$host = "localhost";
 $username = "root";
+$dbname = "ClubDatabase_copy";
 $password = "Lennox2000";
-$dbname = "events_calendar";
 
 // Image directory path (relative to script)
 $imageDir = "scheduleMEDIA/";
@@ -19,186 +19,178 @@ if ($conn->connect_error) {
 // Event data (this would ideally come from your JavaScript array, but for this example, it's hardcoded)
 $events = [
     [
-        "title" => "Financial Planning for Entrepreneurs",
-        "date" => "2023-06-18",
-        "time" => "10:00:00",
-        "eventType" => "financial",
-        "description" => "Learn how to manage your finances as an entrepreneur.",
-        "detailedDescription" => "This workshop will cover budgeting, forecasting, and securing funding.",
-        "eventImage" => $imageDir . "image1.jpg" // Added image path
+        "event_title" => "Entrepreneurship Workshop: Idea Validation",
+        "event_date" => "2024-03-15",
+        "event_time" => "18:00:00",
+        "event_type" => "workshop",
+        "event_desc" => "Learn how to validate your business ideas.",
+        "event_detailed_desc" => "This workshop will cover various methods for validating your business idea, including market research, customer interviews, and competitor analysis. Guest speaker: Sarah Chen, Founder of InnovateTech."
     ],
     [
-        "title" => "Entrepreneurship Workshop: Idea Validation",
-        "date" => "2024-03-15",
-        "time" => "18:00:00",
-        "eventType" => "workshop",
-        "description" => "Learn how to validate your business ideas.",
-        "detailedDescription" => "This workshop will cover various methods for validating your business idea, including market research, customer interviews, and competitor analysis. Guest speaker: Sarah Chen, Founder of InnovateTech."
+        "event_title" => "Marketing Strategies for Small Businesses",
+        "event_date" => "2023-06-25",
+        "event_time" => "14:00:00",
+        "event_type" => "financial",
+        "event_desc" => "Discover effective marketing techniques for your small business.",
+        "event_detailed_desc" => "This seminar will cover social media marketing, email marketing, and content marketing.",
+        "event_img" => $imageDir . "image2.jpg" 
     ],
     [
-        "title" => "Marketing Strategies for Small Businesses",
-        "date" => "2023-06-25",
-        "time" => "14:00:00",
-        "eventType" => "marketing",
-        "description" => "Discover effective marketing techniques for your small business.",
-        "detailedDescription" => "This seminar will cover social media marketing, email marketing, and content marketing.",
-        "eventImage" => $imageDir . "image2.jpg" // Added image path
+        "event_title" => "Networking Event: Meet Local Entrepreneurs",
+        "event_date" => "2023-11-20",
+        "event_time" => "19:00:00",
+        "event_type" => "networking",
+        "event_desc" => "Network with successful local entrepreneurs.",
+        "event_detailed_desc" => "Meet and connect with experienced entrepreneurs in the community. Great opportunity to learn and build connections."
     ],
     [
-        "title" => "Networking Event: Meet Local Entrepreneurs",
-        "date" => "2023-11-20",
-        "time" => "19:00:00",
-        "eventType" => "networking",
-        "description" => "Network with successful local entrepreneurs.",
-        "detailedDescription" => "Meet and connect with experienced entrepreneurs in the community.  Great opportunity to learn and build connections."
+        "event_title" => "Financial Planning for Entrepreneurs",
+        "event_date" => "2023-06-18",
+        "event_time" => "10:00:00",
+        "event_type" => "financial",
+        "event_desc" => "Learn how to manage your finances as an entrepreneur.",
+        "event_detailed_desc" => "This workshop will cover budgeting, forecasting, and securing funding.",
+        "event_img" => $imageDir . "image1.jpg" 
     ],
     [
-        "title" => "Business Plan Competition",
-        "date" => "2025-05-10",
-        "time" => "14:00:00",
-        "eventType" => "competition",
-        "description" => "Pitch your business plan and win prizes!",
-        "detailedDescription" => "Students will present their business plans to a panel of judges.  Prizes will be awarded to the top three entries."
+        "event_title" => "Business Plan Competition",
+        "event_date" => "2025-05-10",
+        "event_time" => "14:00:00",
+        "event_type" => "competition",
+        "event_desc" => "Pitch your business plan and win prizes!",
+        "event_detailed_desc" => "Students will present their business plans to a panel of judges. Prizes will be awarded to the top three entries."
     ],
     [
-        "title" => "Workshop: Building a Minimum Viable Product (MVP)",
-        "date" => "2026-09-12",
-        "time" => "10:00:00",
-        "eventType" => "workshop",
-        "description" => "Learn how to build a Minimum Viable Product.",
-        "detailedDescription" => "This workshop will cover the process of developing a basic version of your product to test market viability."
+        "event_title" => "Workshop: Building a Minimum Viable Product (MVP)",
+        "event_date" => "2026-09-12",
+        "event_time" => "10:00:00",
+        "event_type" => "workshop",
+        "event_desc" => "Learn how to build a Minimum Viable Product.",
+        "event_detailed_desc" => "This workshop will cover the process of developing a basic version of your product to test market viability."
     ],
     [
-        "title" => "Guest Speaker:  Funding Your Startup",
-        "date" => "2024-07-25",
-        "time" => "13:30:00",
-        "eventType" => "speaker",
-        "description" => "Learn about different funding options for startups.",
-        "detailedDescription" => "A successful entrepreneur will share their experiences and advice on securing funding for a new venture."
+        "event_title" => "Guest Speaker: Funding Your Startup",
+        "event_date" => "2024-07-25",
+        "event_time" => "13:30:00",
+        "event_type" => "speaker",
+        "event_desc" => "Learn about different funding options for startups.",
+        "event_detailed_desc" => "A successful entrepreneur will share their experiences and advice on securing funding for a new venture."
     ],
     [
-        "title" => "Financial Literacy Workshop for Entrepreneurs",
-        "date" => "2023-04-05",
-        "time" => "16:00:00",
-        "eventType" => "financial",
-        "description" => "Improve your financial literacy as an entrepreneur.",
-        "detailedDescription" => "This workshop will cover budgeting, financial statements, and securing funding."
+        "event_title" => "Financial Literacy Workshop for Entrepreneurs",
+        "event_date" => "2023-04-05",
+        "event_time" => "16:00:00",
+        "event_type" => "financial",
+        "event_desc" => "Improve your financial literacy as an entrepreneur.",
+        "event_detailed_desc" => "This workshop will cover budgeting, financial statements, and securing funding."
     ],
     [
-        "title" => "Networking Event: Alumni Entrepreneurs",
-        "date" => "2027-02-18",
-        "time" => "19:00:00",
-        "eventType" => "networking",
-        "description" => "Connect with successful alumni entrepreneurs.",
-        "detailedDescription" => "An evening of networking with alumni who have started their own businesses."
+        "event_title" => "Networking Event: Alumni Entrepreneurs",
+        "event_date" => "2027-02-18",
+        "event_time" => "19:00:00",
+        "event_type" => "networking",
+        "event_desc" => "Connect with successful alumni entrepreneurs.",
+        "event_detailed_desc" => "An evening of networking with alumni who have started their own businesses."
     ],
     [
-        "title" => "Workshop:  Marketing Your Startup on a Budget",
-        "date" => "2025-11-01",
-        "time" => "14:00:00",
-        "eventType" => "workshop",
-        "description" => "Learn effective marketing strategies for startups.",
-        "detailedDescription" => "This workshop will focus on low-cost and high-impact marketing techniques."
+        "event_title" => "Workshop: Marketing Your Startup on a Budget",
+        "event_date" => "2025-11-01",
+        "event_time" => "14:00:00",
+        "event_type" => "workshop",
+        "event_desc" => "Learn effective marketing strategies for startups.",
+        "event_detailed_desc" => "This workshop will focus on low-cost and high-impact marketing techniques."
     ],
     [
-        "title" => "Pitch Competition:  The Big Idea",
-        "date" => "2026-05-22",
-        "time" => "09:00:00",
-        "eventType" => "competition",
-        "description" => "Pitch your best business idea and win!",
-        "detailedDescription" => "Students will compete for prizes by pitching their most innovative business ideas."
+        "event_title" => "Pitch Competition: The Big Idea",
+        "event_date" => "2026-05-22",
+        "event_time" => "09:00:00",
+        "event_type" => "competition",
+        "event_desc" => "Pitch your best business idea and win!",
+        "event_detailed_desc" => "Students will compete for prizes by pitching their most innovative business ideas."
     ],
     [
-        "title" => "Guest Speaker:  Building a Strong Team",
-        "date" => "2024-10-10",
-        "time" => "13:00:00",
-        "eventType" => "speaker",
-        "description" => "Learn how to build a high-performing team.",
-        "detailedDescription" => "An experienced entrepreneur will share their insights on building and managing a successful team."
+        "event_title" => "Guest Speaker: Building a Strong Team",
+        "event_date" => "2024-10-10",
+        "event_time" => "13:00:00",
+        "event_type" => "speaker",
+        "event_desc" => "Learn how to build a high-performing team.",
+        "event_detailed_desc" => "An experienced entrepreneur will share their insights on building and managing a successful team."
     ],
     [
-        "title" => "Workshop:  Legal Aspects of Starting a Business",
-        "date" => "2027-08-29",
-        "time" => "10:30:00",
-        "eventType" => "workshop",
-        "description" => "Learn about the legal requirements for starting a business.",
-        "detailedDescription" => "This workshop will cover legal structures, contracts, and intellectual property."
+        "event_title" => "Workshop: Legal Aspects of Starting a Business",
+        "event_date" => "2027-08-29",
+        "event_time" => "10:30:00",
+        "event_type" => "workshop",
+        "event_desc" => "Learn about the legal requirements for starting a business.",
+        "event_detailed_desc" => "This workshop will cover legal structures, contracts, and intellectual property."
     ],
     [
-        "title" => "Startup Showcase",
-        "date" => "2025-07-08",
-        "time" => "14:00:00",
-        "eventType" => "networking",
-        "description" => "Showcase your startup to potential investors and mentors.",
-        "detailedDescription" => "An opportunity for students to present their startups to a wider audience."
+        "event_title" => "Startup Showcase",
+        "event_date" => "2025-07-08",
+        "event_time" => "14:00:00",
+        "event_type" => "networking",
+        "event_desc" => "Showcase your startup to potential investors and mentors.",
+        "event_detailed_desc" => "An opportunity for students to present their startups to a wider audience."
     ],
     [
-        "title" => "Networking Event:  Venture Capitalists",
-        "date" => "2026-01-15",
-        "time" => "18:00:00",
-        "eventType" => "networking",
-        "description" => "Network with venture capitalists and angel investors.",
-        "detailedDescription" => "A valuable opportunity to connect with potential investors for your startup."
+        "event_title" => "Networking Event: Venture Capitalists",
+        "event_date" => "2026-01-15",
+        "event_time" => "18:00:00",
+        "event_type" => "networking",
+        "event_desc" => "Network with venture capitalists and angel investors.",
+        "event_detailed_desc" => "A valuable opportunity to connect with potential investors for your startup."
     ],
     [
-        "title" => "Workshop:  Negotiating Deals",
-        "date" => "2024-12-05",
-        "time" => "13:30:00",
-        "eventType" => "workshop",
-        "description" => "Learn essential negotiation skills for entrepreneurs.",
-        "detailedDescription" => "This workshop will cover strategies and techniques for successful negotiations."
+        "event_title" => "Workshop: Negotiating Deals",
+        "event_date" => "2024-12-05",
+        "event_time" => "13:30:00",
+        "event_type" => "workshop",
+        "event_desc" => "Learn essential negotiation skills for entrepreneurs.",
+        "event_detailed_desc" => "This workshop will cover strategies and techniques for successful negotiations."
     ],
     [
-        "title" => "Financial Planning for Entrepreneurs",
-        "date" => "2023-06-18",
-        "time" => "10:00:00",
-        "eventType" => "financial",
-        "description" => "Learn how to manage your finances as an entrepreneur.",
-        "detailedDescription" => "This workshop will cover budgeting, forecasting, and securing funding."
+        "event_title" => "Financial Planning for Entrepreneurs",
+        "event_date" => "2023-06-18",
+        "event_time" => "10:00:00",
+        "event_type" => "financial",
+        "event_desc" => "Learn how to manage your finances as an entrepreneur.",
+        "event_detailed_desc" => "This workshop will cover budgeting, forecasting, and securing funding."
     ]
 ];
 
 // Prepare the SQL statement ONCE outside the loop (more efficient)
-$sql = "INSERT INTO events (title, date, time, eventType, description, detailedDescription, eventImage) VALUES (?, ?, ?, ?, ?, ?, ?)";
+// Prepare the SQL statement ONCE outside the loop
+$sql = "INSERT INTO events (event_title, event_date, event_time, event_type, event_desc, event_detailed_desc, event_img) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 
 if ($stmt === false) {
     die("Prepare failed: (" . $conn->errno . ") " . $conn->error);
 }
 
-$stmt->bind_param("sssssss", $title, $date, $time, $eventType, $description, $detailedDescription, $imageBlob); // Changed to $imageBlob
-
-
 foreach ($events as $event) {
-    $title = $event["title"];
-    $date = $event["date"];
-    $time = $event["time"];
-    $eventType = $event["eventType"];
-    $description = $event["description"];
-    $detailedDescription = $event["detailedDescription"];
-    $imagePath = $event["eventImage"] ?? null;
+    // Bind parameters (important: inside the loop!)
+    $stmt->bind_param("sssssss", $event_title, $event_date, $event_time, $event_type, $event_desc, $event_detailed_desc, $event_img);
 
-    $imageBlob = null; // Initialize imageBlob
-
-    if ($imagePath !== null) {
-        if (file_exists($imagePath)) {
-            $imageBlob = file_get_contents($imagePath);
-            if ($imageBlob === false) {
-                echo "Error reading image file: " . $imagePath . " for event '" . $title . "'. Skipping image.\n";
-            }
-        } else {
-            echo "Warning: Image file not found: " . $imagePath . " for event '" . $title . "'. Skipping image.\n";
-        }
-    }
-
+    $event_title = $event["event_title"];
+    $event_date = $event["event_date"];
+    $event_time = $event["event_time"];
+    $event_type = $event["event_type"];
+    $event_desc = $event["event_desc"];
+    $event_detailed_desc = $event["event_detailed_desc"];
+    $event_img = $event["event_img"] ?? NULL; // Handle missing image paths gracefully
 
     if ($stmt->execute() === false) {
-        echo "Execute failed for event '" . $title . "': (" . $stmt->errno . ") " . $stmt->error . "\n";
+        echo "Execute failed for event '" . $event_title . "': (" . $stmt->errno . ") " . $stmt->error . "\n";
+        // Consider more robust error handling (e.g., logging, retrying)
+    } else {
+        echo "Event '" . $event_title . "' inserted successfully.\n";
     }
 }
 
-$stmt->close(); // Close the statement after the loop
-echo "New records created successfully (or errors reported above)\n";
+// Close the statement and connection (important: after the loop!)
+$stmt->close();
 $conn->close();
+
+echo "All records processed. (See above for any errors.)\n";
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=events_calendar";
+$dsn = "mysql:host=localhost;dbname=ClubDatabase_copy";
 $username = "root";
 $password = "Lennox2000";
 
