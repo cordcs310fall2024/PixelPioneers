@@ -420,10 +420,10 @@ input[type="submit"]:hover {
 
 @keyframes wave {
     0%, 100% {
-        transform: rotate(-3deg);
+        transform: rotate(-4.5deg);
     }
     50% {
-        transform: rotate(3deg);
+        transform: rotate(4.5deg);
     }
  }
 

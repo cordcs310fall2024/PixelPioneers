@@ -95,3 +95,33 @@ function saveOrder() {
           }
       });
 }
+
+
+function saveOrder() {
+    const items = Array.from(document.querySelectorAll("#sortable li"));
+    const order = items.map((item, index) => ({
+        member_id: item.getAttribute("data-id"),
+        display_order: index + 1 // Order starts from 1
+    }));
+
+    fetch("saveOrder.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(order)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Order updated successfully!");
+            location.reload(); // Reload the page to reflect the new order
+        } else {
+            alert("Failed to update order.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while saving the order.");
+    });
+}
