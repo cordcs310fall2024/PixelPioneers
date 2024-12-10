@@ -32,26 +32,31 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['delete_event'])) {
-        $event_id = $_POST['event_id'];
+        $event_id = $conn->real_escape_string($_POST['event_id']);
 
-        // Sanitize the event ID to prevent SQL injection
-        $event_id = $conn->real_escape_string($event_id);
+        // 1. Retrieve the image path BEFORE deleting the database entry
+        $sql_image = "SELECT event_img FROM events WHERE ID = $event_id";
+        $result_image = $conn->query($sql_image);
+        $imagePath = null; // Initialize imagePath
 
-        // Delete the event from the database
+        if ($result_image && $result_image->num_rows > 0) {
+            $row_image = $result_image->fetch_assoc();
+            $imagePath = $row_image['event_img'];
+        }
+
+        // 2. Delete the event from the database
         $sql = "DELETE FROM events WHERE ID = $event_id";
-
         if ($conn->query($sql) === TRUE) {
-            // Optionally, delete the associated image file from the server
-            $sql_image = "SELECT event_img FROM events WHERE ID = $event_id";
-            $result_image = $conn->query($sql_image);
-            if ($result_image->num_rows > 0) {
-                $row_image = $result_image->fetch_assoc();
-                $image_path = $row_image['event_img'];
-                if (file_exists($image_path)) {
-                    unlink($image_path); // Delete the image file
+            // 3. Delete the image file ONLY if it exists
+            if ($imagePath && file_exists($imagePath)) {
+                if (unlink($imagePath)) {
+                    // Image deleted successfully
+                } else {
+                    // Handle the error: Log it, display a message, etc.
+                    error_log("Error deleting image file: $imagePath");
+                    echo "Error deleting image file. Please check server logs.";
                 }
             }
-
             header("Location: adminEventEdit.php?success=deleted");
             exit();
         } else {
@@ -72,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-        // Check if image file is a actual image or fake image
+        // Check if image file is an actual image or fake image
         $check = getimagesize($_FILES["event_img"]["tmp_name"]);
         if($check !== false) {
             $uploadOk = 1;
@@ -196,15 +201,17 @@ $result = $conn->query($sql);
 
         <div class="right-column">
             <h3>Edit Event</h3>
-            <form method="POST" action="editEvent.php" enctype="multipart/form-data">
+            <form id=eventEditForm method="POST" action="editEvent.php" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="eventTitle">Title</label>
                     <input type="text" id="eventTitle" name="event_title" value="">
                 </div>
                 <div class="form-group">
                     <label for="eventPhoto">Photo</label>
-                    <div class="photo-preview">
-                        <img id="photoPreview" src="" alt="" style="width: 150px; height: auto;">
+                    <div class="photo-preview" style="display: none;">  <!-- Initially hidden -->
+                        <img id="photoPreview" src="" alt="">
+                        <span id="deletePhotoButton" class="delete-button">X</span>
+                        <span class="hover-text">Remove</span> <!-- Text to show on hover -->
                     </div>
                     <input type="file" id="eventPhotoUpload" name="event_img" accept="image/*">
                 </div>
@@ -236,15 +243,16 @@ $result = $conn->query($sql);
                     <input type="date" id="eventDate" name="event_date" value="">
                 </div>
                 <div class="form-group">
-                    <input type="hidden" name="event_id" id="event_id">
-                    <button type="submit">Save Changes</button>
+                    <input type="hidden" name="event_id" id="event_id" value="">
+                    <input type="hidden" id="initial_img_path" name="initial_img_path" value="">
+                    <button type="submit" name="save">Commit Changes</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<script src="js/editEvents.js"></script>
+<script src="js/adminEvents.js"></script>
 <?php require_once("footer.php"); ?>
 </body>
 <?php $conn->close(); ?>

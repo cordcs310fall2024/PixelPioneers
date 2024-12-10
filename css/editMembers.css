@@ -102,4 +102,68 @@
    background-color: red;
 }
 
+.delete-button {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   cursor: pointer;
+   color: #7568e8;
+}
 
+.photo-preview img {
+   display: block; /* Prevent extra space below the image */
+   max-width: 100%; /* Ensure image doesn't overflow its container */
+   height: auto; /* Maintain aspect ratio */
+}
+
+.photo-preview {
+   position: relative; /* Needed for absolute positioning of the delete button */
+   margin-bottom: 10px; /* Add spacing below the preview */
+   border: 1px solid #ccc; /* Add a border for better visual separation */
+   padding: 5px; /* Add padding for better visual separation */
+}
+
+.delete-button {
+   position: absolute;
+   top: 5px;
+   right: 5px; /* Position to the top left */
+    /*background-color: #f00; /* Red background */
+   color:red; /* White text */
+   padding: 2px 5px; /* Add padding */
+   border-radius: 50%; /* Make it a circle */
+   cursor: pointer;
+   font-weight: bold; /* Make the X bolder */
+   
+}
+
+.delete-button:hover {
+    background-color:  rgb(233, 197, 35); /* Darker red on hover */
+    transition: transform 0.2s ease;
+    
+}
+
+/*Optional Styling for input*/
+.form-group input[type="file"] {
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+.hover-text {
+   position: absolute;
+   top: 100%;
+   left: 40%;
+   transform: translateX(-100%);
+   transform: translateY(-500%);
+   background-color: #F7A041;
+   color: white;
+   padding: 4px 8px;
+   border-radius: 4px;
+   opacity: 0;
+   transition: opacity 0.2s ease;
+   pointer-events: none;
+ }
+ 
+ .delete-button:hover + .hover-text { /* Use the adjacent sibling combinator */
+   opacity: 1;
+ }
