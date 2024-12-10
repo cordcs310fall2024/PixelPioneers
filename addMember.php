@@ -64,8 +64,9 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
       <form id="event-form" enctype="multipart/form-data">
          <h1>Add Member</h1>
          <div class="form-group">
-            <input type="text" id="memberName" name="memberName" required>
-            <label for="memberName">Name</label>
+         <label for="memberName">Name</label>
+         <input type="text" id="memberName" name="memberName" required>
+
          </div>
 
          <div class="form-group">

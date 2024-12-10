@@ -82,7 +82,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #ba444c;
+    background-color: #6D153F;;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -156,7 +156,7 @@ main{
     width: 13vw;
     height: 5vw;
     text-align: center;
-    background-color:  #6D153F;
+    background-color:  #6D153F;;
     color: #F7A041;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -189,7 +189,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #ba444c;
+    background-color: #6D153F;;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -289,7 +289,7 @@ main{
     margin-top:5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #ba444c;
+    background-color: #6D153F;;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -395,7 +395,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-right: -100px;
-    background-color: #ba444c;
+    background-color: #6D153F;;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;
@@ -629,7 +629,7 @@ main{
    width: auto;
    max-width: 2.5vw;
    height: auto;
-   animation: head 5s ease-in-out infinite;
+   animation: head 4s ease-in-out infinite;
    transform-origin: bottom center;
 }
 
@@ -641,7 +641,7 @@ main{
    width: auto;
    max-width: 3.5vw;
    height: auto;
-   animation: arm 5s ease-in-out infinite;
+   animation: arm 4s ease-in-out infinite;
    transform-origin: bottom center;
 }
  
@@ -676,19 +676,38 @@ main{
  }
 
  @keyframes head {
-   0%, 100% {
+   0% {
        transform: rotate(0deg);
    }
+   25% {
+       transform: rotate(-15deg);
+   }
    50% {
-       transform: rotate(-10deg);
+       transform: rotate(-15deg); 
+   }
+   75% {
+       transform: rotate(0deg);
+   }
+   100% {
+       transform: rotate(0deg);
    }
 }
 
+
 @keyframes arm {
-   0%, 100% {
+   0% {
        transform: rotate(0deg);
    }
+   25% {
+       transform: rotate(-20deg);
+   }
    50% {
-       transform: rotate(-13deg);
+       transform: rotate(-20deg); 
+   }
+   75% {
+       transform: rotate(0deg);
+   }
+   100% {
+       transform: rotate(0deg);
    }
 }
