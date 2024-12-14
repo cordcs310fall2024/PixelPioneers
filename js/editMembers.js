@@ -55,3 +55,28 @@ function previewPhoto() {
        preview.src = URL.createObjectURL(photoUpload.files[0]);
    }
 }
+
+document.getElementById("delete").addEventListener("click", function () {
+   if (!currentMemberId) {
+       alert("Please select a member to delete.");
+       return;
+   }
+
+   if (confirm("Are you sure you want to delete this member?")) {
+       fetch("deleteMember.php", {
+           method: "POST",
+           headers: {
+               "Content-Type": "application/x-www-form-urlencoded",
+           },
+           body: `memberId=${encodeURIComponent(currentMemberId)}`,
+       })
+       .then(response => response.text())
+       .then(result => {
+           alert(result);
+           location.reload(); // reload the page to refresh the members' list
+       })
+       .catch(error => {
+           console.error("Error deleting member:", error);
+       });
+   }
+});
