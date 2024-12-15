@@ -38,12 +38,15 @@ if ($conn->connect_error) {
  
     <div class="member-grid">
         <?php
-        // get members from the database
-        $sql = "SELECT member_name, member_bio, member_img FROM members";
+        // Get members from the database, ordered by display_order
+        $sql = "SELECT m.member_name, m.member_bio, m.member_img 
+                FROM members m
+                JOIN memberOrder mo ON m.ID = mo.member_id
+                ORDER BY mo.display_order ASC";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            // output each member
+            // Output each member
             while ($row = $result->fetch_assoc()) {
                 $member_name = htmlspecialchars($row['member_name'], ENT_QUOTES, 'UTF-8');
                 $member_bio = htmlspecialchars($row['member_bio'], ENT_QUOTES, 'UTF-8');
@@ -66,6 +69,7 @@ if ($conn->connect_error) {
     </div>
  </main>
 </div>
+
 
 <?php 
 require_once("footer.php");

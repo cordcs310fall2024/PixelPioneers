@@ -109,17 +109,17 @@ $result = $conn->query($sql);
 
             </div>
             <div class="sortable-list">
-            <ul id="sortable">
-               <?php if ($result->num_rows > 0): ?>
-                  <?php $result->data_seek(0); // Reset the result pointer ?>
-                  <?php while ($row = $result->fetch_assoc()): ?>
-                     <li draggable="true" data-id="<?php echo $row['ID']; ?>">
-                           <?php echo htmlspecialchars($row['member_name']); ?>
-                     </li>
-                  <?php endwhile; ?>
-               <?php endif; ?>
-            </ul>
-            </div>
+    <ul id="sortable">
+        <?php 
+        // Reset the result pointer to reuse it
+        $result->data_seek(0); 
+        while ($row = $result->fetch_assoc()): ?>
+            <li draggable="true" data-id="<?php echo $row['ID']; ?>">
+                <?php echo htmlspecialchars($row['member_name']); ?>
+            </li>
+        <?php endwhile; ?>
+    </ul>
+</div>
       </div>
   </div>
 </div>

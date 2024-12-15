@@ -127,7 +127,7 @@ $result = $conn->query($sql);
             <button onclick="saveMember()">Save Changes</button>
          </div>
          <div class="form-group">
-            <button id="delete">Delete Member</button>
+            <button id="delete" data-id="">Delete Member</button>
          </div>
       </div>
    </div>

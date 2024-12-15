@@ -1,11 +1,11 @@
 let currentMemberId = null; //make sure the id is the currently selected member
 
 function editMember(name, photo, bio, id) {
-   // set form fields to the input from the php files
-   document.getElementById('memberName').value = name;
-   document.getElementById('photoPreview').src = photo;
-   document.getElementById('memberBio').value = bio;
-   currentMemberId = id; // save the ID for referencing in table
+   document.getElementById("memberName").value = name;
+   document.getElementById("photoPreview").src = photo;
+   document.getElementById("memberBio").value = bio;
+   document.getElementById("delete").setAttribute("data-id", id); // Set member ID
+   currentMemberId = id; // Update currentMemberId with the selected member's ID
 }
 
 
@@ -55,28 +55,31 @@ function previewPhoto() {
        preview.src = URL.createObjectURL(photoUpload.files[0]);
    }
 }
-
 document.getElementById("delete").addEventListener("click", function () {
-   if (!currentMemberId) {
-       alert("Please select a member to delete.");
-       return;
-   }
+    if (!currentMemberId) {
+        alert("Please select a member to delete.");
+        return;
+    }
 
-   if (confirm("Are you sure you want to delete this member?")) {
-       fetch("deleteMember.php", {
-           method: "POST",
-           headers: {
-               "Content-Type": "application/x-www-form-urlencoded",
-           },
-           body: `memberId=${encodeURIComponent(currentMemberId)}`,
-       })
-       .then(response => response.text())
-       .then(result => {
-           alert(result);
-           location.reload(); // reload the page to refresh the members' list
-       })
-       .catch(error => {
-           console.error("Error deleting member:", error);
-       });
-   }
+    if (confirm("Are you sure you want to delete this member?")) {
+        fetch("deleteMember.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ memberID: currentMemberId }),
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                alert("Member deleted successfully.");
+                location.reload(); // Reload to reflect changes
+            } else {
+                alert("Error deleting member: " + result.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error deleting member:", error);
+        });
+    }
 });

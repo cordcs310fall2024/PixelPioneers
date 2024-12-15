@@ -64,8 +64,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
       <form id="event-form" enctype="multipart/form-data">
          <h1>Add Member</h1>
          <div class="form-group">
-         <label for="memberName">Name</label>
          <input type="text" id="memberName" name="memberName" required>
+         <label for="memberName">Name</label>
 
          </div>
 
@@ -82,7 +82,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
             <label for="newEventPhoto"></label>
          </div>
 
-         <button type="button" onclick="addMember.js">Submit</button>
+         <button type="button" onclick="addNewMember()">Submit</button>
       </form>
    </div>
 </div>
