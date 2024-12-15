@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<noscript>
+    <meta http-equiv="refresh" content="0; URL=enable-js.php">
+</noscript>
+
 <?php
 // Database connection details
 $host = "localhost";
@@ -41,10 +45,10 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-
 <?php 
 require_once("header.php")
 ?>
+
 <!---------------------- CONTENT ---------------------->
     <main>
         <img src="img/ClubImage.png" alt="backHome" class="homeImg">
