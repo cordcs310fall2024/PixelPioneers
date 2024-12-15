@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Delete before deploy, this prints out what the hashed password is so you can put it in db
-echo password_hash("test", PASSWORD_DEFAULT);  // username test, password test
+//echo password_hash("test", PASSWORD_DEFAULT);  // username test, password test
 
 $conn->close();
 ?>
