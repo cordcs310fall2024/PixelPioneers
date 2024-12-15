@@ -16,16 +16,14 @@
 
 
 <?php
+session_start(); // start a new session 
 
+// define session limit (20 minutes)
+$timeout_duration = 1200; // 1200 seconds = 20 minutes
 
-session_start();
-
-// Set session timeout duration (20 minutes)
-$timeout_duration = 1200; // 20 minutes in seconds
-
-// Check if the session has expired
+// check if the session has expired
 if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout_duration) {
-    // Destroy the session if it has expired
+    // if expired, clear session data and redirect to login with timeout notice
     session_unset();
     session_destroy();
     header("Location: login.php?timeout=true"); 
@@ -40,10 +38,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 ?>
 
 <?php
-$host = "localhost";
-$username = "root";
-$dbname = "ClubDatabase";
-$password = "";
+require_once('db_config.php');
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -51,6 +46,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// query to fetch member details along with their display order
 $sql = "SELECT m.ID, m.member_name, m.member_bio, m.member_img, mo.display_order 
         FROM members m
         JOIN memberOrder mo ON m.ID = mo.member_id
@@ -59,7 +55,7 @@ $result = $conn->query($sql);
 
 ?>
 <div class="admin-page">
-   <!-- Sidebar for actions -->
+   <!-- sidebar -->
    <div class="sidebar">
    <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members
@@ -81,16 +77,18 @@ $result = $conn->query($sql);
         </button>
    </div>
 
-   <!-- Content area -->
+   <!-- content area -->
    <div class="content">
-          <!-- Middle Column -->
-          <div class="middle-column">
+          <!-- middle column shows grid of members -->
+         <div class="middle-column">
           <div class="member-grid">
-            <?php if ($result->num_rows > 0): ?>
-               <?php while ($row = $result->fetch_assoc()): ?>
+            <?php if ($result->num_rows > 0): //check if there are memberes to display?>
+               <?php while ($row = $result->fetch_assoc()): //loop through each member?>
                   <div class="member-grid-item">
+                     <!-- display member img --->
                         <img src="data:image/jpeg;base64,<?php echo base64_encode($row['member_img']); ?>" alt="Member Photo">
                         <div class="middle">
+                           <!-- display the member's name -->
                            <div class="memberName"><?php echo htmlspecialchars($row['member_name']); ?></div>
                         </div>
                   </div>
@@ -98,28 +96,27 @@ $result = $conn->query($sql);
             <?php else: ?>
                <p>No members found.</p>
             <?php endif; ?>
-</div>
+         </div>
       </div>
-      <!-- Right Column - ORDER MEMBER -->
+      <!-- Right Column - ORDER MEMBER FUNCTIONALITY -->
       <div class="right-column">
-
             <h2>Reorder Members</h2>
             <div class="form-group">
                      <button onclick="saveOrder()">Save Changes</button>
-
             </div>
             <div class="sortable-list">
-    <ul id="sortable">
-        <?php 
-        // Reset the result pointer to reuse it
-        $result->data_seek(0); 
-        while ($row = $result->fetch_assoc()): ?>
-            <li draggable="true" data-id="<?php echo $row['ID']; ?>">
-                <?php echo htmlspecialchars($row['member_name']); ?>
-            </li>
-        <?php endwhile; ?>
-    </ul>
-</div>
+                    <!-- list of members to be reordered -->
+                  <ul id="sortable">
+                     <?php 
+                     // reset the result pointer to reuse it
+                     $result->data_seek(0); 
+                     while ($row = $result->fetch_assoc()): ?>
+                           <li draggable="true" data-id="<?php echo $row['ID']; ?>">
+                              <?php echo htmlspecialchars($row['member_name']); ?>
+                           </li>
+                     <?php endwhile; ?>
+                  </ul>
+            </div>
       </div>
   </div>
 </div>

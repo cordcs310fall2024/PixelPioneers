@@ -20,9 +20,9 @@ session_start();
 // Set session timeout duration (20 minutes)
 $timeout_duration = 1200; // 20 minutes in seconds
 
-// Check if the session has expired
+// check if the session has expired
 if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout_duration) {
-    // Destroy the session if it has expired
+    // destroy the session if it has expired
     session_unset();
     session_destroy();
     header("Location: login.php?timeout=true"); 
@@ -37,10 +37,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 ?>
 
 <?php
-$host = "localhost";
-$username = "root";
-$dbname = "ClubDatabase";
-$password = "";
+//database connection
+require_once('db_config.php');
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -48,6 +46,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+//sql query from database
 $sql = "SELECT ID, member_name, member_bio, member_img FROM members";
 $result = $conn->query($sql);
 ?>

@@ -13,12 +13,12 @@
 <?php
 session_start();
 
-// Set session timeout duration (20 minutes)
+// set session timeout duration (20 minutes)
 $timeout_duration = 1200; // 20 minutes in seconds
 
-// Check if the session has expired
+// check if the session has expired
 if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout_duration) {
-    // Destroy the session if it has expired
+    // destroy the session if it has expired
     session_unset();
     session_destroy();
     header("Location: login.php?timeout=true"); 
@@ -37,7 +37,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 
 <div class="admin-page">
-   <!-- Sidebar for actions -->
+   <!-- siderbar for actions -->
    <div class="sidebar">
       <button onclick="window.location.href='orderMembers.php'">
          <i class="bi bi-list-ul"></i> Order Members

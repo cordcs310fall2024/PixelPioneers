@@ -15,11 +15,8 @@
 <?php 
 require_once("header.php");
 
-// Database configuration
-$servername = "localhost";
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "ClubDatabase";
+//database connection
+require_once('db_config.php');
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -36,9 +33,10 @@ if ($conn->connect_error) {
         <h1>Meet Our Members</h1>
     </div>
  
+    <!-- grid container for displaying members -->
     <div class="member-grid">
         <?php
-        // Get members from the database, ordered by display_order
+        // get members from the database, ordered by display_order
         $sql = "SELECT m.member_name, m.member_bio, m.member_img 
                 FROM members m
                 JOIN memberOrder mo ON m.ID = mo.member_id
@@ -46,12 +44,13 @@ if ($conn->connect_error) {
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            // Output each member
+            // output each member by looping through resulting set
             while ($row = $result->fetch_assoc()) {
                 $member_name = htmlspecialchars($row['member_name'], ENT_QUOTES, 'UTF-8');
                 $member_bio = htmlspecialchars($row['member_bio'], ENT_QUOTES, 'UTF-8');
-                $member_img = base64_encode($row['member_img']); // Encode binary data to Base64
+                $member_img = base64_encode($row['member_img']); // encode binary data 
 
+                // create html structure for each member
                 echo '<div class="member-grid-item">';
                 echo '<img src="data:image/jpeg;base64,' . $member_img . '" alt="' . $member_name . '">';
                 echo '<div class="middle">';
