@@ -275,7 +275,7 @@ function findClosestEventDate() {
   for (const event of sortedEvents) {
       // Explicitly set time to midnight to avoid time zone issues
       const eventDate = new Date(event.event_date);
-      eventDate.setHours(0, 0, 0, 0); // Set time to midnight
+      //eventDate.setHours(0, 0, 0, 0); // Set time to midnight
 
       if (eventDate >= today) {
           closestFutureEvent = eventDate;
@@ -285,7 +285,7 @@ function findClosestEventDate() {
 
   if (closestFutureEvent === null && sortedEvents.length > 0) {
       const lastEventDate = new Date(sortedEvents[sortedEvents.length - 1].date);
-      lastEventDate.setHours(0, 0, 0, 0); // Set time to midnight
+      //lastEventDate.setHours(0, 0, 0, 0); // Set time to midnight
       closestFutureEvent = lastEventDate;
   }
 

@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "Lennox2000";
-$dbname = "events_calendar";
+$dbname = "clubDatabase_copy";
 
 
 // Create connection

@@ -26,15 +26,7 @@ $events = [
         "event_desc" => "Learn how to validate your business ideas.",
         "event_detailed_desc" => "This workshop will cover various methods for validating your business idea, including market research, customer interviews, and competitor analysis. Guest speaker: Sarah Chen, Founder of InnovateTech."
     ],
-    [
-        "event_title" => "Marketing Strategies for Small Businesses",
-        "event_date" => "2023-06-25",
-        "event_time" => "14:00:00",
-        "event_type" => "financial",
-        "event_desc" => "Discover effective marketing techniques for your small business.",
-        "event_detailed_desc" => "This seminar will cover social media marketing, email marketing, and content marketing.",
-        "event_img" => $imageDir . "image2.jpg" 
-    ],
+   
     [
         "event_title" => "Networking Event: Meet Local Entrepreneurs",
         "event_date" => "2023-11-20",
@@ -43,15 +35,7 @@ $events = [
         "event_desc" => "Network with successful local entrepreneurs.",
         "event_detailed_desc" => "Meet and connect with experienced entrepreneurs in the community. Great opportunity to learn and build connections."
     ],
-    [
-        "event_title" => "Financial Planning for Entrepreneurs",
-        "event_date" => "2023-06-18",
-        "event_time" => "10:00:00",
-        "event_type" => "financial",
-        "event_desc" => "Learn how to manage your finances as an entrepreneur.",
-        "event_detailed_desc" => "This workshop will cover budgeting, forecasting, and securing funding.",
-        "event_img" => $imageDir . "image1.jpg" 
-    ],
+
     [
         "event_title" => "Business Plan Competition",
         "event_date" => "2025-05-10",
