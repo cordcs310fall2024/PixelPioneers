@@ -118,11 +118,10 @@ require_once("header.php")
               </div>
             <div class="pContainer">
               <p>
-                Are you passionate about turning ideas into reality? Join the Entrepreneurship Club!
-            This dynamic student organization is designed to enhance your entrepreneurial skills beyond the classroom. 
-            By joining, you'll gain access to invaluable resources, hands-on experiences, and networking opportunities that will guide you on your entrepreneurial journey. 
-            Whether you're looking to start your own business or simply want to explore innovative thinking, the club prepares you for success in whatever path you choose. 
-            Come be part of Concordia College’s vibrant entrepreneurial spirit!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
               </p>
             </div>
                 <a href="contact.php" class="ContactLink">Read More</a>
