@@ -60,7 +60,7 @@ h1 {
     padding-bottom: 15px;
     padding-right: 10px;
     padding-left: 10px;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     border: none;
     background-color: transparent; 
     color: #eaa82a;
@@ -125,14 +125,9 @@ h1 {
 
 .pageTotal {
     width: 100%;
-    transition: width 0.3s ease;
     position: relative;
 }
 
-.openSidebarMenu:checked ~ .pageTotal {
-    width: calc(100% - 250px); 
-    margin-right: 250px; 
-}
 
 .memberName {
     font-size:calc(15px + 1vw);
@@ -144,7 +139,7 @@ h1 {
 
 .memberDescription{
     padding-top: 2vh;
-    font-size:calc(8px + 1vw);
+    font-size:calc(8px + 0.9vw);
     font-weight: lighter;
     text-align: center
 
