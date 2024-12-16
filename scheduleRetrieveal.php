@@ -1,7 +1,7 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=ClubDatabase_copy";
+$dsn = "mysql:host=localhost;dbname=ClubDatabase";
 $username = "root";
-$password = "Lennox2000";
+$password = "";
 
 try {
     $pdo = new PDO($dsn, $username, $password);

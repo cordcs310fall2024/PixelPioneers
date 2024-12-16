@@ -3,8 +3,8 @@
 // Database credentials (REPLACE WITH YOUR ACTUAL CREDENTIALS -  DO NOT HARDCODE IN PRODUCTION!)
 $servername = "localhost";
 $username = "root";
-$password = "Lennox2000";
-$dbname = "clubDatabase_copy";
+$password = "";
+$dbname = "ClubDatabase";
 
 
 // Create connection

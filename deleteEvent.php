@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = "Lennox2000"; 
-$dbname = "ClubDatabase_copy";
+$password = ""; 
+$dbname = "ClubDatabase";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 

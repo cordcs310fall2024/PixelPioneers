@@ -49,8 +49,7 @@
          </li>
          <li><a href="schedule.php">Schedule</a>
             <ul>
-               <li><a href="schedule.html"><i class="bi bi-calendar-event"></i> Events</a></li>
-               <li><a href="schedule.html"><i class="bi bi-clock"></i> Meetings</a></li>
+               <li><a href="schedule.php"><i class="bi bi-calendar-event"></i> Events</a></li>
             </ul>
          </li>
          <li><a href="contact.php">Contact</a>

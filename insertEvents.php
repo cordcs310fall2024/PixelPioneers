@@ -2,8 +2,8 @@
 // Database credentials (REPLACE WITH YOUR ACTUAL CREDENTIALS)
 $host = "localhost";
 $username = "root";
-$dbname = "ClubDatabase_copy";
-$password = "Lennox2000";
+$dbname = "ClubDatabase";
+$password = "";
 
 // Image directory path (relative to script)
 $imageDir = "scheduleMEDIA/";

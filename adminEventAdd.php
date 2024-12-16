@@ -38,8 +38,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <?php
 $host = "localhost";
 $username = "root";
-$dbname = "ClubDatabase_copy";
-$password = "Lennox2000";
+$dbname = "ClubDatabase";
+$password = "";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -140,7 +140,5 @@ $result = $conn->query($sql);
 <script src="js/addEvent.js"></script>
 <?php $conn->close(); ?>
 </body>
-<?php 
-      require_once("footer.php")
-      ?>
+
 </html>

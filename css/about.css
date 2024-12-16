@@ -499,9 +499,6 @@ main{
     flex-basis: 45%;  
  }
  
- 
- 
- 
  .contentSocial h1 {
  
  
@@ -554,7 +551,7 @@ main{
     margin-left: 1.5vw;
  }
  .right-section{
-    position: relative; /* Ensure this section is the positioning context */
+    position: relative; 
     flex: 1;
     display: flex;
     align-items: center;
