@@ -8,7 +8,7 @@
     background-color: #6D153F;
     padding: 20px;
     border-right: 1px solid #6D153F;
-    height:1068px;
+    height:1220px;
  }
  .sidebar button {
    display: block;
@@ -57,6 +57,7 @@ label {
    margin-bottom: 5px; 
    color: #333; /* Darker label color */
    font-weight: normal; 
+   
 }
 
 
@@ -132,12 +133,6 @@ button:hover {
    background-color: #a14e13;
 }
 
-.footer {
-   position: fixed; /*This is important*/
-   bottom: 0; /*This is important*/
-   left: 0; /*This is important*/
-   width: 100%; /*This is important*/
-}
 #event-form{
    margin-bottom:1000px;
 }

@@ -134,126 +134,126 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/editMembers.css">
-</head>
-<body>
-<?php require_once("header.php") ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/editMembers.css">
+    </head>
+    <body>
+        <?php require_once("header.php") ?>
 
-<div class="admin-page">
-<div class="sidebar">
-    <button onclick="window.location.href='orderMembers.php'">
-        <i class="bi bi-list-ul"></i> Order Members
-    </button>
-    <button onclick="window.location.href='editMembers.php'">
-        <i class="bi bi-pencil-square"></i> Edit Members
-    </button>
-    <button onclick="window.location.href='addMember.php'">
-        <i class="bi bi-person-plus"></i> Add Member
-    </button>
-    <button onclick="window.location.href='adminEventAdd.php'">
-        <i class="bi bi-person-plus"></i> Add Event
-    </button>
-    <button onclick="window.location.href='adminEventEdit.php'">
-        <i class="bi bi-pencil-square"></i> Edit Event
-    </button>
-    <button onclick="window.location.href='adminSignUp.php'">
-        <i class="bi bi-person-plus"></i> Add User
-    </button>
-</div>
-
-    <div class="content">
-        <div class="middle-column">
-            <div class="member-grid">
-                <?php if ($result->num_rows > 0): ?>
-                    <?php while ($row = $result->fetch_assoc()): ?>
-                        <div class="member-grid-item"
-                            onclick="editEvent(
-                                '<?php echo addslashes($row['event_title']); ?>',
-                                '<?php echo addslashes($row['event_desc']); ?>',
-                                '<?php echo addslashes($row['event_detailed_desc']); ?>',
-                                '<?php echo addslashes($row['event_time']); ?>',
-                                '<?php echo addslashes($row['event_type']); ?>',
-                                '<?php echo addslashes($row['event_img']); ?>',
-                                '<?php echo addslashes($row['event_date']); ?>',
-                                <?php echo $row['ID']; ?>)">
-                            <img src="<?php echo $row['event_img']; ?>" alt="Event Photo">
-                            <div class="middle">
-                                <div class="eventName"><?php echo htmlspecialchars($row['event_title']); ?></div>
-                                <div class="eventName"><?php echo htmlspecialchars($row['event_date']); ?></div>
-                            </div>
-                            <form method="POST" action="adminEventEdit.php">
-                                <input type="hidden" name="event_id" value="<?php echo $row['ID']; ?>">
-                                <button type="submit" name="delete_event" onclick="return confirm('Are you sure you want to delete this event?');">Delete</button>
-                            </form>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <p>No events found.</p>
-                <?php endif; ?>
+        <div class="admin-page">
+            <div class="sidebar">
+                <button onclick="window.location.href='orderMembers.php'">
+                    <i class="bi bi-list-ul"></i> Order Members
+                </button>
+                <button onclick="window.location.href='editMembers.php'">
+                    <i class="bi bi-pencil-square"></i> Edit Members
+                </button>
+                <button onclick="window.location.href='addMember.php'">
+                    <i class="bi bi-person-plus"></i> Add Member
+                </button>
+                <button onclick="window.location.href='adminEventAdd.php'">
+                    <i class="bi bi-person-plus"></i> Add Event
+                </button>
+                <button onclick="window.location.href='adminEventEdit.php'">
+                    <i class="bi bi-pencil-square"></i> Edit Event
+                </button>
+                <button onclick="window.location.href='adminSignUp.php'">
+                    <i class="bi bi-person-plus"></i> Add User
+                </button>
             </div>
-        </div>
 
-        <div class="right-column">
-            <h3>Edit Event</h3>
-            <form id=eventEditForm method="POST" action="editEvent.php" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="eventTitle">Title</label>
-                    <input type="text" id="eventTitle" name="event_title" value="">
-                </div>
-                <div class="form-group">
-                    <label for="eventPhoto">Photo</label>
-                    <div class="photo-preview" style="display: none;">  <!-- Initially hidden -->
-                        <img id="photoPreview" src="" alt="">
-                        <span id="deletePhotoButton" class="delete-button">X</span>
-                        <span class="hover-text">Remove</span> <!-- Text to show on hover -->
+                <div class="content">
+                    <div class="middle-column">
+                        <div class="member-grid">
+                            <?php if ($result->num_rows > 0): ?>
+                                <?php while ($row = $result->fetch_assoc()): ?>
+                                    <div class="member-grid-item"
+                                        onclick="editEvent(
+                                            '<?php echo addslashes($row['event_title']); ?>',
+                                            '<?php echo addslashes($row['event_desc']); ?>',
+                                            '<?php echo addslashes($row['event_detailed_desc']); ?>',
+                                            '<?php echo addslashes($row['event_time']); ?>',
+                                            '<?php echo addslashes($row['event_type']); ?>',
+                                            '<?php echo addslashes($row['event_img']); ?>',
+                                            '<?php echo addslashes($row['event_date']); ?>',
+                                            <?php echo $row['ID']; ?>)">
+                                        <img src="<?php echo $row['event_img']; ?>" alt="Event Photo">
+                                        <div class="middle">
+                                            <div class="eventName"><?php echo htmlspecialchars($row['event_title']); ?></div>
+                                            <div class="eventName"><?php echo htmlspecialchars($row['event_date']); ?></div>
+                                        </div>
+                                        <form method="POST" action="adminEventEdit.php">
+                                            <input type="hidden" name="event_id" value="<?php echo $row['ID']; ?>">
+                                            <button type="submit" name="delete_event" onclick="return confirm('Are you sure you want to delete this event?');">Delete</button>
+                                        </form>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php else: ?>
+                                <p>No events found.</p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                    <input type="file" id="eventPhotoUpload" name="event_img" accept="image/*">
-                </div>
-                <div class="form-group">
-                    <label for="eventDesc">Short Description</label>
-                    <textarea id="eventDesc" name="event_desc"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="eventDetailedDesc">Detailed Description</label>
-                    <textarea id="eventDetailedDesc" name="event_detailed_desc"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="eventTime">Time</label>
-                    <input type="time" id="eventTime" name="event_time" value="">
-                </div>
-                <div class="form-group">
-                    <label for="eventType">Event Type</label>
-                    <select id="eventType" name="event_type">
-                        <option value="workshop">Workshop</option>
-                        <option value="networking">Networking</option>
-                        <option value="competition">Competition</option>
-                        <option value="speaker">Speaker Event</option>
-                        <option value="financial">Financial Event</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="eventDate">Event Date</label>
-                    <input type="date" id="eventDate" name="event_date" value="">
-                </div>
-                <div class="form-group">
-                    <input type="hidden" name="event_id" id="event_id" value="">
-                    <input type="hidden" id="initial_img_path" name="initial_img_path" value="">
-                    <button type="submit" name="save">Commit Changes</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
-<script src="js/adminEvents.js"></script>
-<?php require_once("footer.php"); ?>
-</body>
-<?php $conn->close(); ?>
+                    <div class="right-column">
+                        <h3>Edit Event</h3>
+                        <form id=eventEditForm method="POST" action="editEvent.php" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="eventTitle">Title</label>
+                                <input type="text" id="eventTitle" name="event_title" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="eventPhoto">Photo</label>
+                                <div class="photo-preview" style="display: none;">  <!-- Initially hidden -->
+                                    <img id="photoPreview" src="" alt="">
+                                    <span id="deletePhotoButton" class="delete-button">X</span>
+                                    <span class="hover-text">Remove</span> <!-- Text to show on hover -->
+                                </div>
+                                <input type="file" id="eventPhotoUpload" name="event_img" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDesc">Short Description</label>
+                                <textarea id="eventDesc" name="event_desc"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDetailedDesc">Detailed Description</label>
+                                <textarea id="eventDetailedDesc" name="event_detailed_desc"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventTime">Time</label>
+                                <input type="time" id="eventTime" name="event_time" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="eventType">Event Type</label>
+                                <select id="eventType" name="event_type">
+                                    <option value="workshop">Workshop</option>
+                                    <option value="networking">Networking</option>
+                                    <option value="competition">Competition</option>
+                                    <option value="speaker">Speaker Event</option>
+                                    <option value="financial">Financial Event</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDate">Event Date</label>
+                                <input type="date" id="eventDate" name="event_date" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" name="event_id" id="event_id" value="">
+                                <input type="hidden" id="initial_img_path" name="initial_img_path" value="">
+                                <button type="submit" name="save">Commit Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+        <script src="js/adminEvents.js"></script>
+    </body>
+    <?php $conn->close(); ?>
+    <?php require_once("footer.php"); ?>
 </html>

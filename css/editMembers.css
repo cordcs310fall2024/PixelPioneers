@@ -1,6 +1,7 @@
 .admin-page {
    display: flex;
-   margin-bottom: 60px;
+   margin-bottom:0px;
+   padding-top: 80px;
    
 }
 .sidebar {
@@ -9,6 +10,7 @@
    padding: 20px;
    border-right: 1px solid #6D153F;
    position: sticky; 
+   height:1500px;
 
 }
 .sidebar button {
