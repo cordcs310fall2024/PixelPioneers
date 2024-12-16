@@ -1,5 +1,9 @@
 <?php
-require_once('db_config.php');
+$host = "localhost";
+$username = "root";
+$password = "Lennox2000"; 
+$dbname = "ClubDatabase_copy";
+
 $conn = new mysqli($host, $username, $password, $dbname);
 
 if ($conn->connect_error) {

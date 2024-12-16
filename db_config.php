@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
 $username = "root";  
-$password = "";   
-$dbname = "ClubDatabase";  
+$password = "Lennox2000";   
+$dbname = "ClubDatabase_copy";  
 ?>

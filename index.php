@@ -20,8 +20,8 @@
 // Database connection details
 $host = "localhost";
 $username = "root";
-$password = "";
-$dbname = "ClubDatabase";
+$password = "Lennox2000";
+$dbname = "ClubDatabase_copy";
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $dbname);

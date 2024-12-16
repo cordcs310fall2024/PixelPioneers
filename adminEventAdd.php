@@ -38,8 +38,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <?php
 $host = "localhost";
 $username = "root";
-$dbname = "ClubDatabase";
-$password = "";
+$dbname = "ClubDatabase_copy";
+$password = "Lennox2000";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -47,7 +47,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID, event_title, event_desc, event_img, event_date FROM events";
+$sql = "SELECT ID, event_title, event_date, event_time, event_type, event_desc, event_detailed_desc, event_img  FROM events";
 $result = $conn->query($sql);
 
 
@@ -77,42 +77,68 @@ $result = $conn->query($sql);
         </button>
    </div>
 
-   <!-- Content area -->
+   <!-- Content area.Lennox-Made changes 1 -->
    <div class="content">
-      <form id="event-form" enctype="multipart/form-data">
-         <h1>Add Event</h1>
-         <div class="form-group">
+    <form id="event-form" enctype="multipart/form-data">
+
+        <div class=topComponents>
+            <button type="button" onclick="addNewEvent()">Submit</button>
+            <h1>Add Event</h1>
+        </div>
+
+        <div class="form-group">
             <input type="text" id="newEventTitle" name="event_title" required>
             <label for="newEventTitle">Title</label>
-         </div>
+        </div>
 
-         <div class="form-group">
-            <textarea id="newEventDesc" rows="4" name = "event_desc" required></textarea>
-            <label for="newEventDesc">Description</label>
-         </div>
+        <div class="form-group">
+            <textarea id="newEventDesc" rows="4" name="event_desc" required></textarea>
+            <label for="newEventDesc">Short Description</label>
+        </div>
 
-         <div class="form-group">
-               <div class="photo-preview">
-                  <img id="newPhotoPreview" src="" alt="" style="width: 150px; height: auto; display: none;">
-               </div>
-            <input type="file" id="newEventPhotoUpload" name = "event_img" accept="image/*" onchange="previewNewPhoto()">
-            <label for="newEventPhoto"></label>
-         </div>
-         <div class="form-group">
-            <input type="date" id="newEventDate" name = "event_date" required>
-            <label for="newEventDate"></label>
-         </div>
+        <div class="form-group">
+            <textarea id="newEventDetailedDesc" rows="6" name="event_detailed_desc"></textarea>  <!-- Added detailed description -->
+            <label for="newEventDetailedDesc">Detailed Description</label>
+        </div>
 
-         <button type="button" onclick="addNewEvent()">Submit</button>
-      </form>
-   </div>
+        <div class="form-group">
+            <input type="time" id="newEventTime" name="event_time" required>  <!-- Added event time -->
+            <label for="newEventTime">Time</label>
+        </div>
+
+        <div class="form-group">
+            <select id="newEventType" name="event_type" required>  <!-- Added event type selection -->
+                <option value="">Select Type</option>
+                <option value="workshop">Workshop</option>
+                <option value="networking">Networking</option>
+                <option value="competition">Competition</option>
+                <option value="speaker">Speaker Event</option>
+                <option value="financial">Financial Event</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="newEventType">Event Type</label>
+        </div>
+
+
+        <div class="form-group">
+            <div class="photo-preview">
+                <img id="newPhotoPreview" src="" alt="" style="width: 150px; height: auto; display: none;">
+            </div>
+            <input type="file" id="newEventPhotoUpload" name="event_img" accept="image/*" onchange="previewNewPhoto()">
+            <label for="newEventPhotoUpload">Image (Optional)</label> </div>  <!-- Improved label -->
+
+        <div class="form-group">
+            <input type="date" id="newEventDate" name="event_date" required>
+            <label for="newEventDate">Date</label>
+        </div>
+    </form>
 </div>
+<div class =footer>
 <?php 
-    require_once("footer.php")
-    ?>
+      require_once("footer.php")
+      ?>
+</div>
 <script src="js/addEvent.js"></script>
-
 <?php $conn->close(); ?>
-
 </body>
 </html>
