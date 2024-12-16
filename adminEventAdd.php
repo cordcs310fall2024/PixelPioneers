@@ -82,7 +82,7 @@ $result = $conn->query($sql);
         <form id="event-form" enctype="multipart/form-data">
 
             <div class=topComponents>
-                <button type="button" onclick="addNewEvent()">Submit</button>
+                
                 <h1>Add Event</h1>
             </div>
 
@@ -132,6 +132,7 @@ $result = $conn->query($sql);
                 <input type="date" id="newEventDate" name="event_date" required>
                 <label for="newEventDate">Date</label>
             </div>
+            <button type="button" onclick="addNewEvent()">Submit</button>
         </form>
     </div>
 </div>
