@@ -111,7 +111,7 @@ require_once("header.php")
            <div class="contact">
             <div class="txtContainer">
               <div class="contactImgContainer">
-                <img src="img\ActualPhotos/contact.jpeg" alt="contactHome"> 
+                <img src="img/programsImage.png" alt="contactHome"> 
               </div>
               <div class="title">
                 <h1>Join Us!</h1>

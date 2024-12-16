@@ -2,9 +2,7 @@ main{
     background-color: #FBF7F2
  }
  
- 
- 
- 
+
  .top-section {
     display: flex;
     width: 100%;
@@ -135,12 +133,7 @@ main{
  
  .pageTotal {
     width: 100%;
-    transition: width 0.3s ease;
  }
- 
- 
- 
- 
  
  
  .buttonMembers{
@@ -493,7 +486,7 @@ main{
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: -100px;
-    background-color: #da525b;
+    background-color: #6D153F;
     padding: 0.5vw;
     border-radius: 8px;
     z-index: 2;

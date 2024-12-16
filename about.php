@@ -159,7 +159,7 @@ require_once("header.php")
 
    </div>
    <div class = "imageSocial">
-       <img id = "ferret5" src="img/ferrets/ferret5.png">
+       <img id = "ferret5" src="img/instagramImg.png">
    </div>
 </div>
 </div>
