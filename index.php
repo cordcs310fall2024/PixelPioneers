@@ -86,7 +86,6 @@ require_once("header.php")
             <?php if (!empty($events)): ?>
                 <?php foreach ($events as $event): ?>
                     <div class="event-item">
-                        <img src="data:image/jpeg;base64,<?php echo base64_encode($event['event_img']); ?>" alt="eventImage">
                         <p>
                             <?php echo htmlspecialchars($event['event_title']); ?><br>
                             <?php echo date('m/d/Y', strtotime($event['event_date'])); ?><br>
